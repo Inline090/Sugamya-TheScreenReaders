@@ -7,7 +7,8 @@ const $ = (s) => document.querySelector(s),
     return e;
   };
 let current = null,
-  working = false;
+  working = false,
+  external = null;
 function notice(text, error = false) {
   $("#notice").textContent = text;
   $("#notice").className = error ? "error" : "";
@@ -199,6 +200,7 @@ function render() {
     $("#baseline-detail").replaceChildren(pre, link);
   }
   renderCoverage();
+  renderExternal();
   $("#events").replaceChildren(
     ...[...current.events].reverse().map((e) => {
       const li = el("li"),
@@ -505,4 +507,114 @@ $("#roi").onsubmit = (e) => {
     Math.round(((sites * (baseline - 2 * review)) / 60) * rate) +
     ". Excludes hosting, setup, manual audits and maintenance. These inputs are assumptions, not measured savings.";
 };
+function renderExternal() {
+  const box = $("#external-result");
+  if (!box) return;
+  if (!external) {
+    box.replaceChildren();
+    return;
+  }
+  const head = el("div", undefined, "section-head");
+  head.append(el("h3", "Proposals for " + external.url));
+  const link = el("a", "Open fixed preview ↗", "button");
+  link.href = external.previewUrl;
+  link.target = "_blank";
+  link.rel = "noopener";
+  head.append(link);
+  const summary = el(
+    "p",
+    external.operations.length +
+      " supported operation(s) · " +
+      external.contrast.length +
+      " contrast finding(s) need owner CSS",
+    "caption",
+  );
+  const nodes = [head, summary];
+  for (const o of external.operations) nodes.push(renderExternalOp(o));
+  if (external.contrast.length) {
+    const det = el("details");
+    det.append(
+      el("summary", "Contrast findings (detected, not auto-fixed)"),
+      el("pre", JSON.stringify(external.contrast, null, 2)),
+    );
+    nodes.push(det);
+  }
+  box.replaceChildren(...nodes);
+}
+function renderExternalOp(o) {
+  const card = el("article", undefined, "proposal");
+  const title = el("div", undefined, "proposal-title");
+  const decided = o.decision && o.decision.action !== "reject";
+  title.append(
+    el("strong", o.criterion + " · " + o.kind),
+    el(
+      "span",
+      o.decision
+        ? o.decision.action === "reject"
+          ? "Rejected"
+          : "Human approved"
+        : "Needs human review",
+      "status " + (decided ? "good" : "wait"),
+    ),
+  );
+  card.append(title, el("p", o.reason, "caption"));
+  const diff = el("div", undefined, "diff");
+  diff.append(
+    el("span", "Before"),
+    el("span", o.before === null ? "Attribute absent" : o.before),
+    el("span", "Proposed"),
+    el("code", o.attribute + '="' + o.value + '"'),
+  );
+  card.append(diff);
+  if (current?.role === "operator" || current?.role === "approver") {
+    const wrap = el("div", undefined, "review-fields");
+    const label = el("label", "Change value (review off, applied on reload)");
+    const input = el("input");
+    input.type = "text";
+    input.value = o.value;
+    input.maxLength = 300;
+    label.append(input);
+    wrap.append(label);
+    const actions = el("div", undefined, "review-actions");
+    actions.append(
+      button("Apply change", () =>
+        perform("Apply change", async () => {
+          external = await api(
+            "/external/" + external.id + "/operation/" + o.id,
+            { value: input.value.trim() },
+          );
+          renderExternal();
+          return external;
+        }),
+      ),
+      button("Reject", () =>
+        perform("Reject change", async () => {
+          external = await api(
+            "/external/" + external.id + "/decide",
+            { operationId: o.id, action: "reject", reason: "Rejected in demo" },
+          );
+          renderExternal();
+          return external;
+        }),
+        "danger",
+      ),
+    );
+    card.append(wrap, actions);
+  }
+  return card;
+}
+$("#external-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  perform("Analyze URL", async () => {
+    const url = $("#external-url").value.trim();
+    if (!url) throw Error("Enter a public URL");
+    external = await api("/external/analyze", { url });
+    $("#external-note").textContent =
+      "Analysed " +
+      external.url +
+      ". Approve changes, then open the fixed preview.";
+    renderExternal();
+    return external;
+  });
+});
 refresh().catch((e) => notice(e.message, true));

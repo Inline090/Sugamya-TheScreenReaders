@@ -1,12 +1,21 @@
 import { z } from "zod";
 import { remotePayload, redact } from "./privacy.js";
 import { hash } from "./store.js";
+// The model layer is optional and provider-agnostic. Configure it with:
+//   SUGAMYA_MODEL_ENDPOINT, SUGAMYA_MODEL_API_KEY, SUGAMYA_MODEL_NAME,
+//   SUGAMYA_MODEL_PROVIDER, SUGAMYA_MODEL_PRIVACY_URL, SUGAMYA_MODEL_RETENTION
+// With none set it falls back to the original Groq text-only provider.
 export const PROVIDER = {
-  name: "Groq",
-  endpoint: "https://api.groq.com/openai/v1/chat/completions",
-  model: "openai/gpt-oss-20b",
-  privacyUrl: "https://console.groq.com/docs/your-data",
+  name: process.env.SUGAMYA_MODEL_PROVIDER || "Groq",
+  endpoint:
+    process.env.SUGAMYA_MODEL_ENDPOINT ||
+    "https://api.groq.com/openai/v1/chat/completions",
+  model: process.env.SUGAMYA_MODEL_NAME || "openai/gpt-oss-20b",
+  privacyUrl:
+    process.env.SUGAMYA_MODEL_PRIVACY_URL ||
+    "https://console.groq.com/docs/your-data",
   retention:
+    process.env.SUGAMYA_MODEL_RETENTION ||
     "Provider says inference content is not retained by default; reliability/abuse exceptions may retain up to 30 days in the US. Account ZDR status not verified.",
 };
 export const Draft = z
@@ -69,7 +78,9 @@ export function previewPayload(op, baseline, target) {
       "credentials",
       "citizen records",
     ],
-    available: Boolean(process.env.GROQ_API_KEY),
+    available: Boolean(
+      process.env.SUGAMYA_MODEL_API_KEY || process.env.GROQ_API_KEY,
+    ),
   };
 }
 export async function draft(
@@ -78,7 +89,7 @@ export async function draft(
     consent,
     expectedHash,
     fetchImpl = fetch,
-    key = process.env.GROQ_API_KEY,
+    key = process.env.SUGAMYA_MODEL_API_KEY || process.env.GROQ_API_KEY,
   } = {},
 ) {
   if (consent !== true)

@@ -17,6 +17,13 @@ import { observe, verify } from "./browser.js";
 import { recover } from "./recovery.js";
 import { draft, previewPayload, PROVIDER } from "./model.js";
 import { transform, approvalsComplete } from "./transform.js";
+import {
+  analyzeUrl,
+  decide as decideExternal,
+  getPublicSession,
+  previewHtml,
+  setValue as setExternalValue,
+} from "./external.js";
 const target = Target.parse(
   JSON.parse(
     fs.readFileSync(process.env.TARGET_CONFIG || "config/target.json", "utf8"),
@@ -680,6 +687,57 @@ app.get("/api/report", (req, res) => {
           "No human-study or time-saving claim; forecast requires explicit operator inputs.",
       },
     });
+});
+// ---------------------------------------------------------------------------
+// External-URL mode: analyse any public URL, approve fixes, reload the preview.
+// This is additive and does not touch the owner-installed exact-fingerprint
+// pipeline above.
+// ---------------------------------------------------------------------------
+app.post(
+  "/api/external/analyze",
+  requireRole("operator"),
+  action(async (req) => {
+    const body = z
+      .object({ url: z.string().min(4).max(2000) })
+      .strict()
+      .safeParse(req.body);
+    if (!body.success) throw Error("A public URL is required");
+    return analyzeUrl(body.data.url);
+  }),
+);
+app.get("/api/external/:id", (req, res, next) => {
+  try {
+    res.set("Cache-Control", "no-store").json(getPublicSession(req.params.id));
+  } catch (e) {
+    next(e);
+  }
+});
+app.post(
+  "/api/external/:id/operation/:opId",
+  action(async (req) =>
+    setExternalValue(req.params.id, req.params.opId, req.body?.value),
+  ),
+);
+app.post(
+  "/api/external/:id/decide",
+  action(async (req) =>
+    decideExternal(req.params.id, req.body?.operationId, req.body),
+  ),
+);
+app.get("/preview/:id", (req, res, next) => {
+  try {
+    // The preview renders a snapshot of a third-party page on this origin, so
+    // it gets a scoped, permissive policy rather than the console's strict CSP.
+    res.setHeader(
+      "Content-Security-Policy",
+      "default-src * data: blob: 'unsafe-inline' 'unsafe-eval'; img-src * data: blob:; style-src * 'unsafe-inline'; font-src * data:",
+    );
+    res.set("Cache-Control", "no-store");
+    res.set("X-Sugamya-Version", "external-preview");
+    res.type("html").send(previewHtml(req.params.id));
+  } catch (e) {
+    next(e);
+  }
 });
 const skips = new Map();
 async function gateway(req, res, next) {

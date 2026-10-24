@@ -86,6 +86,29 @@
               </button>
             </div>
           </section>
+          <section id="external" class="panel">
+            <div class="section-head">
+              <h2>Analyze any public URL</h2>
+            </div>
+            <p class="caption">
+              Enter a public URL. The agent loads it in a real browser, finds
+              supported accessibility barriers, and proposes fixes. Human
+              review is off for this demo: changes are applied directly, the
+              value can be edited, and the fixed preview reloads with them. The
+              target site itself is never modified.
+            </p>
+            <form id="external-form" class="roi">
+              <label
+                >Public URL<input
+                  id="external-url"
+                  type="url"
+                  required
+                  placeholder="https://example.gov.in/apply" /></label
+              ><button type="submit" class="primary">Analyze URL</button>
+            </form>
+            <p id="external-note" class="caption"></p>
+            <div id="external-result"></div>
+          </section>
           <ol id="pipeline" class="pipeline" aria-label="Repair lifecycle"></ol>
           <section class="numbers" aria-label="Run denominators">
             <div>
