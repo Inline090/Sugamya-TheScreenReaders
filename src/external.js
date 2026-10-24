@@ -322,6 +322,18 @@ export async function analyzeUrl(raw) {
   }
 }
 
+function outerHtml(session, op, apply) {
+  try {
+    const $ = cheerio.load(session.html);
+    const el = $(op.selector);
+    if (!el.length) return "";
+    if (apply) el.attr(op.attribute, op.value);
+    return $.html(el).slice(0, 600);
+  } catch {
+    return "";
+  }
+}
+
 function publicSession(s) {
   return {
     id: s.id,
@@ -330,6 +342,8 @@ function publicSession(s) {
     operations: s.operations.map((o) => ({
       ...o,
       decision: s.decisions.get(o.id) || null,
+      beforeHtml: outerHtml(s, o, false),
+      afterHtml: outerHtml(s, o, true),
     })),
     contrast: s.contrast,
     axe: s.axe,

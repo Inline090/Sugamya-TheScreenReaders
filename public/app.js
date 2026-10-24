@@ -682,8 +682,19 @@ function renderExternalOp(o) {
   );
   card.append(diff);
   if (current?.role === "operator" || current?.role === "approver") {
+    if (o.beforeHtml || o.afterHtml) {
+      card.append(
+        el(
+          "pre",
+          "Before: " +
+            (o.beforeHtml || "(element not found)") +
+            "\nAfter:  " +
+            (o.afterHtml || ""),
+        ),
+      );
+    }
     const wrap = el("div", undefined, "review-fields");
-    const label = el("label", "Change value (review off, applied on reload)");
+    const label = el("label", "Make your own change");
     const input = el("input");
     input.type = "text";
     input.value = o.value;
@@ -691,9 +702,21 @@ function renderExternalOp(o) {
     label.append(input);
     wrap.append(label);
     const actions = el("div", undefined, "review-actions");
+    const decide = (action) => () =>
+      perform("External " + action, async () => {
+        external = await api("/external/" + external.id + "/decide", {
+          operationId: o.id,
+          action,
+          reason: action + " in operator review",
+        });
+        renderExternal();
+        return external;
+      });
     actions.append(
-      button("Apply change", () =>
-        perform("Apply change", async () => {
+      button("Approve", decide("approve")),
+      button("Reject", decide("reject"), "danger"),
+      button("Make own changes", () =>
+        perform("Save own change", async () => {
           external = await api(
             "/external/" + external.id + "/operation/" + o.id,
             { value: input.value.trim() },
@@ -701,17 +724,6 @@ function renderExternalOp(o) {
           renderExternal();
           return external;
         }),
-      ),
-      button("Reject", () =>
-        perform("Reject change", async () => {
-          external = await api(
-            "/external/" + external.id + "/decide",
-            { operationId: o.id, action: "reject", reason: "Rejected in demo" },
-          );
-          renderExternal();
-          return external;
-        }),
-        "danger",
       ),
     );
     card.append(wrap, actions);
