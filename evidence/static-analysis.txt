@@ -1,0 +1,55 @@
+
+/home/user/Sugamya/scripts/e2e.js
+   55:1  warning  Found mkdirSync from package "node:fs" with non literal argument at index 0      security/detect-non-literal-fs-filename
+  123:3  warning  Found writeFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+  151:5  warning  Found writeFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+  180:5  warning  Found writeFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+  244:5  warning  Found writeFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+  308:5  warning  Found writeFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+  350:5  warning  Found writeFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+  373:1  warning  Found writeFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+  391:1  warning  Found writeFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+
+/home/user/Sugamya/scripts/export-evidence.js
+   7:7   warning  Found existsSync from package "node:fs" with non literal argument at index 0     security/detect-non-literal-fs-filename
+   8:24  warning  Found readdirSync from package "node:fs" with non literal argument at index 0    security/detect-non-literal-fs-filename
+  11:27  warning  Found readFileSync from package "node:fs" with non literal argument at index 0   security/detect-non-literal-fs-filename
+  14:12  warning  Found existsSync from package "node:fs" with non literal argument at index 0     security/detect-non-literal-fs-filename
+  25:3   warning  Found writeFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+  30:5   warning  Found readFileSync from package "node:fs" with non literal argument at index 0   security/detect-non-literal-fs-filename
+
+/home/user/Sugamya/scripts/record-demo.js
+  55:3  warning  Found writeFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+
+/home/user/Sugamya/scripts/replay.js
+   5:23  warning  Found readFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+  23:29  warning  Found readFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+
+/home/user/Sugamya/src/planner.js
+  5:3  warning  Found readFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+
+/home/user/Sugamya/src/privacy.js
+  7:14  warning  Unsafe Regular Expression  security/detect-unsafe-regex
+
+/home/user/Sugamya/src/server.js
+  22:5  warning  Found readFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+
+/home/user/Sugamya/src/store.js
+  13:5   warning  Found mkdirSync from package "node:fs" with non literal argument at index 0       security/detect-non-literal-fs-filename
+  15:19  warning  Found existsSync from package "node:fs" with non literal argument at index 0      security/detect-non-literal-fs-filename
+  16:9   warning  Found readFileSync from package "node:fs" with non literal argument at index 0    security/detect-non-literal-fs-filename
+  24:18  warning  Found existsSync from package "node:fs" with non literal argument at index 0      security/detect-non-literal-fs-filename
+  25:20  warning  Found readFileSync from package "node:fs" with non literal argument at index 0    security/detect-non-literal-fs-filename
+  56:5   warning  Found appendFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+  64:5   warning  Found writeFileSync from package "node:fs" with non literal argument at index 0   security/detect-non-literal-fs-filename
+  67:5   warning  Found renameSync from package "node:fs" with non literal argument at index 0,1    security/detect-non-literal-fs-filename
+  73:10  warning  Found existsSync from package "node:fs" with non literal argument at index 0      security/detect-non-literal-fs-filename
+  74:7   warning  Found writeFileSync from package "node:fs" with non literal argument at index 0   security/detect-non-literal-fs-filename
+  84:7   warning  Found readFileSync from package "node:fs" with non literal argument at index 0    security/detect-non-literal-fs-filename
+
+/home/user/Sugamya/tests/contracts.test.js
+  152:16  warning  Found readFileSync from package "node:fs" with non literal argument at index 0   security/detect-non-literal-fs-filename
+  153:5   warning  Found writeFileSync from package "node:fs" with non literal argument at index 0  security/detect-non-literal-fs-filename
+
+✖ 34 problems (0 errors, 34 warnings)
+

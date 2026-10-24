@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-24T07:28:18.552Z",
+  "environment": {
+    "node": "v22.23.4",
+    "chromium": "/home/user/.cache/ms-playwright/chromium-1248/chrome-linux64/chrome"
+  },
+  "results": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "violations": [],
+      "pageErrors": [],
+      "focus": {
+        "tag": "A",
+        "outlineStyle": "solid",
+        "outlineWidth": "3px"
+      },
+      "loadedFonts": true
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "violations": [],
+      "pageErrors": [],
+      "focus": {
+        "tag": "A",
+        "outlineStyle": "solid",
+        "outlineWidth": "3px"
+      },
+      "loadedFonts": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "violations": [],
+      "pageErrors": [],
+      "focus": {
+        "tag": "A",
+        "outlineStyle": "solid",
+        "outlineWidth": "3px"
+      },
+      "loadedFonts": true
+    }
+  ]
+}

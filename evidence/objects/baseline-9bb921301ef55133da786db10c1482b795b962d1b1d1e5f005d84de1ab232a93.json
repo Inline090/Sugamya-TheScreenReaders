@@ -1,0 +1,405 @@
+{
+  "safe": {
+    "id": "d0df4a38-28e8-46b4-a0bd-f8f41c5fb81e",
+    "at": "2026-10-24T06:45:59.171Z",
+    "url": "http://127.0.0.1:4100/apply",
+    "method": "local Chromium DOM + accessibility snapshot + axe; public fixture only",
+    "sha256": "36463f630037163409be4f41a3eb75d731388de68acf36e2f03652f0e4873446",
+    "privacy": "public-fixture-minimal",
+    "observations": [
+      {
+        "tag": "img",
+        "id": "desk-map",
+        "text": "",
+        "attributes": {
+          "id": "desk-map",
+          "src": "/map.svg"
+        },
+        "label": null,
+        "title": null,
+        "precedingText": "Finding the desk",
+        "context": "The diagram shows the route from the entrance to the service desk.",
+        "color": "rgb(22, 42, 50)",
+        "background": "rgb(217, 228, 232)",
+        "box": {
+          "x": 164,
+          "y": 399.546875,
+          "width": 456,
+          "height": 170
+        }
+      },
+      {
+        "tag": "p",
+        "id": "help",
+        "text": "All fields are required. Use test details only.",
+        "attributes": {
+          "class": "muted",
+          "id": "help"
+        },
+        "label": null,
+        "title": null,
+        "precedingText": "Your application",
+        "context": null,
+        "color": "rgb(170, 170, 170)",
+        "background": "rgb(255, 255, 255)",
+        "box": {
+          "x": 689,
+          "y": 262.484375,
+          "width": 398,
+          "height": 26.34375
+        }
+      },
+      {
+        "tag": "input",
+        "id": "full-name",
+        "text": "",
+        "attributes": {
+          "id": "full-name",
+          "required": "",
+          "autocomplete": "name"
+        },
+        "label": null,
+        "title": null,
+        "precedingText": "Full name",
+        "context": null,
+        "color": "rgb(0, 0, 0)",
+        "background": "rgb(255, 255, 255)",
+        "box": {
+          "x": 689,
+          "y": 349.171875,
+          "width": 398,
+          "height": 52.34375
+        }
+      },
+      {
+        "tag": "input",
+        "id": "email",
+        "text": "",
+        "attributes": {
+          "id": "email",
+          "type": "email",
+          "required": "",
+          "autocomplete": "email"
+        },
+        "label": "Email address",
+        "title": null,
+        "precedingText": "Email address",
+        "context": null,
+        "color": "rgb(0, 0, 0)",
+        "background": "rgb(255, 255, 255)",
+        "box": {
+          "x": 689,
+          "y": 443.859375,
+          "width": 398,
+          "height": 52.34375
+        }
+      },
+      {
+        "tag": "button",
+        "id": "submit",
+        "text": "→",
+        "attributes": {
+          "id": "submit",
+          "type": "submit",
+          "data-action-label": "Submit application"
+        },
+        "label": null,
+        "title": null,
+        "precedingText": "",
+        "context": null,
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(20, 60, 76)",
+        "box": {
+          "x": 689,
+          "y": 518.203125,
+          "width": 58.25,
+          "height": 50.34375
+        }
+      }
+    ],
+    "dom": {
+      "title": "Resident service application · Controlled fixture",
+      "lang": "en",
+      "media": 0,
+      "elements": [
+        {
+          "tag": "img",
+          "id": "desk-map",
+          "text": "",
+          "attributes": {
+            "id": "desk-map",
+            "src": "/map.svg"
+          },
+          "label": null,
+          "title": null,
+          "precedingText": "Finding the desk",
+          "context": "The diagram shows the route from the entrance to the service desk.",
+          "color": "rgb(22, 42, 50)",
+          "background": "rgb(217, 228, 232)",
+          "box": {
+            "x": 164,
+            "y": 399.546875,
+            "width": 456,
+            "height": 170
+          }
+        },
+        {
+          "tag": "p",
+          "id": "help",
+          "text": "All fields are required. Use test details only.",
+          "attributes": {
+            "class": "muted",
+            "id": "help"
+          },
+          "label": null,
+          "title": null,
+          "precedingText": "Your application",
+          "context": null,
+          "color": "rgb(170, 170, 170)",
+          "background": "rgb(255, 255, 255)",
+          "box": {
+            "x": 689,
+            "y": 262.484375,
+            "width": 398,
+            "height": 26.34375
+          }
+        },
+        {
+          "tag": "input",
+          "id": "full-name",
+          "text": "",
+          "attributes": {
+            "id": "full-name",
+            "required": "",
+            "autocomplete": "name"
+          },
+          "label": null,
+          "title": null,
+          "precedingText": "Full name",
+          "context": null,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "box": {
+            "x": 689,
+            "y": 349.171875,
+            "width": 398,
+            "height": 52.34375
+          }
+        },
+        {
+          "tag": "input",
+          "id": "email",
+          "text": "",
+          "attributes": {
+            "id": "email",
+            "type": "email",
+            "required": "",
+            "autocomplete": "email"
+          },
+          "label": "Email address",
+          "title": null,
+          "precedingText": "Email address",
+          "context": null,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "box": {
+            "x": 689,
+            "y": 443.859375,
+            "width": 398,
+            "height": 52.34375
+          }
+        },
+        {
+          "tag": "button",
+          "id": "submit",
+          "text": "→",
+          "attributes": {
+            "id": "submit",
+            "type": "submit",
+            "data-action-label": "Submit application"
+          },
+          "label": null,
+          "title": null,
+          "precedingText": "",
+          "context": null,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(20, 60, 76)",
+          "box": {
+            "x": 689,
+            "y": 518.203125,
+            "width": 58.25,
+            "height": 50.34375
+          }
+        }
+      ]
+    },
+    "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please.\n  - heading \"Finding the desk\" [level=2]\n  - img\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox\n  - text: Email address\n  - textbox \"Email address\"\n  - button\n  - status\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime.",
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "description": "Ensure buttons have discernible text",
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.9.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              "#submit"
+            ],
+            "summary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              "#help"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT7.a",
+          "TT7.b",
+          "EN-301-549",
+          "EN-9.1.1.1",
+          "ACT",
+          "RGAAv4",
+          "RGAA-1.1.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              "#desk-map"
+            ],
+            "summary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "description": "Ensure every form element has a label",
+        "tags": [
+          "cat.forms",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.n",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.1.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              "#full-name"
+            ],
+            "summary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 1
+      }
+    ],
+    "passes": [
+      "aria-allowed-attr",
+      "aria-conditional-attr",
+      "aria-deprecated-role",
+      "aria-hidden-body",
+      "aria-hidden-focus",
+      "aria-prohibited-attr",
+      "aria-required-attr",
+      "aria-roles",
+      "aria-valid-attr-value",
+      "aria-valid-attr",
+      "autocomplete-valid",
+      "bypass",
+      "color-contrast",
+      "document-title",
+      "duplicate-id-aria",
+      "form-field-multiple-labels",
+      "html-has-lang",
+      "html-lang-valid",
+      "label",
+      "link-name",
+      "meta-viewport",
+      "nested-interactive",
+      "target-size"
+    ],
+    "errors": [],
+    "blockedOrigins": [],
+    "loadMs": 1032
+  },
+  "html": "<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Resident service application · Controlled fixture</title><style>*{box-sizing:border-box}body{margin:0;font:17px/1.55 system-ui;color:#162a32;background:#eef2f3}header,main,footer{max-width:1000px;margin:auto;padding:24px}header{border-bottom:1px solid #c6d2d6}h1{font-size:36px;line-height:1.2;margin:10px 0}h2{font-size:23px}main{display:grid;grid-template-columns:1fr 1fr;gap:40px}form{background:white;padding:28px;border:1px solid #c6d2d6;border-radius:4px}label,.field-title{display:block;margin-top:16px}input{width:100%;padding:12px;font:inherit;border:1px solid #667b85}button{margin-top:22px;background:#143c4c;color:white;border:0;padding:12px 22px;font:inherit;min-height:46px;cursor:pointer}.muted{color:#aaa;background:white}.sugamya-contrast{color:#344e5a!important;background:#fff!important}img{width:100%;max-height:170px;object-fit:contain;background:#d9e4e8}a{color:#154a62}:focus-visible{outline:3px solid #a74600;outline-offset:3px}footer{font-size:14px}@media(max-width:650px){main{grid-template-columns:1fr;gap:10px}h1{font-size:28px}}</style></head><body><header><strong>Resident services lab</strong><p>Owned test site · deliberately seeded accessibility barriers · not a government service</p></header><main><section><h1>Apply for a service visit</h1><p id=\"intro\">Request a visit to the resident service desk. No real personal details, please.</p><h2>Finding the desk</h2><img id=\"desk-map\" src=\"/map.svg\"><p id=\"map-context\">The diagram shows the route from the entrance to the service desk.</p><a href=\"#application\">Go to application</a></section><form id=\"application\"><h2>Your application</h2><p class=\"muted\" id=\"help\">All fields are required. Use test details only.</p><p class=\"field-title\" id=\"name-label\">Full name</p><input id=\"full-name\" name=\"fullName\" required autocomplete=\"name\"><label for=\"email\">Email address</label><input id=\"email\" name=\"email\" type=\"email\" required autocomplete=\"email\"><button id=\"submit\" type=\"submit\" data-action-label=\"Submit application\"><span aria-hidden=\"true\">→</span></button><p id=\"result\" role=\"status\" aria-live=\"polite\"></p></form></main><footer>Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime.</footer><script>document.querySelector('form').addEventListener('submit',async e=>{e.preventDefault();const f=e.target;if(!f.reportValidity())return;const r=await fetch('/apply',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f))});document.querySelector('#result').textContent=r.ok?'Application received. Test reference SR-2026.':'Submission unavailable. Try later.';});if(location.pathname.endsWith('/dynamic')||document.documentElement.dataset.fixtureMode==='hydrate')setTimeout(()=>{document.querySelector('#full-name').removeAttribute('aria-label');document.querySelector('#full-name').removeAttribute('aria-labelledby');},250);</script></body></html>",
+  "headers": {
+    "cache-control": "no-store, private",
+    "connection": "keep-alive",
+    "content-length": "3080",
+    "content-type": "text/html; charset=utf-8",
+    "cross-origin-opener-policy": "same-origin",
+    "cross-origin-resource-policy": "same-origin",
+    "date": "Sat, 24 Oct 2026 06:45:58 GMT",
+    "etag": "W/\"c08-k5RwnygpFkfdv9idO4DGle5IbQs\"",
+    "keep-alive": "timeout=5",
+    "origin-agent-cluster": "?1",
+    "referrer-policy": "no-referrer",
+    "vary": "Cookie",
+    "x-dns-prefetch-control": "off",
+    "x-download-options": "noopen",
+    "x-frame-options": "SAMEORIGIN",
+    "x-permitted-cross-domain-policies": "none",
+    "x-sugamya-delivery": "owner-controlled-reverse-proxy",
+    "x-sugamya-version": "origin",
+    "x-xss-protection": "0",
+    "content-security-policy": "default-src 'self'; script-src 'sha256-Y9Du6c03R5ZgN7OORQN44p9VafSglkEViiIbVit+/aU='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'self'",
+    "x-content-type-options": "nosniff"
+  }
+}

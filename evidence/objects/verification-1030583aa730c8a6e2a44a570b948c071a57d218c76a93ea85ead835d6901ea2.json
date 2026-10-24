@@ -1,0 +1,110 @@
+{
+  "id": "87feffac-35b9-41e8-af68-e87e4edea849",
+  "version": "a677c9eb-37c2-419a-8aca-b652d1d7f74a",
+  "at": "2026-10-24T06:44:00.680Z",
+  "pass": true,
+  "checks": [
+    {
+      "name": "origin-response",
+      "pass": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "visitor-version",
+      "pass": true,
+      "detail": {
+        "received": "a677c9eb-37c2-419a-8aca-b652d1d7f74a",
+        "profile": "new context; extensions disabled; no operator session"
+      }
+    },
+    {
+      "name": "axe-no-new-findings",
+      "pass": true,
+      "detail": {
+        "newFindings": [],
+        "remaining": [],
+        "limits": "No-new-findings is not conformance"
+      }
+    },
+    {
+      "name": "unaffected-dom",
+      "pass": true,
+      "detail": {
+        "method": "restore intended attributes, compare normalized entire DOM"
+      }
+    },
+    {
+      "name": "html-no-new-parse-errors",
+      "pass": true,
+      "detail": {
+        "before": [],
+        "after": []
+      }
+    },
+    {
+      "name": "layout-unaffected",
+      "pass": true,
+      "detail": {
+        "shifts": [],
+        "expectedChanges": "attribute-only; approved contrast colour; no size change expected"
+      }
+    },
+    {
+      "name": "csp-preserved",
+      "pass": true,
+      "detail": {
+        "csp": "default-src 'self'; script-src 'sha256-M3t295c2dskpR0GFPimnYJQ/b2aU5Z8Qs3c5fqL3uNc='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'self'"
+      }
+    },
+    {
+      "name": "manifest-effects-after-hydration",
+      "pass": true,
+      "detail": [
+        {
+          "operation": "f118a3f7-2a72-4f65-b06f-91946dbfd384",
+          "pass": true
+        },
+        {
+          "operation": "1027e5c8-9bd5-484c-96d2-ac24e1172d3d",
+          "pass": true
+        },
+        {
+          "operation": "199362a2-aae4-49c4-9f15-ea407d398bdd",
+          "pass": true
+        },
+        {
+          "operation": "a700233e-6136-4368-9598-cd5203308be1",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "service-task-keyboard",
+      "pass": true,
+      "detail": {
+        "method": "Submit a service-visit application by accessible name and keyboard",
+        "expectedInputName": "Full name",
+        "expectedButtonName": "Submit application",
+        "error": null
+      }
+    },
+    {
+      "name": "page-functionality",
+      "pass": true,
+      "detail": {
+        "errors": []
+      }
+    },
+    {
+      "name": "network-same-origin",
+      "pass": true,
+      "detail": {
+        "blocked": []
+      }
+    }
+  ],
+  "elapsedMs": 1230,
+  "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please.\n  - heading \"Finding the desk\" [level=2]\n  - img \"The diagram shows the route from the entrance to the service desk.\"\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox \"Full name\": Test Resident\n  - text: Email address\n  - textbox \"Email address\": resident@example.test\n  - button \"Submit application\"\n  - status: Application received. Test reference SR-2026.\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime."
+}

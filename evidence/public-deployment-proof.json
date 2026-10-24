@@ -1,0 +1,237 @@
+{
+  "at": "2026-10-24T07:28:15.510Z",
+  "publicURL": "https://freight-galleries-feels-messenger.trycloudflare.com/apply",
+  "environment": "Fresh Chromium context, no extension, no operator cookies, HTTPS owner-controlled proxy published through a temporary Cloudflare Quick Tunnel; not customer production",
+  "version": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+  "verification": {
+    "id": "bf66c8a5-8de1-428d-abd8-4f0a611b7693",
+    "version": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+    "at": "2026-10-24T07:28:12.001Z",
+    "pass": true,
+    "checks": [
+      {
+        "name": "origin-response",
+        "pass": true,
+        "detail": {
+          "status": 200
+        }
+      },
+      {
+        "name": "visitor-version",
+        "pass": true,
+        "detail": {
+          "received": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+          "profile": "new context; extensions disabled; no operator session"
+        }
+      },
+      {
+        "name": "axe-no-new-findings",
+        "pass": true,
+        "detail": {
+          "newFindings": [],
+          "remaining": [],
+          "limits": "No-new-findings is not conformance"
+        }
+      },
+      {
+        "name": "unaffected-dom",
+        "pass": true,
+        "detail": {
+          "method": "restore intended attributes, compare normalized entire DOM"
+        }
+      },
+      {
+        "name": "html-no-new-parse-errors",
+        "pass": true,
+        "detail": {
+          "before": [],
+          "after": []
+        }
+      },
+      {
+        "name": "layout-unaffected",
+        "pass": true,
+        "detail": {
+          "shifts": [],
+          "expectedChanges": "attribute-only; approved contrast colour; no size change expected"
+        }
+      },
+      {
+        "name": "csp-preserved",
+        "pass": true,
+        "detail": {
+          "csp": "default-src 'self'; script-src 'sha256-Y9Du6c03R5ZgN7OORQN44p9VafSglkEViiIbVit+/aU='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'self'"
+        }
+      },
+      {
+        "name": "manifest-effects-after-hydration",
+        "pass": true,
+        "detail": [
+          {
+            "operation": "86af939d-ff53-4659-b1be-7eb988c0421f",
+            "pass": true
+          },
+          {
+            "operation": "90d96104-9310-42a0-9e18-0c3901ea1931",
+            "pass": true
+          },
+          {
+            "operation": "14c012dd-8751-4502-8742-baa25ed4c54f",
+            "pass": true
+          },
+          {
+            "operation": "62afa2b0-86b0-4e0e-b77b-741b102dc1d9",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "name": "service-task-keyboard",
+        "pass": true,
+        "detail": {
+          "method": "Submit a service-visit application by accessible name and keyboard",
+          "expectedInputName": "Full name",
+          "expectedButtonName": "Submit application",
+          "error": null
+        }
+      },
+      {
+        "name": "page-functionality",
+        "pass": true,
+        "detail": {
+          "errors": []
+        }
+      },
+      {
+        "name": "network-same-origin",
+        "pass": true,
+        "detail": {
+          "blocked": []
+        }
+      }
+    ],
+    "elapsedMs": 2724,
+    "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please.\n  - heading \"Finding the desk\" [level=2]\n  - img \"From Entrance, follow the path right, turn upward, then right to Service desk.\"\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox \"Full name\": Test Resident\n  - text: Email address\n  - textbox \"Email address\": resident@example.test\n  - button \"Submit application\"\n  - status: Application received. Test reference SR-2026.\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime."
+  },
+  "before": {
+    "url": "http://127.0.0.1:4101/apply",
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "description": "Ensure buttons have discernible text",
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.9.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              "#submit"
+            ],
+            "summary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              "#help"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT7.a",
+          "TT7.b",
+          "EN-301-549",
+          "EN-9.1.1.1",
+          "ACT",
+          "RGAAv4",
+          "RGAA-1.1.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              "#desk-map"
+            ],
+            "summary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "description": "Ensure every form element has a label",
+        "tags": [
+          "cat.forms",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.n",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.1.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              "#full-name"
+            ],
+            "summary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      }
+    ],
+    "instances": 4,
+    "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please.\n  - heading \"Finding the desk\" [level=2]\n  - img\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox\n  - text: Email address\n  - textbox \"Email address\"\n  - button\n  - status\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime."
+  },
+  "after": {
+    "url": "https://freight-galleries-feels-messenger.trycloudflare.com/apply",
+    "violations": [],
+    "instances": 0,
+    "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please.\n  - heading \"Finding the desk\" [level=2]\n  - img \"From Entrance, follow the path right, turn upward, then right to Service desk.\"\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox \"Full name\"\n  - text: Email address\n  - textbox \"Email address\"\n  - button \"Submit application\"\n  - status\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime."
+  },
+  "limitations": "No government site, no screen-reader user study; proxy must be routed by owner on a real domain; dynamic/private states excluded"
+}

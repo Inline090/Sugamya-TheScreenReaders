@@ -1,0 +1,50 @@
+{
+  "id": "566bdf94-19b3-4492-a957-b315cca1e6e9",
+  "target": "owned-service-fixture",
+  "path": "/apply",
+  "locale": "en",
+  "baselineHash": "38d76cb304bf195a5d1e1c9c3c7cf37ee29e0f820a9c9b8fcaff0ed5e9587da5",
+  "createdAt": "2026-10-24T06:44:03.332Z",
+  "operations": [
+    {
+      "id": "9a461c9f-93ce-44ce-a04a-4178180f6ba1",
+      "criterion": "3.3.2",
+      "selector": "#full-name",
+      "attribute": "aria-labelledby",
+      "before": null,
+      "value": "name-label",
+      "semantic": true,
+      "reason": "Associate the existing visible Full name prompt with the required application field; human confirms relationship."
+    },
+    {
+      "id": "40dfc3ff-c739-4bd4-9b47-290a434e8c2f",
+      "criterion": "4.1.2",
+      "selector": "#submit",
+      "attribute": "aria-label",
+      "before": null,
+      "value": "Submit application",
+      "semantic": true,
+      "reason": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning."
+    },
+    {
+      "id": "7109fd33-3f1f-4cfb-aaee-2c260d8bf047",
+      "criterion": "1.4.3",
+      "selector": "#help",
+      "attribute": "class",
+      "before": "muted",
+      "value": "muted sugamya-contrast",
+      "semantic": false,
+      "reason": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated."
+    },
+    {
+      "id": "409b2aa1-77bf-4c35-8d6b-3bd212638284",
+      "criterion": "1.1.1",
+      "selector": "#desk-map",
+      "attribute": "alt",
+      "before": null,
+      "value": "The diagram shows the route from the entrance to the service desk.",
+      "semantic": true,
+      "reason": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject."
+    }
+  ]
+}

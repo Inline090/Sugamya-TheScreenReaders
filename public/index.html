@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Sugamya · Repair operations</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to repair operations</a>
+    <div class="shell">
+      <aside>
+        <a class="brand" href="/"
+          ><svg aria-hidden="true" viewBox="0 0 32 32">
+            <path
+              d="M4 25h9V7h7v18h8M4 16h24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+            /></svg
+          ><span>Sugamya</span></a
+        >
+        <p class="workspace">
+          The Screen Readers<br />Accessibility operations
+        </p>
+        <nav aria-label="Operations">
+          <a href="#overview">Repair control plane</a
+          ><a href="#proposals">Semantic review</a
+          ><a href="#coverage">Criterion coverage</a
+          ><a href="#verification">Visitor verification</a
+          ><a href="#trace">Run history</a>
+        </nav>
+        <div class="aside-end">
+          <p>AgentOps’26 · HX-P3JQ<br />IT Infrastructure</p>
+          <p id="identity">Not signed in</p>
+          <button id="signout" hidden>Sign out</button>
+        </div>
+      </aside>
+      <main id="main">
+        <header id="overview">
+          <div>
+            <p class="eyebrow">Owner-controlled delivery / public HTML</p>
+            <h1>Repair operations</h1>
+            <p>From a finding to a change visitors actually receive.</p>
+          </div>
+          <a href="/apply" target="_blank" rel="noopener" class="button"
+            >Open visitor site ↗</a
+          >
+        </header>
+        <div id="notice" role="status" aria-live="polite"></div>
+        <section id="login-panel" class="panel">
+          <h2>Sign in to operate</h2>
+          <p>
+            Use a private operator or approver capability from your
+            installation’s <code>.env</code>. They are separate roles, not a
+            mock login. Sessions expire after 30 minutes.
+          </p>
+          <form id="login">
+            <label for="access-token">Access token</label
+            ><input
+              id="access-token"
+              type="password"
+              required
+              autocomplete="current-password"
+            /><button type="submit" class="primary">Sign in</button>
+          </form>
+          <p>
+            No credentials? Run <code>npm run setup</code> on your own
+            installation. The public visitor site needs no account or extension.
+          </p>
+        </section>
+        <div id="console" hidden>
+          <section class="target panel">
+            <div>
+              <h2 id="target-name">Target</h2>
+              <p id="target-origin"></p>
+              <p id="authorization"></p>
+            </div>
+            <div class="target-actions">
+              <button id="connect" data-role="operator">
+                Verify owner installation</button
+              ><button id="scan" data-role="operator" class="primary">
+                Observe & plan
+              </button>
+            </div>
+          </section>
+          <ol id="pipeline" class="pipeline" aria-label="Repair lifecycle"></ol>
+          <section class="numbers" aria-label="Run denominators">
+            <div>
+              <span>Findings considered</span
+              ><strong id="finding-count">0</strong>
+            </div>
+            <div>
+              <span>Repair operations</span><strong id="repair-count">0</strong>
+            </div>
+            <div>
+              <span>Semantic approvals</span
+              ><strong id="approval-count">0 / 0</strong>
+            </div>
+            <div>
+              <span>Visitor task</span
+              ><strong id="task-result">Not tested</strong>
+            </div>
+          </section>
+          <div class="work-grid">
+            <section id="proposals" class="panel">
+              <div class="section-head">
+                <h2>Review the proposed change</h2>
+                <span id="version-status">No version staged</span>
+              </div>
+              <p class="caption">
+                Meaning is a human decision. No scan can override an unresolved
+                approval. Edits invalidate approvals tied to the earlier
+                manifest.
+              </p>
+              <div id="proposal-list">
+                <p>
+                  Verify the owner installation and observe the public task to
+                  produce evidence-backed proposals.
+                </p>
+              </div>
+              <div class="deploy-bar">
+                <button id="deploy" data-role="operator" class="primary">
+                  Run canary & deploy</button
+                ><button id="disable" data-role="operator" class="danger">
+                  Emergency disable
+                </button>
+              </div>
+              <p id="deploy-detail" class="caption"></p>
+            </section>
+            <section id="verification" class="panel">
+              <div class="section-head">
+                <h2>Independent visitor checks</h2>
+                <button id="verify" data-role="operator">Re-verify</button>
+              </div>
+              <p class="caption">
+                New Chromium profile. No extension, operator session, or
+                repair-engine import. Canary must pass before promotion.
+              </p>
+              <div id="verification-list">
+                <p>No checks run. No success inferred.</p>
+              </div>
+              <p id="verification-time" class="caption"></p>
+              <h3>Private by default</h3>
+              <p>
+                Evidence stays on this installation. Groq text drafting is
+                optional and requires a fresh, explicit payload consent for each
+                request. Signed-in paths and arbitrary URLs are denied. No
+                images, screenshots, full HTML or form values are sent. All
+                semantic drafts require human review.
+              </p>
+              <details>
+                <summary>Inspect the public baseline</summary>
+                <div id="baseline-detail"></div>
+              </details>
+            </section>
+          </div>
+          <section id="coverage" class="panel">
+            <div class="section-head">
+              <h2>Coverage, not a compliance score</h2>
+              <label
+                >Filter criteria
+                <select id="coverage-filter">
+                  <option value="all">All considered criteria</option>
+                  <option value="applicable-and-automated">
+                    Automated evidence
+                  </option>
+                  <option value="applicable-and-human-assisted">
+                    Human-assisted
+                  </option>
+                  <option value="applicable-but-unsupported">
+                    Manual / unsupported
+                  </option>
+                  <option value="unresolved">Unresolved / untested</option>
+                  <option value="not-applicable">Not applicable</option>
+                </select></label
+              >
+            </div>
+            <p class="caption" id="coverage-summary">
+              WCAG 2.2 AA inventory: 55 criteria. Inventory is not automated
+              coverage. No whole-site conformance claim.
+            </p>
+            <div class="table-wrap">
+              <table>
+                <caption class="sr-only">
+                  Criterion applicability and evidence method
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Criterion</th>
+                    <th scope="col">Evidence status</th>
+                    <th scope="col">Method & limits</th>
+                  </tr>
+                </thead>
+                <tbody id="criteria-body"></tbody>
+              </table>
+            </div>
+          </section>
+          <section class="panel">
+            <h2>Business case with explicit assumptions</h2>
+            <p>
+              Purchaser: service-owning agency or managed-service provider.
+              Operator: web operations team. Approver: accessibility/content
+              owner. Visitors install nothing.
+            </p>
+            <p id="metrics">
+              Model use is recorded per request; billed cost is not verified.
+              Human review and setup time have not been measured in a user
+              study.
+            </p>
+            <form id="roi" class="roi">
+              <label
+                >Sites / month<input
+                  id="roi-sites"
+                  type="number"
+                  min="1"
+                  max="10000"
+                  value="10" /></label
+              ><label
+                >Manual baseline min / site<input
+                  id="roi-baseline"
+                  type="number"
+                  min="0"
+                  max="10000"
+                  value="45" /></label
+              ><label
+                >Sugamya review min / site<input
+                  id="roi-review"
+                  type="number"
+                  min="0"
+                  max="10000"
+                  value="15" /></label
+              ><label
+                >Operator cost ₹ / hour<input
+                  id="roi-rate"
+                  type="number"
+                  min="0"
+                  max="100000"
+                  value="600" /></label
+              ><button type="submit">Calculate forecast</button>
+            </form>
+            <p id="roi-result">
+              Not measured. Enter your assumptions to calculate a forecast;
+              hosting and integration costs are additional.
+            </p>
+          </section>
+          <section id="trace" class="panel">
+            <div class="section-head">
+              <h2>Replayable run history</h2>
+              <a class="button" href="/api/report" download
+                >Download report JSON</a
+              >
+            </div>
+            <p class="caption">
+              Append-only events and content-addressed evidence. Local hash
+              chain is tamper-evident, not externally notarized.
+            </p>
+            <ol id="events" class="events"></ol>
+          </section>
+          <footer>
+            <p id="mode"></p>
+            <p>
+              Owned fixture only · Public, server-rendered HTML · No source
+              rewrite · No WCAG certification · No production customer outcomes
+            </p>
+          </footer>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

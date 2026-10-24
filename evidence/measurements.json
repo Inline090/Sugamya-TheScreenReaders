@@ -1,0 +1,256 @@
+{
+  "at": "2026-10-24T07:06:06.115Z",
+  "method": "Same fresh-browser accessible-name and keyboard task, three trials each; 30 paired warm local HTTP requests after 5 warmups, complete body consumed, no cache",
+  "population": "Two owned synthetic fixture instances only; not disabled-user observations or production benchmarks",
+  "task": {
+    "before": [
+      {
+        "completed": false,
+        "elapsedMs": 5560,
+        "error": "locator.fill: Timeout 5000ms exceeded."
+      },
+      {
+        "completed": false,
+        "elapsedMs": 5541,
+        "error": "locator.fill: Timeout 5000ms exceeded."
+      },
+      {
+        "completed": false,
+        "elapsedMs": 5545,
+        "error": "locator.fill: Timeout 5000ms exceeded."
+      }
+    ],
+    "after": [
+      {
+        "completed": true,
+        "elapsedMs": 754
+      },
+      {
+        "completed": true,
+        "elapsedMs": 747
+      },
+      {
+        "completed": true,
+        "elapsedMs": 707
+      }
+    ],
+    "completedBefore": 0,
+    "completedAfter": 3,
+    "trials": 3
+  },
+  "runtime": {
+    "samples": [
+      {
+        "originMs": 2.290511999999808,
+        "gatewayMs": 10.197875000000067,
+        "incrementMs": 7.9073630000002595
+      },
+      {
+        "originMs": 2.213689999999815,
+        "gatewayMs": 9.328518000000031,
+        "incrementMs": 7.114828000000216
+      },
+      {
+        "originMs": 2.023952999999892,
+        "gatewayMs": 7.659955000000082,
+        "incrementMs": 5.63600200000019
+      },
+      {
+        "originMs": 1.8259700000000976,
+        "gatewayMs": 8.408734000000095,
+        "incrementMs": 6.582763999999997
+      },
+      {
+        "originMs": 2.112237999999934,
+        "gatewayMs": 10.415177000000085,
+        "incrementMs": 8.302939000000151
+      },
+      {
+        "originMs": 2.036873000000014,
+        "gatewayMs": 10.8756249999999,
+        "incrementMs": 8.838751999999886
+      },
+      {
+        "originMs": 2.272310999999945,
+        "gatewayMs": 8.283413999999993,
+        "incrementMs": 6.011103000000048
+      },
+      {
+        "originMs": 2.061892000000171,
+        "gatewayMs": 6.840160999999853,
+        "incrementMs": 4.778268999999682
+      },
+      {
+        "originMs": 2.4774999999999636,
+        "gatewayMs": 7.388329999999996,
+        "incrementMs": 4.910830000000033
+      },
+      {
+        "originMs": 7.297049999999899,
+        "gatewayMs": 6.815161999999873,
+        "incrementMs": -0.4818880000000263
+      },
+      {
+        "originMs": 2.0255640000000312,
+        "gatewayMs": 6.628487999999834,
+        "incrementMs": 4.602923999999803
+      },
+      {
+        "originMs": 2.0272879999999986,
+        "gatewayMs": 7.241406999999981,
+        "incrementMs": 5.214118999999982
+      },
+      {
+        "originMs": 2.2930840000001353,
+        "gatewayMs": 6.538244999999961,
+        "incrementMs": 4.245160999999825
+      },
+      {
+        "originMs": 1.87242399999991,
+        "gatewayMs": 6.844143000000031,
+        "incrementMs": 4.971719000000121
+      },
+      {
+        "originMs": 2.0201730000001135,
+        "gatewayMs": 6.5415680000000975,
+        "incrementMs": 4.521394999999984
+      },
+      {
+        "originMs": 1.8447320000000218,
+        "gatewayMs": 6.323337000000038,
+        "incrementMs": 4.478605000000016
+      },
+      {
+        "originMs": 2.1070150000000467,
+        "gatewayMs": 6.300435999999991,
+        "incrementMs": 4.193420999999944
+      },
+      {
+        "originMs": 1.7850089999999454,
+        "gatewayMs": 6.661194000000023,
+        "incrementMs": 4.876185000000078
+      },
+      {
+        "originMs": 1.7575870000000577,
+        "gatewayMs": 7.176245999999992,
+        "incrementMs": 5.418658999999934
+      },
+      {
+        "originMs": 1.4914570000000822,
+        "gatewayMs": 5.183062000000064,
+        "incrementMs": 3.6916049999999814
+      },
+      {
+        "originMs": 1.8666299999999865,
+        "gatewayMs": 6.156107999999904,
+        "incrementMs": 4.289477999999917
+      },
+      {
+        "originMs": 1.5220449999999346,
+        "gatewayMs": 5.647881999999981,
+        "incrementMs": 4.125837000000047
+      },
+      {
+        "originMs": 1.7369610000000648,
+        "gatewayMs": 6.215052999999898,
+        "incrementMs": 4.478091999999833
+      },
+      {
+        "originMs": 2.00253100000009,
+        "gatewayMs": 6.146439999999984,
+        "incrementMs": 4.143908999999894
+      },
+      {
+        "originMs": 1.9199049999999716,
+        "gatewayMs": 6.209035999999969,
+        "incrementMs": 4.289130999999998
+      },
+      {
+        "originMs": 4.7348279999998795,
+        "gatewayMs": 6.8596520000000965,
+        "incrementMs": 2.124824000000217
+      },
+      {
+        "originMs": 1.9029539999999088,
+        "gatewayMs": 6.3388129999998455,
+        "incrementMs": 4.435858999999937
+      },
+      {
+        "originMs": 1.8035100000001876,
+        "gatewayMs": 7.0143339999999625,
+        "incrementMs": 5.210823999999775
+      },
+      {
+        "originMs": 1.9160460000000512,
+        "gatewayMs": 10.323712000000114,
+        "incrementMs": 8.407666000000063
+      },
+      {
+        "originMs": 2.6300300000000334,
+        "gatewayMs": 8.029806000000008,
+        "incrementMs": 5.399775999999974
+      }
+    ],
+    "origin": {
+      "medianMs": 2.0201730000001135,
+      "p95Ms": 4.7348279999998795
+    },
+    "gateway": {
+      "medianMs": 6.840160999999853,
+      "p95Ms": 10.415177000000085
+    },
+    "increment": {
+      "medianMs": 4.778268999999682,
+      "p95Ms": 8.407666000000063
+    },
+    "limits": "Local paired timing includes HTTP proxy, parsing and serialization; network noise can make some paired differences negative. Not geographic latency or a production SLA."
+  },
+  "coverage": {
+    "applicable-and-human-assisted": 3,
+    "not-applicable": 5,
+    "unresolved": 43,
+    "applicable-and-automated": 1,
+    "applicable-but-unsupported": 3
+  },
+  "denominators": {
+    "findingsConsidered": 4,
+    "repairOperations": 4,
+    "semanticApprovals": 3,
+    "activeVersions": 1,
+    "manualOrUntestedCriteria": 46,
+    "modelCalls": 1
+  },
+  "human": {
+    "reviewMinutes": null,
+    "setupMinutes": null,
+    "reason": "Not measured as a timed human workflow; engineering wall-clock and scripted test timings must not be presented as operator effort."
+  },
+  "ai": {
+    "tokens": 441,
+    "postHocListPriceEstimateUSD": 0.000066825,
+    "listPriceSource": "https://console.groq.com/docs/model/openai/gpt-oss-20b",
+    "verifiedAt": "2026-10-24T07:06:06.116Z",
+    "billedCost": null
+  },
+  "forecast": {
+    "inputs": {
+      "sitesPerMonth": 10,
+      "manualMinutes": 45,
+      "reviewMinutes": 15,
+      "hourlyINR": 600
+    },
+    "formula": "sites × (manualMinutes − reviewMinutes) / 60 × hourlyINR",
+    "grossEffortValueINR": 3000,
+    "lowVolumeINR": 300,
+    "doubleReviewBurdenINR": 1500,
+    "exclusions": [
+      "hosting",
+      "initial installation",
+      "manual WCAG audits",
+      "maintenance",
+      "customer evidence",
+      "invoice cost"
+    ],
+    "label": "Forecast only; times and hourly rate are explicit assumptions, not observed savings"
+  }
+}

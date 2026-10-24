@@ -1,0 +1,124 @@
+{
+  "environment": {
+    "node": "v22.23.4",
+    "platform": "linux",
+    "base": "http://127.0.0.1:4200",
+    "at": "2026-10-24T07:25:55.521Z",
+    "extensions": false,
+    "fixture": "Deliberately seeded owned public fixture; not customer outcomes"
+  },
+  "elapsedMs": 16084,
+  "results": [
+    {
+      "name": "Unauthenticated API denied",
+      "pass": true,
+      "elapsedMs": 20
+    },
+    {
+      "name": "Operator cannot forge approver role",
+      "pass": true,
+      "elapsedMs": 14
+    },
+    {
+      "name": "Unauthorized origin route, private route and file denied",
+      "pass": true,
+      "elapsedMs": 13
+    },
+    {
+      "name": "Submitted external/internal target URLs are rejected rather than crawled",
+      "pass": true,
+      "elapsedMs": 6
+    },
+    {
+      "name": "Malformed Unicode capability fails authentication without comparison exception",
+      "pass": true,
+      "elapsedMs": 6
+    },
+    {
+      "name": "Owner installation challenge verified",
+      "pass": true,
+      "elapsedMs": 30
+    },
+    {
+      "name": "Baseline is real, task-relevant proposals and coverage generated",
+      "pass": true,
+      "elapsedMs": 1352
+    },
+    {
+      "name": "Semantic deployment blocked before approval",
+      "pass": true,
+      "elapsedMs": 4
+    },
+    {
+      "name": "Human semantic approvals bind the actual manifest",
+      "pass": true,
+      "elapsedMs": 15
+    },
+    {
+      "name": "Canary gates and fresh-browser visitor deployment",
+      "pass": true,
+      "elapsedMs": 2693
+    },
+    {
+      "name": "Ordinary visitor receives version, origin source response remains flawed",
+      "pass": true,
+      "elapsedMs": 1337
+    },
+    {
+      "name": "Emergency disable actually restores original visitor HTML",
+      "pass": true,
+      "elapsedMs": 8
+    },
+    {
+      "name": "Reject semantic proposal prevents promotion",
+      "pass": true,
+      "elapsedMs": 1218
+    },
+    {
+      "name": "Edited misleading proposal fails independent task gate and is not promoted",
+      "pass": true,
+      "elapsedMs": 2639
+    },
+    {
+      "name": "Signed-in sensitive route never crawled or sent remotely",
+      "pass": true,
+      "elapsedMs": 8
+    },
+    {
+      "name": "Dynamic hydration behavior is unsupported and observable",
+      "pass": true,
+      "elapsedMs": 202
+    },
+    {
+      "name": "Restore a final valid approved and independently verified version",
+      "pass": true,
+      "elapsedMs": 3947
+    },
+    {
+      "name": "Live stale response skips repair; independent failure really rolls back active pointer",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ '03de1b5a-296e-414e-bd44-753f81d1d4ba'\n- 'origin'\n",
+      "elapsedMs": 9
+    },
+    {
+      "name": "Origin outage preserves truthful status; no fabricated repair success",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n200 !== 503\n",
+      "elapsedMs": 11
+    },
+    {
+      "name": "Hydrated fixture state is observed and not silently repaired",
+      "pass": false,
+      "error": "{\"error\":\"Disable active transformations before a new origin baseline\",\"code\":\"ACTION_FAILED\"}\n\n409 !== 200\n",
+      "elapsedMs": 1284
+    },
+    {
+      "name": "Final normal fixture version restored and visitor verified",
+      "pass": false,
+      "error": "{\"error\":\"Disable active transformations before a new origin baseline\",\"code\":\"ACTION_FAILED\"}\n\n409 !== 200\n",
+      "elapsedMs": 1246
+    }
+  ],
+  "passed": 17,
+  "total": 21
+}

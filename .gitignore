@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.*
+!.env.example
+var/
+.auth/
+test-results/
+playwright-report/
+.agents/
+.claude/
+.eve/
+.taste-skill/
+*.webm
+
+.playwright-mcp/
+var-*/
+agent/

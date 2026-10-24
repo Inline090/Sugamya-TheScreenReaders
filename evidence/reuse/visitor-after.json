@@ -1,0 +1,287 @@
+{
+  "toolVersions": {
+    "axe": "4.14.0",
+    "chromium": "156.0.8078.4"
+  },
+  "id": "cf5a1efe-7a61-4c3a-875c-60927219a83b",
+  "at": "2026-10-24T07:27:26.125Z",
+  "url": "http://127.0.0.1:4200/apply",
+  "method": "local Chromium DOM + accessibility snapshot + axe; public fixture only",
+  "sha256": "41fe4f841a5bbdf3e3afbd61e175f7ff68275b57ee1b40eaafc202ea1c79ec28",
+  "privacy": "public-fixture-minimal",
+  "observations": [
+    {
+      "tag": "img",
+      "id": "desk-map",
+      "text": "",
+      "attributes": {
+        "id": "desk-map",
+        "src": "/map.svg",
+        "alt": "The diagram shows the route from the entrance to the service desk."
+      },
+      "label": null,
+      "title": null,
+      "precedingText": "Finding the desk",
+      "context": "The diagram shows the route from the entrance to the service desk.",
+      "color": "rgb(22, 42, 50)",
+      "background": "rgb(217, 228, 232)",
+      "box": {
+        "x": 164,
+        "y": 399.546875,
+        "width": 456,
+        "height": 170
+      }
+    },
+    {
+      "tag": "p",
+      "id": "help",
+      "text": "All fields are required. Use test details only.",
+      "attributes": {
+        "class": "muted sugamya-contrast",
+        "id": "help"
+      },
+      "label": null,
+      "title": null,
+      "precedingText": "Your application",
+      "context": null,
+      "color": "rgb(52, 78, 90)",
+      "background": "rgb(255, 255, 255)",
+      "box": {
+        "x": 689,
+        "y": 262.484375,
+        "width": 398,
+        "height": 26.34375
+      }
+    },
+    {
+      "tag": "input",
+      "id": "full-name",
+      "text": "",
+      "attributes": {
+        "id": "full-name",
+        "required": "",
+        "autocomplete": "name",
+        "aria-labelledby": "name-label"
+      },
+      "label": null,
+      "title": null,
+      "precedingText": "Full name",
+      "context": null,
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(255, 255, 255)",
+      "box": {
+        "x": 689,
+        "y": 349.171875,
+        "width": 398,
+        "height": 52.34375
+      }
+    },
+    {
+      "tag": "input",
+      "id": "email",
+      "text": "",
+      "attributes": {
+        "id": "email",
+        "type": "email",
+        "required": "",
+        "autocomplete": "email"
+      },
+      "label": "Email address",
+      "title": null,
+      "precedingText": "Email address",
+      "context": null,
+      "color": "rgb(0, 0, 0)",
+      "background": "rgb(255, 255, 255)",
+      "box": {
+        "x": 689,
+        "y": 443.859375,
+        "width": 398,
+        "height": 52.34375
+      }
+    },
+    {
+      "tag": "button",
+      "id": "submit",
+      "text": "→",
+      "attributes": {
+        "id": "submit",
+        "type": "submit",
+        "data-action-label": "Submit application",
+        "aria-label": "Submit application"
+      },
+      "label": null,
+      "title": null,
+      "precedingText": "",
+      "context": null,
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(20, 60, 76)",
+      "box": {
+        "x": 689,
+        "y": 518.203125,
+        "width": 58.25,
+        "height": 50.34375
+      }
+    }
+  ],
+  "dom": {
+    "title": "Resident service application · Controlled fixture",
+    "lang": "en",
+    "media": 0,
+    "elements": [
+      {
+        "tag": "img",
+        "id": "desk-map",
+        "text": "",
+        "attributes": {
+          "id": "desk-map",
+          "src": "/map.svg",
+          "alt": "The diagram shows the route from the entrance to the service desk."
+        },
+        "label": null,
+        "title": null,
+        "precedingText": "Finding the desk",
+        "context": "The diagram shows the route from the entrance to the service desk.",
+        "color": "rgb(22, 42, 50)",
+        "background": "rgb(217, 228, 232)",
+        "box": {
+          "x": 164,
+          "y": 399.546875,
+          "width": 456,
+          "height": 170
+        }
+      },
+      {
+        "tag": "p",
+        "id": "help",
+        "text": "All fields are required. Use test details only.",
+        "attributes": {
+          "class": "muted sugamya-contrast",
+          "id": "help"
+        },
+        "label": null,
+        "title": null,
+        "precedingText": "Your application",
+        "context": null,
+        "color": "rgb(52, 78, 90)",
+        "background": "rgb(255, 255, 255)",
+        "box": {
+          "x": 689,
+          "y": 262.484375,
+          "width": 398,
+          "height": 26.34375
+        }
+      },
+      {
+        "tag": "input",
+        "id": "full-name",
+        "text": "",
+        "attributes": {
+          "id": "full-name",
+          "required": "",
+          "autocomplete": "name",
+          "aria-labelledby": "name-label"
+        },
+        "label": null,
+        "title": null,
+        "precedingText": "Full name",
+        "context": null,
+        "color": "rgb(0, 0, 0)",
+        "background": "rgb(255, 255, 255)",
+        "box": {
+          "x": 689,
+          "y": 349.171875,
+          "width": 398,
+          "height": 52.34375
+        }
+      },
+      {
+        "tag": "input",
+        "id": "email",
+        "text": "",
+        "attributes": {
+          "id": "email",
+          "type": "email",
+          "required": "",
+          "autocomplete": "email"
+        },
+        "label": "Email address",
+        "title": null,
+        "precedingText": "Email address",
+        "context": null,
+        "color": "rgb(0, 0, 0)",
+        "background": "rgb(255, 255, 255)",
+        "box": {
+          "x": 689,
+          "y": 443.859375,
+          "width": 398,
+          "height": 52.34375
+        }
+      },
+      {
+        "tag": "button",
+        "id": "submit",
+        "text": "→",
+        "attributes": {
+          "id": "submit",
+          "type": "submit",
+          "data-action-label": "Submit application",
+          "aria-label": "Submit application"
+        },
+        "label": null,
+        "title": null,
+        "precedingText": "",
+        "context": null,
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(20, 60, 76)",
+        "box": {
+          "x": 689,
+          "y": 518.203125,
+          "width": 58.25,
+          "height": 50.34375
+        }
+      }
+    ]
+  },
+  "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please.\n  - heading \"Finding the desk\" [level=2]\n  - img \"The diagram shows the route from the entrance to the service desk.\"\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox \"Full name\"\n  - text: Email address\n  - textbox \"Email address\"\n  - button \"Submit application\"\n  - status\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime.",
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "nodes": 1
+    },
+    {
+      "id": "label-content-name-mismatch",
+      "nodes": 1
+    }
+  ],
+  "passes": [
+    "aria-allowed-attr",
+    "aria-conditional-attr",
+    "aria-deprecated-role",
+    "aria-hidden-body",
+    "aria-hidden-focus",
+    "aria-prohibited-attr",
+    "aria-required-attr",
+    "aria-roles",
+    "aria-valid-attr-value",
+    "aria-valid-attr",
+    "autocomplete-valid",
+    "button-name",
+    "bypass",
+    "color-contrast",
+    "document-title",
+    "duplicate-id-aria",
+    "form-field-multiple-labels",
+    "html-has-lang",
+    "html-lang-valid",
+    "image-alt",
+    "label",
+    "link-name",
+    "meta-viewport",
+    "nested-interactive",
+    "target-size"
+  ],
+  "errors": [],
+  "blockedOrigins": [],
+  "loadMs": 1231
+}

@@ -1,0 +1,135 @@
+{
+  "id": "921d0128-6f0a-421d-bcc7-4e8312eb0658",
+  "version": "c7659e46-985b-461c-99cf-01dece159909",
+  "at": "2026-10-24T06:45:49.923Z",
+  "pass": false,
+  "checks": [
+    {
+      "name": "origin-response",
+      "pass": true,
+      "detail": {
+        "status": 200
+      }
+    },
+    {
+      "name": "visitor-version",
+      "pass": false,
+      "detail": {
+        "received": "origin",
+        "profile": "new context; extensions disabled; no operator session"
+      }
+    },
+    {
+      "name": "axe-no-new-findings",
+      "pass": true,
+      "detail": {
+        "newFindings": [],
+        "remaining": [
+          {
+            "id": "button-name",
+            "nodes": 1
+          },
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "nodes": 1
+          },
+          {
+            "id": "label",
+            "nodes": 1
+          }
+        ],
+        "limits": "No-new-findings is not conformance"
+      }
+    },
+    {
+      "name": "unaffected-dom",
+      "pass": false,
+      "detail": {
+        "method": "restore intended attributes, compare normalized entire DOM"
+      }
+    },
+    {
+      "name": "html-no-new-parse-errors",
+      "pass": true,
+      "detail": {
+        "before": [],
+        "after": []
+      }
+    },
+    {
+      "name": "layout-unaffected",
+      "pass": false,
+      "detail": {
+        "shifts": [
+          {
+            "id": "desk-map",
+            "x": 164,
+            "y": 425.890625,
+            "width": 456,
+            "height": 170
+          }
+        ],
+        "expectedChanges": "attribute-only; approved contrast colour; no size change expected"
+      }
+    },
+    {
+      "name": "csp-preserved",
+      "pass": true,
+      "detail": {
+        "csp": "default-src 'self'; script-src 'sha256-Y9Du6c03R5ZgN7OORQN44p9VafSglkEViiIbVit+/aU='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'self'"
+      }
+    },
+    {
+      "name": "manifest-effects-after-hydration",
+      "pass": false,
+      "detail": [
+        {
+          "operation": "45d556c0-d2fe-45d9-a961-8d8106bc0dcd",
+          "pass": false
+        },
+        {
+          "operation": "f3c4332f-d5d7-449b-8289-b253913daf38",
+          "pass": false
+        },
+        {
+          "operation": "a46bf3c3-25d4-42c6-a9db-43022317c219",
+          "pass": false
+        },
+        {
+          "operation": "42bb1eeb-1f8a-432b-9a6f-acc273a5c59f",
+          "pass": false
+        }
+      ]
+    },
+    {
+      "name": "service-task-keyboard",
+      "pass": false,
+      "detail": {
+        "method": "Submit a service-visit application by accessible name and keyboard",
+        "expectedInputName": "Full name",
+        "expectedButtonName": "Submit application",
+        "error": "locator.fill: Timeout 5000ms exceeded."
+      }
+    },
+    {
+      "name": "page-functionality",
+      "pass": true,
+      "detail": {
+        "errors": []
+      }
+    },
+    {
+      "name": "network-same-origin",
+      "pass": true,
+      "detail": {
+        "blocked": []
+      }
+    }
+  ],
+  "elapsedMs": 6176,
+  "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please. Origin content changed after approval.\n  - heading \"Finding the desk\" [level=2]\n  - img\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox\n  - text: Email address\n  - textbox \"Email address\"\n  - button\n  - status\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime."
+}

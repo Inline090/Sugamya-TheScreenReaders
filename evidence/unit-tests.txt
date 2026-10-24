@@ -1,0 +1,190 @@
+TAP version 13
+# Subtest: Constrained operation rejects arbitrary JavaScript/HTML/selector/class
+ok 1 - Constrained operation rejects arbitrary JavaScript/HTML/selector/class
+  ---
+  duration_ms: 4.235155
+  type: 'test'
+  ...
+# Subtest: Schema rejects unknown model fields instead of executing instructions
+ok 2 - Schema rejects unknown model fields instead of executing instructions
+  ---
+  duration_ms: 1.751272
+  type: 'test'
+  ...
+# Subtest: Unapproved semantic operation preserves original response
+ok 3 - Unapproved semantic operation preserves original response
+  ---
+  duration_ms: 0.87354
+  type: 'test'
+  ...
+# Subtest: Approved narrow attribute reaches output
+ok 4 - Approved narrow attribute reaches output
+  ---
+  duration_ms: 27.52291
+  type: 'test'
+  ...
+# Subtest: Approval replay fails after any manifest content changes
+ok 5 - Approval replay fails after any manifest content changes
+  ---
+  duration_ms: 0.69785
+  type: 'test'
+  ...
+# Subtest: Forged operation hash is refused
+ok 6 - Forged operation hash is refused
+  ---
+  duration_ms: 0.457294
+  type: 'test'
+  ...
+# Subtest: Stale document fingerprint skips whole repair and preserves original
+ok 7 - Stale document fingerprint skips whole repair and preserves original
+  ---
+  duration_ms: 0.384966
+  type: 'test'
+  ...
+# Subtest: Tenant/origin and path confusion refused
+ok 8 - Tenant/origin and path confusion refused
+  ---
+  duration_ms: 0.36063
+  type: 'test'
+  ...
+# Subtest: Missing selector or mismatched attribute fails precondition atomically
+ok 9 - Missing selector or mismatched attribute fails precondition atomically
+  ---
+  duration_ms: 9.697984
+  type: 'test'
+  ...
+# Subtest: Signed-in evidence and absent consent cannot become remote payloads
+ok 10 - Signed-in evidence and absent consent cannot become remote payloads
+  ---
+  duration_ms: 0.696537
+  type: 'test'
+  ...
+# Subtest: Redaction fixture removes email, Aadhaar, Indian phone and token
+ok 11 - Redaction fixture removes email, Aadhaar, Indian phone and token
+  ---
+  duration_ms: 0.6561
+  type: 'test'
+  ...
+# Subtest: Raw evidence is content-addressed, historical observations not overwritten
+ok 12 - Raw evidence is content-addressed, historical observations not overwritten
+  ---
+  duration_ms: 2.078821
+  type: 'test'
+  ...
+# Subtest: Audit chain detects tampering and refuses restart
+ok 13 - Audit chain detects tampering and refuses restart
+  ---
+  duration_ms: 0.873765
+  type: 'test'
+  ...
+# Subtest: No reliable observations produces no fabricated repair or pass
+ok 14 - No reliable observations produces no fabricated repair or pass
+  ---
+  duration_ms: 0.602924
+  type: 'test'
+  ...
+# Subtest: Priority actually favors task-blocking label above low-confidence image semantics
+ok 15 - Priority actually favors task-blocking label above low-confidence image semantics
+  ---
+  duration_ms: 0.703913
+  type: 'test'
+  ...
+# Subtest: Media criterion is not declared inapplicable when media is present
+ok 16 - Media criterion is not declared inapplicable when media is present
+  ---
+  duration_ms: 0.197563
+  type: 'test'
+  ...
+# Subtest: Unexpected approval action / missing rationale denied
+ok 17 - Unexpected approval action / missing rationale denied
+  ---
+  duration_ms: 7.184951
+  type: 'test'
+  ...
+# Subtest: Target URL/config cannot be injected through unknown request properties
+ok 18 - Target URL/config cannot be injected through unknown request properties
+  ---
+  duration_ms: 2.5278
+  type: 'test'
+  ...
+# Subtest: Installed target configuration validates including asset paths
+ok 19 - Installed target configuration validates including asset paths
+  ---
+  duration_ms: 0.765042
+  type: 'test'
+  ...
+# Subtest: Only redacted, bounded text reaches model preview; no image or form values
+ok 20 - Only redacted, bounded text reaches model preview; no image or form values
+  ---
+  duration_ms: 1.71856
+  type: 'test'
+  ...
+# Subtest: Signed-in/minimal-evidence guard fails closed
+ok 21 - Signed-in/minimal-evidence guard fails closed
+  ---
+  duration_ms: 0.496704
+  type: 'test'
+  ...
+# Subtest: Model cannot be called without explicit consent
+ok 22 - Model cannot be called without explicit consent
+  ---
+  duration_ms: 0.547382
+  type: 'test'
+  ...
+# Subtest: Consent preview hash mismatch prevents any external request
+ok 23 - Consent preview hash mismatch prevents any external request
+  ---
+  duration_ms: 0.25238
+  type: 'test'
+  ...
+# Subtest: Model output cannot become arbitrary generated code
+ok 24 - Model output cannot become arbitrary generated code
+  ---
+  duration_ms: 2.429768
+  type: 'test'
+  ...
+# Subtest: Model outage leaves a truthful error and does not synthesize a response
+ok 25 - Model outage leaves a truthful error and does not synthesize a response
+  ---
+  duration_ms: 0.455246
+  type: 'test'
+  ...
+# Subtest: Missing provider key leaves deterministic/manual route explicitly available
+ok 26 - Missing provider key leaves deterministic/manual route explicitly available
+  ---
+  duration_ms: 0.59159
+  type: 'test'
+  ...
+# Subtest: Interrupted canary is withheld without promotion on restart
+ok 27 - Interrupted canary is withheld without promotion on restart
+  ---
+  duration_ms: 2.074527
+  type: 'test'
+  ...
+# Subtest: Unverified persisted active deployment really restores known verified pointer
+ok 28 - Unverified persisted active deployment really restores known verified pointer
+  ---
+  duration_ms: 0.74379
+  type: 'test'
+  ...
+# Subtest: Unverified initial promotion restores original origin on restart
+ok 29 - Unverified initial promotion restores original origin on restart
+  ---
+  duration_ms: 0.163763
+  type: 'test'
+  ...
+# Subtest: Verified active version survives restart unchanged
+ok 30 - Verified active version survives restart unchanged
+  ---
+  duration_ms: 0.168218
+  type: 'test'
+  ...
+1..30
+# tests 30
+# suites 0
+# pass 30
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1301.756291

@@ -1,0 +1,110 @@
+{
+  "environment": {
+    "node": "v22.23.4",
+    "platform": "linux",
+    "base": "http://127.0.0.1:4100",
+    "at": "2026-10-24T06:46:01.734Z",
+    "extensions": false,
+    "fixture": "Deliberately seeded owned public fixture; not customer outcomes"
+  },
+  "elapsedMs": 30687,
+  "results": [
+    {
+      "name": "Unauthenticated API denied",
+      "pass": true,
+      "elapsedMs": 13
+    },
+    {
+      "name": "Operator cannot forge approver role",
+      "pass": true,
+      "elapsedMs": 6
+    },
+    {
+      "name": "Unauthorized origin route, private route and file denied",
+      "pass": true,
+      "elapsedMs": 9
+    },
+    {
+      "name": "Owner installation challenge verified",
+      "pass": true,
+      "elapsedMs": 11
+    },
+    {
+      "name": "Baseline is real, task-relevant proposals and coverage generated",
+      "pass": true,
+      "elapsedMs": 1240
+    },
+    {
+      "name": "Semantic deployment blocked before approval",
+      "pass": true,
+      "elapsedMs": 3
+    },
+    {
+      "name": "Human semantic approvals bind the actual manifest",
+      "pass": true,
+      "elapsedMs": 12
+    },
+    {
+      "name": "Canary gates and fresh-browser visitor deployment",
+      "pass": true,
+      "elapsedMs": 2520
+    },
+    {
+      "name": "Ordinary visitor receives version, origin source response remains flawed",
+      "pass": true,
+      "elapsedMs": 1315
+    },
+    {
+      "name": "Emergency disable actually restores original visitor HTML",
+      "pass": true,
+      "elapsedMs": 7
+    },
+    {
+      "name": "Reject semantic proposal prevents promotion",
+      "pass": true,
+      "elapsedMs": 1164
+    },
+    {
+      "name": "Edited misleading proposal fails independent task gate and is not promoted",
+      "pass": true,
+      "elapsedMs": 2451
+    },
+    {
+      "name": "Signed-in sensitive route never crawled or sent remotely",
+      "pass": true,
+      "elapsedMs": 5
+    },
+    {
+      "name": "Dynamic hydration behavior is unsupported and observable",
+      "pass": true,
+      "elapsedMs": 198
+    },
+    {
+      "name": "Restore a final valid approved and independently verified version",
+      "pass": true,
+      "elapsedMs": 3714
+    },
+    {
+      "name": "Live stale response skips repair; independent failure really rolls back active pointer",
+      "pass": true,
+      "elapsedMs": 6232
+    },
+    {
+      "name": "Origin outage preserves truthful status; no fabricated repair success",
+      "pass": true,
+      "elapsedMs": 696
+    },
+    {
+      "name": "Hydrated fixture state is observed and not silently repaired",
+      "pass": true,
+      "elapsedMs": 7391
+    },
+    {
+      "name": "Final normal fixture version restored and visitor verified",
+      "pass": true,
+      "elapsedMs": 3668
+    }
+  ],
+  "passed": 19,
+  "total": 19
+}

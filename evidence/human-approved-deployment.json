@@ -1,0 +1,171 @@
+{
+  "at": "2026-10-24T06:58:31.114Z",
+  "source": "Explicit human selection in Arena ask_user final_semantics: approve",
+  "exactApprovedValues": {
+    "alt": "From Entrance, follow the path right, turn upward, then right to Service desk.",
+    "field": "Full name",
+    "button": "Submit application"
+  },
+  "limitation": "Engineering agent transmitted the human decision through the approver capability. This is not a disabled-user study or enterprise identity verification.",
+  "version": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+  "approvals": [
+    {
+      "version": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+      "status": "staged",
+      "approval": {
+        "id": "8caac4bb-a912-4fd6-9eec-9860af062227",
+        "version": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+        "operation": "62afa2b0-86b0-4e0e-b77b-741b102dc1d9",
+        "manifestHash": "cd9ca4364caa5aeea5a313085ad987742ea548de9adba754513a4e1d7472fe19",
+        "operationHash": "9d81faa460a928814be253601d8a930b8ebaee1cc2fb68be247b7c42a7d70b85",
+        "actor": "approver",
+        "action": "edit",
+        "reason": "Human project-owner approval received through explicit Arena confirmation: approve exact diagram route, visible Full name association and Submit application action. Recorded by engineering agent on owner instruction.",
+        "at": "2026-10-24T06:58:28.079Z"
+      }
+    },
+    {
+      "version": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+      "status": "staged",
+      "approval": {
+        "id": "6fd979df-e2cd-4b9a-992a-d9c83805a919",
+        "version": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+        "operation": "86af939d-ff53-4659-b1be-7eb988c0421f",
+        "manifestHash": "cd9ca4364caa5aeea5a313085ad987742ea548de9adba754513a4e1d7472fe19",
+        "operationHash": "69ed5b8b8ff2951dbd7118bb6920bc74dbd81f82f2b3cd7cb03853ce75a267d8",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Human project-owner approval received through explicit Arena confirmation: approve exact diagram route, visible Full name association and Submit application action. Recorded by engineering agent on owner instruction.",
+        "at": "2026-10-24T06:58:28.088Z"
+      }
+    },
+    {
+      "version": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+      "status": "approved",
+      "approval": {
+        "id": "9fe50626-7785-4d71-a28f-c4ba4c30c8d8",
+        "version": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+        "operation": "90d96104-9310-42a0-9e18-0c3901ea1931",
+        "manifestHash": "cd9ca4364caa5aeea5a313085ad987742ea548de9adba754513a4e1d7472fe19",
+        "operationHash": "76f0ae2210c0458cfaddd6c34be91313d75078a1c509d0ba4e862462f66d7772",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Human project-owner approval received through explicit Arena confirmation: approve exact diagram route, visible Full name association and Submit application action. Recorded by engineering agent on owner instruction.",
+        "at": "2026-10-24T06:58:28.095Z"
+      }
+    }
+  ],
+  "deployment": {
+    "promoted": true,
+    "verification": {
+      "id": "03f44eda-7c72-475d-a7a1-152bf62b8fd5",
+      "version": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+      "at": "2026-10-24T06:58:31.070Z",
+      "pass": true,
+      "checks": [
+        {
+          "name": "origin-response",
+          "pass": true,
+          "detail": {
+            "status": 200
+          }
+        },
+        {
+          "name": "visitor-version",
+          "pass": true,
+          "detail": {
+            "received": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+            "profile": "new context; extensions disabled; no operator session"
+          }
+        },
+        {
+          "name": "axe-no-new-findings",
+          "pass": true,
+          "detail": {
+            "newFindings": [],
+            "remaining": [],
+            "limits": "No-new-findings is not conformance"
+          }
+        },
+        {
+          "name": "unaffected-dom",
+          "pass": true,
+          "detail": {
+            "method": "restore intended attributes, compare normalized entire DOM"
+          }
+        },
+        {
+          "name": "html-no-new-parse-errors",
+          "pass": true,
+          "detail": {
+            "before": [],
+            "after": []
+          }
+        },
+        {
+          "name": "layout-unaffected",
+          "pass": true,
+          "detail": {
+            "shifts": [],
+            "expectedChanges": "attribute-only; approved contrast colour; no size change expected"
+          }
+        },
+        {
+          "name": "csp-preserved",
+          "pass": true,
+          "detail": {
+            "csp": "default-src 'self'; script-src 'sha256-Y9Du6c03R5ZgN7OORQN44p9VafSglkEViiIbVit+/aU='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'self'"
+          }
+        },
+        {
+          "name": "manifest-effects-after-hydration",
+          "pass": true,
+          "detail": [
+            {
+              "operation": "86af939d-ff53-4659-b1be-7eb988c0421f",
+              "pass": true
+            },
+            {
+              "operation": "90d96104-9310-42a0-9e18-0c3901ea1931",
+              "pass": true
+            },
+            {
+              "operation": "14c012dd-8751-4502-8742-baa25ed4c54f",
+              "pass": true
+            },
+            {
+              "operation": "62afa2b0-86b0-4e0e-b77b-741b102dc1d9",
+              "pass": true
+            }
+          ]
+        },
+        {
+          "name": "service-task-keyboard",
+          "pass": true,
+          "detail": {
+            "method": "Submit a service-visit application by accessible name and keyboard",
+            "expectedInputName": "Full name",
+            "expectedButtonName": "Submit application",
+            "error": null
+          }
+        },
+        {
+          "name": "page-functionality",
+          "pass": true,
+          "detail": {
+            "errors": []
+          }
+        },
+        {
+          "name": "network-same-origin",
+          "pass": true,
+          "detail": {
+            "blocked": []
+          }
+        }
+      ],
+      "elapsedMs": 1441,
+      "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please.\n  - heading \"Finding the desk\" [level=2]\n  - img \"From Entrance, follow the path right, turn upward, then right to Service desk.\"\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox \"Full name\": Test Resident\n  - text: Email address\n  - textbox \"Email address\": resident@example.test\n  - button \"Submit application\"\n  - status: Application received. Test reference SR-2026.\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime."
+    }
+  }
+}

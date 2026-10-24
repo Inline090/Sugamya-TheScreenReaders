@@ -1,0 +1,31 @@
+{
+  "id": "second-client-fixture",
+  "name": "Second client reuse lab",
+  "origin": "http://127.0.0.1:4201",
+  "paths": ["/apply"],
+  "assetPaths": ["/map.svg"],
+  "publicEvidence": true,
+  "standard": "WCAG 2.2 AA",
+  "authorizationExpires": "2026-10-28T00:00:00.000Z",
+  "locale": "en",
+  "task": {
+    "name": "Submit a service-visit application by accessible name and keyboard",
+    "inputSelector": "#full-name",
+    "inputName": "Full name",
+    "emailSelector": "#email",
+    "emailName": "Email address",
+    "submitSelector": "#submit",
+    "submitName": "Submit application",
+    "resultSelector": "#result",
+    "successText": "Application received."
+  },
+  "policy": {
+    "fieldSelector": "#full-name",
+    "labelSelector": "#name-label",
+    "actionSelector": "#submit",
+    "actionSourceAttribute": "data-action-label",
+    "imageSelector": "#desk-map",
+    "contrastSelector": "#help",
+    "contrastClass": "muted sugamya-contrast"
+  }
+}

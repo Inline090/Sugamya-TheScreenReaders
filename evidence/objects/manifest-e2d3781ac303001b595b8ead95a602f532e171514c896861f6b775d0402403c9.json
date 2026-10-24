@@ -1,0 +1,50 @@
+{
+  "id": "e0c78d6b-384f-4666-9b0f-a2dc0a4decfb",
+  "target": "second-client-fixture",
+  "path": "/apply",
+  "locale": "en",
+  "baselineHash": "36463f630037163409be4f41a3eb75d731388de68acf36e2f03652f0e4873446",
+  "createdAt": "2026-10-24T07:27:27.388Z",
+  "operations": [
+    {
+      "id": "be418bec-3e4d-4227-93c4-0514db90c419",
+      "criterion": "3.3.2",
+      "selector": "#full-name",
+      "attribute": "aria-labelledby",
+      "before": null,
+      "value": "name-label",
+      "semantic": true,
+      "reason": "Associate the existing visible Full name prompt with the required application field; human confirms relationship."
+    },
+    {
+      "id": "8e15004d-4549-476c-a994-1d2574aeca95",
+      "criterion": "4.1.2",
+      "selector": "#submit",
+      "attribute": "aria-label",
+      "before": null,
+      "value": "Submit application",
+      "semantic": true,
+      "reason": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning."
+    },
+    {
+      "id": "26eac84c-dbbc-4615-a0a1-897023711404",
+      "criterion": "1.4.3",
+      "selector": "#help",
+      "attribute": "class",
+      "before": "muted",
+      "value": "muted sugamya-contrast",
+      "semantic": false,
+      "reason": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated."
+    },
+    {
+      "id": "3cca4b68-7e75-40af-a959-31f1656f30d9",
+      "criterion": "1.1.1",
+      "selector": "#desk-map",
+      "attribute": "alt",
+      "before": null,
+      "value": "The diagram shows the route from the entrance to the service desk.",
+      "semantic": true,
+      "reason": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject."
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "promoted": false,
+  "verification": {
+    "id": "2dcecfa6-47dd-4871-80b1-2e8665709d92",
+    "version": "29e024dc-349c-44e5-b0f7-9dd47c56043e",
+    "at": "2026-10-24T06:45:39.774Z",
+    "pass": false,
+    "checks": [
+      {
+        "name": "origin-response",
+        "pass": true,
+        "detail": {
+          "status": 200
+        }
+      },
+      {
+        "name": "visitor-version",
+        "pass": true,
+        "detail": {
+          "received": "29e024dc-349c-44e5-b0f7-9dd47c56043e",
+          "profile": "new context; extensions disabled; no operator session"
+        }
+      },
+      {
+        "name": "axe-no-new-findings",
+        "pass": true,
+        "detail": {
+          "newFindings": [],
+          "remaining": [],
+          "limits": "No-new-findings is not conformance"
+        }
+      },
+      {
+        "name": "unaffected-dom",
+        "pass": true,
+        "detail": {
+          "method": "restore intended attributes, compare normalized entire DOM"
+        }
+      },
+      {
+        "name": "html-no-new-parse-errors",
+        "pass": true,
+        "detail": {
+          "before": [],
+          "after": []
+        }
+      },
+      {
+        "name": "layout-unaffected",
+        "pass": true,
+        "detail": {
+          "shifts": [],
+          "expectedChanges": "attribute-only; approved contrast colour; no size change expected"
+        }
+      },
+      {
+        "name": "csp-preserved",
+        "pass": true,
+        "detail": {
+          "csp": "default-src 'self'; script-src 'sha256-Y9Du6c03R5ZgN7OORQN44p9VafSglkEViiIbVit+/aU='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'self'"
+        }
+      },
+      {
+        "name": "manifest-effects-after-hydration",
+        "pass": true,
+        "detail": [
+          {
+            "operation": "f4f1030e-1988-4eb1-90a4-67990d4fbf55",
+            "pass": true
+          },
+          {
+            "operation": "d0d9a45b-bb10-4a25-b9aa-67e1d627d663",
+            "pass": true
+          },
+          {
+            "operation": "a02cfd24-d24f-4939-aa7c-48ac7b2636b3",
+            "pass": true
+          },
+          {
+            "operation": "d9b596c7-b553-43f2-934a-330228e23ada",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "name": "service-task-keyboard",
+        "pass": false,
+        "detail": {
+          "method": "Submit a service-visit application by accessible name and keyboard",
+          "expectedInputName": "Full name",
+          "expectedButtonName": "Submit application",
+          "error": "Keyboard focus or independent submit name mismatch"
+        }
+      },
+      {
+        "name": "page-functionality",
+        "pass": true,
+        "detail": {
+          "errors": []
+        }
+      },
+      {
+        "name": "network-same-origin",
+        "pass": true,
+        "detail": {
+          "blocked": []
+        }
+      }
+    ],
+    "elapsedMs": 1202,
+    "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please.\n  - heading \"Finding the desk\" [level=2]\n  - img \"The diagram shows the route from the entrance to the service desk.\"\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox \"Full name\": Test Resident\n  - text: Email address\n  - textbox \"Email address\": resident@example.test\n  - button \"Transfer funds\"\n  - status\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime."
+  }
+}

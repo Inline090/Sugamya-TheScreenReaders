@@ -1,0 +1,8 @@
+.git
+.env*
+var*
+node_modules
+evidence
+artifacts
+.agents
+.taste-skill

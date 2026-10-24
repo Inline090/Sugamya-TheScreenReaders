@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-24T07:16:53.212Z",
+  "label": "Actual recorded product behavior, captioned; not a live action and no voice narration",
+  "mainVersion": "8bdc2f5f-85e6-4665-b67d-4a4eb2f17100",
+  "publicURL": "https://freight-galleries-feels-messenger.trycloudflare.com",
+  "clips": [
+    {
+      "name": "01-before",
+      "duration": 13.05,
+      "caption": "Recorded working product | Owned fixture, not a government service.\nBefore: the accessible-name task cannot find the required Full name field."
+    },
+    {
+      "name": "02-control",
+      "duration": 24.1,
+      "caption": "The owner-approved version is disabled, then genuinely redeployed through the proxy.\nMeaning-changing values were explicitly approved by the project owner; source is untouched."
+    },
+    {
+      "name": "03-public",
+      "duration": 11.5,
+      "caption": "Fresh browser profile | No extension, operator session, or cookies.\nPublic HTTPS gateway: keyboard submission succeeds; no source patch was installed."
+    },
+    {
+      "name": "04-canary",
+      "duration": 13.6,
+      "caption": "Controlled negative fixture | Test approval is intentionally wrong: “Transfer funds”.\nThe independent task gate rejects it. No promotion; visitors retain the original version."
+    },
+    {
+      "name": "05-evidence",
+      "duration": 17.35,
+      "caption": "Replayable decisions, honest coverage, and forecast-only business value.\n4 seeded axe instances to 0; automated task 0/3 to 3/3. No conformance or user-study claim."
+    }
+  ],
+  "durationSeconds": 79.60000000000001,
+  "bytes": 1279682,
+  "negativeFixture": "Separate second-client origin/gateway, intentionally misleading test manifest. No human approval is fabricated."
+}

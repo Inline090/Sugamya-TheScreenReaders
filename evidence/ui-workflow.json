@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-24T07:30:41.550Z",
+  "fixture": "Independent second-client fixture; automated capability-role UI test, not human decisions",
+  "steps": [
+    "Sign in",
+    "Emergency disable",
+    "Observe & plan",
+    "Real minimized-payload consent preview shown; no inference request sent",
+    "Sign out",
+    "Sign in",
+    "Semantic edit",
+    "Semantic approve",
+    "Semantic approve",
+    "Sign out",
+    "Sign in",
+    "Independent canary & visitor deployment",
+    "Visitor verification"
+  ],
+  "version": "038d5347-311d-4790-919d-7af4b2c3f014",
+  "pass": true
+}

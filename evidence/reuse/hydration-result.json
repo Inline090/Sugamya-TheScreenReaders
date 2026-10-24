@@ -1,0 +1,118 @@
+{
+  "promoted": false,
+  "verification": {
+    "id": "0874f181-d929-484b-a503-c4826aad0a35",
+    "version": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+    "at": "2026-10-24T07:27:48.237Z",
+    "pass": false,
+    "checks": [
+      {
+        "name": "origin-response",
+        "pass": true,
+        "detail": {
+          "status": 200
+        }
+      },
+      {
+        "name": "visitor-version",
+        "pass": true,
+        "detail": {
+          "received": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+          "profile": "new context; extensions disabled; no operator session"
+        }
+      },
+      {
+        "name": "axe-no-new-findings",
+        "pass": true,
+        "detail": {
+          "newFindings": [],
+          "remaining": [
+            {
+              "id": "label",
+              "nodes": 1
+            }
+          ],
+          "limits": "No-new-findings is not conformance"
+        }
+      },
+      {
+        "name": "unaffected-dom",
+        "pass": true,
+        "detail": {
+          "method": "restore intended attributes, compare normalized entire DOM"
+        }
+      },
+      {
+        "name": "html-no-new-parse-errors",
+        "pass": true,
+        "detail": {
+          "before": [],
+          "after": []
+        }
+      },
+      {
+        "name": "layout-unaffected",
+        "pass": true,
+        "detail": {
+          "shifts": [],
+          "expectedChanges": "attribute-only; approved contrast colour; no size change expected"
+        }
+      },
+      {
+        "name": "csp-preserved",
+        "pass": true,
+        "detail": {
+          "csp": "default-src 'self'; script-src 'sha256-Y9Du6c03R5ZgN7OORQN44p9VafSglkEViiIbVit+/aU='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'self'"
+        }
+      },
+      {
+        "name": "manifest-effects-after-hydration",
+        "pass": false,
+        "detail": [
+          {
+            "operation": "5f3e17ea-1226-4a5a-8e66-1bc561c98136",
+            "pass": false
+          },
+          {
+            "operation": "63ad39ac-92b4-41ec-991c-c8ccaa2bfe3c",
+            "pass": true
+          },
+          {
+            "operation": "f8fce1dc-e852-429c-97f7-a94f9280333d",
+            "pass": true
+          },
+          {
+            "operation": "3ae46519-a83e-41f0-a2b4-e208dfe45fc6",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "name": "service-task-keyboard",
+        "pass": false,
+        "detail": {
+          "method": "Submit a service-visit application by accessible name and keyboard",
+          "expectedInputName": "Full name",
+          "expectedButtonName": "Submit application",
+          "error": "locator.fill: Timeout 5000ms exceeded."
+        }
+      },
+      {
+        "name": "page-functionality",
+        "pass": true,
+        "detail": {
+          "errors": []
+        }
+      },
+      {
+        "name": "network-same-origin",
+        "pass": true,
+        "detail": {
+          "blocked": []
+        }
+      }
+    ],
+    "elapsedMs": 6186,
+    "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please.\n  - heading \"Finding the desk\" [level=2]\n  - img \"The diagram shows the route from the entrance to the service desk.\"\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox\n  - text: Email address\n  - textbox \"Email address\"\n  - button \"Submit application\"\n  - status\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime."
+  }
+}

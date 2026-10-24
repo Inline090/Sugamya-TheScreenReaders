@@ -1,0 +1,48 @@
+{
+  "at": "2026-10-24T07:28:20.882Z",
+  "source": "https://github.com/microsoft/playwright-mcp",
+  "version": "0.0.83",
+  "tools": [
+    "browser_close",
+    "browser_resize",
+    "browser_console_messages",
+    "browser_handle_dialog",
+    "browser_emulate_media",
+    "browser_evaluate",
+    "browser_file_upload",
+    "browser_drop",
+    "browser_find",
+    "browser_fill_form",
+    "browser_press_key",
+    "browser_type",
+    "browser_navigate",
+    "browser_navigate_back",
+    "browser_network_requests",
+    "browser_network_request",
+    "browser_run_code_unsafe",
+    "browser_take_screenshot",
+    "browser_snapshot",
+    "browser_click",
+    "browser_drag",
+    "browser_hover",
+    "browser_select_option",
+    "browser_tabs",
+    "browser_wait_for"
+  ],
+  "navigation": {
+    "content": [
+      {
+        "type": "text",
+        "text": "### Ran Playwright code\n```js\nawait page.goto('http://127.0.0.1:4100/');\n```\n### Page\n- Page URL: http://127.0.0.1:4100/\n- Page Title: Sugamya · Repair operations\n- Console: 1 errors, 0 warnings\n### Snapshot\n- [Snapshot](.playwright-mcp/page-2026-10-24T07-28-20-863Z.yml)\n### Events\n- New console entries: .playwright-mcp/console-2026-10-24T07-28-20-568Z.log#L1-L2"
+      }
+    ]
+  },
+  "snapshot": {
+    "content": [
+      {
+        "type": "text",
+        "text": "### Page\n- Page URL: http://127.0.0.1:4100/\n- Page Title: Sugamya · Repair operations\n- Console: 1 errors, 0 warnings\n### Snapshot\n```yaml\n- generic [active] [ref=e1]:\n  - link \"Skip to repair operations\" [ref=e2] [cursor=pointer]:\n    - /url: \"#main\"\n  - generic [ref=e3]:\n    - complementary [ref=e4]:\n      - link \"Sugamya\" [ref=e5] [cursor=pointer]:\n        - /url: /\n      - paragraph [ref=e9]: The Screen ReadersAccessibility operations\n      - navigation \"Operations\" [ref=e10]:\n        - link \"Repair control plane\" [ref=e11] [cursor=pointer]:\n          - /url: \"#overview\"\n        - link \"Semantic review\" [ref=e12] [cursor=pointer]:\n          - /url: \"#proposals\"\n        - link \"Criterion coverage\" [ref=e13] [cursor=pointer]:\n          - /url: \"#coverage\"\n        - link \"Visitor verification\" [ref=e14] [cursor=pointer]:\n          - /url: \"#verification\"\n        - link \"Run history\" [ref=e15] [cursor=pointer]:\n          - /url: \"#trace\"\n      - generic [ref=e16]:\n        - paragraph [ref=e17]: AgentOps’26 · HX-P3JQIT Infrastructure\n        - paragraph [ref=e18]: Not signed in\n    - main [ref=e19]:\n      - generic [ref=e20]:\n        - generic [ref=e21]:\n          - paragraph [ref=e22]: Owner-controlled delivery / public HTML\n          - heading \"Repair operations\" [level=1] [ref=e23]\n          - paragraph [ref=e24]: From a finding to a change visitors actually receive.\n        - link \"Open visitor site ↗\" [ref=e25] [cursor=pointer]:\n          - /url: /apply\n      - status\n      - generic [ref=e26]:\n        - heading \"Sign in to operate\" [level=2] [ref=e27]\n        - paragraph [ref=e28]:\n          - text: Use a private operator or approver capability from your installation’s\n          - code [ref=e29]: .env\n          - text: . They are separate roles, not a mock login. Sessions expire after 30 minutes.\n        - generic [ref=e30]:\n          - generic [ref=e31]: Access token\n          - textbox \"Access token\" [ref=e32]\n          - button \"Sign in\" [ref=e33] [cursor=pointer]\n        - paragraph [ref=e34]:\n          - text: No credentials? Run\n          - code [ref=e35]: npm run setup\n          - text: on your own installation. The public visitor site needs no account or extension.\n```"
+      }
+    ]
+  }
+}

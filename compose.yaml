@@ -1,0 +1,25 @@
+services:
+  origin:
+    build:
+      context: .
+      dockerfile: fixture/Dockerfile
+    environment:
+      OWNER_CHALLENGE: ${OWNER_CHALLENGE}
+    networks: [repair]
+    expose: ["4101"]
+  gateway:
+    build: .
+    environment:
+      OPERATOR_TOKEN: ${OPERATOR_TOKEN}
+      APPROVER_TOKEN: ${APPROVER_TOKEN}
+      OWNER_CHALLENGE: ${OWNER_CHALLENGE}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      TARGET_CONFIG: /app/config/container-target.json
+    ports: ["4100:4100"]
+    volumes: ["audit:/app/var"]
+    networks: [repair]
+    depends_on: [origin]
+networks:
+  repair: {}
+volumes:
+  audit: {}

@@ -1,0 +1,3581 @@
+{
+  "generatedAt": "2026-10-24T07:27:52.163Z",
+  "product": "Sugamya",
+  "team": "The Screen Readers / HX-P3JQ",
+  "target": {
+    "id": "second-client-fixture",
+    "name": "Second client reuse lab",
+    "origin": "http://127.0.0.1:4201",
+    "paths": [
+      "/apply"
+    ],
+    "assetPaths": [
+      "/map.svg"
+    ],
+    "publicEvidence": true,
+    "standard": "WCAG 2.2 AA",
+    "authorizationExpires": "2026-10-28T00:00:00.000Z",
+    "locale": "en",
+    "policy": {
+      "fieldSelector": "#full-name",
+      "labelSelector": "#name-label",
+      "actionSelector": "#submit",
+      "actionSourceAttribute": "data-action-label",
+      "imageSelector": "#desk-map",
+      "contrastSelector": "#help",
+      "contrastClass": "muted sugamya-contrast"
+    },
+    "task": {
+      "name": "Submit a service-visit application by accessible name and keyboard",
+      "inputSelector": "#full-name",
+      "inputName": "Full name",
+      "emailSelector": "#email",
+      "emailName": "Email address",
+      "submitSelector": "#submit",
+      "submitName": "Submit application",
+      "resultSelector": "#result",
+      "successText": "Application received."
+    }
+  },
+  "state": {
+    "authorization": {
+      "target": "second-client-fixture",
+      "origin": "http://127.0.0.1:4201",
+      "paths": [
+        "/apply"
+      ],
+      "verifiedAt": "2026-10-24T07:27:49.484Z",
+      "expires": "2026-10-28T00:00:00.000Z",
+      "method": "owner-installed challenge"
+    },
+    "versions": [
+      {
+        "manifest": {
+          "id": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+          "target": "second-client-fixture",
+          "path": "/apply",
+          "locale": "en",
+          "baselineHash": "36463f630037163409be4f41a3eb75d731388de68acf36e2f03652f0e4873446",
+          "createdAt": "2026-10-24T07:27:21.976Z",
+          "operations": [
+            {
+              "id": "fe8906b2-70c1-4e3d-a874-ff07cfa6fa10",
+              "criterion": "3.3.2",
+              "selector": "#full-name",
+              "attribute": "aria-labelledby",
+              "before": null,
+              "value": "name-label",
+              "semantic": true,
+              "reason": "Associate the existing visible Full name prompt with the required application field; human confirms relationship."
+            },
+            {
+              "id": "aecdb97e-a413-49c5-96d3-5ce895c9c0b3",
+              "criterion": "4.1.2",
+              "selector": "#submit",
+              "attribute": "aria-label",
+              "before": null,
+              "value": "Submit application",
+              "semantic": true,
+              "reason": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning."
+            },
+            {
+              "id": "49b9cfd2-ed7b-4168-9a08-41416cfb4a6e",
+              "criterion": "1.4.3",
+              "selector": "#help",
+              "attribute": "class",
+              "before": "muted",
+              "value": "muted sugamya-contrast",
+              "semantic": false,
+              "reason": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated."
+            },
+            {
+              "id": "5c5b4c1e-ca8f-4708-b734-cc1083224eeb",
+              "criterion": "1.1.1",
+              "selector": "#desk-map",
+              "attribute": "alt",
+              "before": null,
+              "value": "The diagram shows the route from the entrance to the service desk.",
+              "semantic": true,
+              "reason": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject."
+            }
+          ]
+        },
+        "approvals": [
+          {
+            "id": "9cb970b0-c354-49c6-b62d-d27503bb59a9",
+            "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+            "operation": "fe8906b2-70c1-4e3d-a874-ff07cfa6fa10",
+            "manifestHash": "88ad421b6eb2ad525b2c96897ad30bcbd1104342178fc410ab2abce64b37541e",
+            "operationHash": "09d3d469951ac208c89ca820f34e722970dc2e7b17292e625f87fa0961e1abab",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Engineering evaluation: checked against owned fixture content and service task.",
+            "at": "2026-10-24T07:27:21.989Z"
+          },
+          {
+            "id": "f7994141-a0a2-4dab-bdf4-987792b8f7b7",
+            "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+            "operation": "aecdb97e-a413-49c5-96d3-5ce895c9c0b3",
+            "manifestHash": "88ad421b6eb2ad525b2c96897ad30bcbd1104342178fc410ab2abce64b37541e",
+            "operationHash": "4f0528274805129cbdfb57912667fd33e3aab32981657f59a873e784e3c88097",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Engineering evaluation: checked against owned fixture content and service task.",
+            "at": "2026-10-24T07:27:21.993Z"
+          },
+          {
+            "id": "ace3b94c-94d1-4fd8-b959-485173d45b2e",
+            "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+            "operation": "5c5b4c1e-ca8f-4708-b734-cc1083224eeb",
+            "manifestHash": "88ad421b6eb2ad525b2c96897ad30bcbd1104342178fc410ab2abce64b37541e",
+            "operationHash": "dc80a9aad3a32bc818b1fe912065cae60e42e877c399092cd072205872d16518",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Engineering evaluation: checked against owned fixture content and service task.",
+            "at": "2026-10-24T07:27:21.996Z"
+          }
+        ],
+        "status": "verified",
+        "baselineObject": {
+          "name": "baseline-16ae7c961d3d222732a49d78da28b89257a306f7a47016b96416ddf4ab27550b.json",
+          "sha256": "16ae7c961d3d222732a49d78da28b89257a306f7a47016b96416ddf4ab27550b"
+        },
+        "history": []
+      },
+      {
+        "manifest": {
+          "id": "e0c78d6b-384f-4666-9b0f-a2dc0a4decfb",
+          "target": "second-client-fixture",
+          "path": "/apply",
+          "locale": "en",
+          "baselineHash": "36463f630037163409be4f41a3eb75d731388de68acf36e2f03652f0e4873446",
+          "createdAt": "2026-10-24T07:27:27.388Z",
+          "operations": [
+            {
+              "id": "be418bec-3e4d-4227-93c4-0514db90c419",
+              "criterion": "3.3.2",
+              "selector": "#full-name",
+              "attribute": "aria-labelledby",
+              "before": null,
+              "value": "name-label",
+              "semantic": true,
+              "reason": "Associate the existing visible Full name prompt with the required application field; human confirms relationship."
+            },
+            {
+              "id": "8e15004d-4549-476c-a994-1d2574aeca95",
+              "criterion": "4.1.2",
+              "selector": "#submit",
+              "attribute": "aria-label",
+              "before": null,
+              "value": "Submit application",
+              "semantic": true,
+              "reason": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning."
+            },
+            {
+              "id": "26eac84c-dbbc-4615-a0a1-897023711404",
+              "criterion": "1.4.3",
+              "selector": "#help",
+              "attribute": "class",
+              "before": "muted",
+              "value": "muted sugamya-contrast",
+              "semantic": false,
+              "reason": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated."
+            },
+            {
+              "id": "3cca4b68-7e75-40af-a959-31f1656f30d9",
+              "criterion": "1.1.1",
+              "selector": "#desk-map",
+              "attribute": "alt",
+              "before": null,
+              "value": "The diagram shows the route from the entrance to the service desk.",
+              "semantic": true,
+              "reason": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject."
+            }
+          ]
+        },
+        "approvals": [
+          {
+            "id": "d2b342b3-34dc-4064-839b-a7e196e22814",
+            "version": "e0c78d6b-384f-4666-9b0f-a2dc0a4decfb",
+            "operation": "be418bec-3e4d-4227-93c4-0514db90c419",
+            "manifestHash": "e2d3781ac303001b595b8ead95a602f532e171514c896861f6b775d0402403c9",
+            "operationHash": "dacbe5245fed7b11f17184b7ef7caac3e64ffcf612c220566d171a0db7cc5b9c",
+            "actor": "approver",
+            "action": "reject",
+            "reason": "Evaluation rejection case: insufficient diagram description.",
+            "at": "2026-10-24T07:27:27.395Z"
+          }
+        ],
+        "status": "rejected",
+        "baselineObject": {
+          "name": "baseline-6925e7598b1605390df70495655762c44a7d95ee0068865c82ea0cc3d5e382f2.json",
+          "sha256": "6925e7598b1605390df70495655762c44a7d95ee0068865c82ea0cc3d5e382f2"
+        },
+        "history": []
+      },
+      {
+        "manifest": {
+          "id": "b6aa9e02-1111-4eb6-9c16-51c1f794d26b",
+          "target": "second-client-fixture",
+          "path": "/apply",
+          "locale": "en",
+          "baselineHash": "36463f630037163409be4f41a3eb75d731388de68acf36e2f03652f0e4873446",
+          "createdAt": "2026-10-24T07:27:28.628Z",
+          "operations": [
+            {
+              "id": "508df4f5-cd0d-4432-8f15-4bc68c754d9b",
+              "criterion": "3.3.2",
+              "selector": "#full-name",
+              "attribute": "aria-labelledby",
+              "before": null,
+              "value": "name-label",
+              "semantic": true,
+              "reason": "Associate the existing visible Full name prompt with the required application field; human confirms relationship."
+            },
+            {
+              "id": "370f9c07-d6aa-4255-9008-fc92787e79d2",
+              "criterion": "4.1.2",
+              "selector": "#submit",
+              "attribute": "aria-label",
+              "before": null,
+              "value": "Transfer funds",
+              "semantic": true,
+              "reason": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning."
+            },
+            {
+              "id": "0e49c287-e04c-4d3b-94d8-0af0be16f254",
+              "criterion": "1.4.3",
+              "selector": "#help",
+              "attribute": "class",
+              "before": "muted",
+              "value": "muted sugamya-contrast",
+              "semantic": false,
+              "reason": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated."
+            },
+            {
+              "id": "0a519e48-0a12-45e7-8131-ba4240eb8f5f",
+              "criterion": "1.1.1",
+              "selector": "#desk-map",
+              "attribute": "alt",
+              "before": null,
+              "value": "The diagram shows the route from the entrance to the service desk.",
+              "semantic": true,
+              "reason": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject."
+            }
+          ]
+        },
+        "approvals": [
+          {
+            "id": "51b7fe4e-aefa-44fd-8b5c-e2d4e81de8b8",
+            "version": "b6aa9e02-1111-4eb6-9c16-51c1f794d26b",
+            "operation": "370f9c07-d6aa-4255-9008-fc92787e79d2",
+            "manifestHash": "3f557ee8f442798706f9793741ff94c0fdbb8d8c84f690ef3ae5278502e84025",
+            "operationHash": "b7b99e971ccc0704754a5d4c9f7a5422e046292de9cdb764f544427442ae5672",
+            "actor": "approver",
+            "action": "edit",
+            "reason": "Controlled negative test only: intentionally wrong action name to exercise independent task gate.",
+            "at": "2026-10-24T07:27:28.633Z"
+          },
+          {
+            "id": "161b4b4a-b408-494c-8a5e-3f7e333d0322",
+            "version": "b6aa9e02-1111-4eb6-9c16-51c1f794d26b",
+            "operation": "508df4f5-cd0d-4432-8f15-4bc68c754d9b",
+            "manifestHash": "3f557ee8f442798706f9793741ff94c0fdbb8d8c84f690ef3ae5278502e84025",
+            "operationHash": "54cc9b16fac57ce59649af7a8639e9334a405acfc1446cfefbb5b402032e8dbf",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Controlled negative test: approve remaining semantic operations.",
+            "at": "2026-10-24T07:27:28.640Z"
+          },
+          {
+            "id": "d75fdff5-6723-4560-921e-f68e42a81722",
+            "version": "b6aa9e02-1111-4eb6-9c16-51c1f794d26b",
+            "operation": "0a519e48-0a12-45e7-8131-ba4240eb8f5f",
+            "manifestHash": "3f557ee8f442798706f9793741ff94c0fdbb8d8c84f690ef3ae5278502e84025",
+            "operationHash": "5c95813aeaf5516b47d1d8a2e5cab43de4b109aeff16b56f9b468260345515cb",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Controlled negative test: approve remaining semantic operations.",
+            "at": "2026-10-24T07:27:28.643Z"
+          }
+        ],
+        "status": "withheld",
+        "baselineObject": {
+          "name": "baseline-6b918bb65674d6f8686433f9ccab2504c77628c4eb4ed2852ca6864bbad062a2.json",
+          "sha256": "6b918bb65674d6f8686433f9ccab2504c77628c4eb4ed2852ca6864bbad062a2"
+        },
+        "history": [
+          {
+            "manifest": {
+              "name": "manifest-03dfb72f27eaca367ef9ba4b8608e259fa40777bb69e8f73f80339f38a17e1d5.json",
+              "sha256": "03dfb72f27eaca367ef9ba4b8608e259fa40777bb69e8f73f80339f38a17e1d5"
+            },
+            "approvals": [],
+            "at": "2026-10-24T07:27:28.633Z"
+          }
+        ]
+      },
+      {
+        "manifest": {
+          "id": "a7098ccf-4fbe-4103-8304-7ea256244995",
+          "target": "second-client-fixture",
+          "path": "/apply",
+          "locale": "en",
+          "baselineHash": "36463f630037163409be4f41a3eb75d731388de68acf36e2f03652f0e4873446",
+          "createdAt": "2026-10-24T07:27:31.311Z",
+          "operations": [
+            {
+              "id": "55fc0c3d-2025-4ae0-899a-056bee876d82",
+              "criterion": "3.3.2",
+              "selector": "#full-name",
+              "attribute": "aria-labelledby",
+              "before": null,
+              "value": "name-label",
+              "semantic": true,
+              "reason": "Associate the existing visible Full name prompt with the required application field; human confirms relationship."
+            },
+            {
+              "id": "3ae9c99a-86b8-4941-abf8-abb59456298e",
+              "criterion": "4.1.2",
+              "selector": "#submit",
+              "attribute": "aria-label",
+              "before": null,
+              "value": "Submit application",
+              "semantic": true,
+              "reason": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning."
+            },
+            {
+              "id": "37bd136c-4f98-4479-aa1a-ffa56b2846ba",
+              "criterion": "1.4.3",
+              "selector": "#help",
+              "attribute": "class",
+              "before": "muted",
+              "value": "muted sugamya-contrast",
+              "semantic": false,
+              "reason": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated."
+            },
+            {
+              "id": "03a390f2-bea4-4b1c-91cc-5de4f15c8d2c",
+              "criterion": "1.1.1",
+              "selector": "#desk-map",
+              "attribute": "alt",
+              "before": null,
+              "value": "The diagram shows the route from the entrance to the service desk.",
+              "semantic": true,
+              "reason": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject."
+            }
+          ]
+        },
+        "approvals": [
+          {
+            "id": "9d40ed78-d46d-4156-b857-16c2bc04b210",
+            "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+            "operation": "55fc0c3d-2025-4ae0-899a-056bee876d82",
+            "manifestHash": "80e0de7308a30a5a63163c637d403d5f7de09f7324f4624fc9f8ef67145f05fd",
+            "operationHash": "ae7bf371d534162e2a965e4e15ed71570b0ac990e8e1f1c5cd69532791e72c97",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Engineering fixture review; correct visible label, diagram context and submit action.",
+            "at": "2026-10-24T07:27:31.316Z"
+          },
+          {
+            "id": "23260afa-3b60-47ac-b3fc-4b5ce525431c",
+            "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+            "operation": "3ae9c99a-86b8-4941-abf8-abb59456298e",
+            "manifestHash": "80e0de7308a30a5a63163c637d403d5f7de09f7324f4624fc9f8ef67145f05fd",
+            "operationHash": "da70751b14e0f505812c86d3e689cae2b94d60911646134a5bca1a8e7824ff92",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Engineering fixture review; correct visible label, diagram context and submit action.",
+            "at": "2026-10-24T07:27:31.319Z"
+          },
+          {
+            "id": "4f4af2a7-195b-4846-b14d-0c771b308531",
+            "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+            "operation": "03a390f2-bea4-4b1c-91cc-5de4f15c8d2c",
+            "manifestHash": "80e0de7308a30a5a63163c637d403d5f7de09f7324f4624fc9f8ef67145f05fd",
+            "operationHash": "72fdd798428ba36e8f65be125db37d8948249cdd11d45645ba0036f3b49ae6fd",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Engineering fixture review; correct visible label, diagram context and submit action.",
+            "at": "2026-10-24T07:27:31.322Z"
+          }
+        ],
+        "status": "rolled-back",
+        "baselineObject": {
+          "name": "baseline-0eb5907038b15f2c4cae2395fbcc6bac94417445d78dabc60cdf52d0cb50cf42.json",
+          "sha256": "0eb5907038b15f2c4cae2395fbcc6bac94417445d78dabc60cdf52d0cb50cf42"
+        },
+        "history": []
+      },
+      {
+        "manifest": {
+          "id": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+          "target": "second-client-fixture",
+          "path": "/apply",
+          "locale": "en",
+          "baselineHash": "bcccaeda587962ae74b513143b30b0ee436dc9fc448da2e6526055546ea4e80a",
+          "createdAt": "2026-10-24T07:27:42.031Z",
+          "operations": [
+            {
+              "id": "5f3e17ea-1226-4a5a-8e66-1bc561c98136",
+              "criterion": "3.3.2",
+              "selector": "#full-name",
+              "attribute": "aria-labelledby",
+              "before": null,
+              "value": "name-label",
+              "semantic": true,
+              "reason": "Associate the existing visible Full name prompt with the required application field; human confirms relationship."
+            },
+            {
+              "id": "63ad39ac-92b4-41ec-991c-c8ccaa2bfe3c",
+              "criterion": "4.1.2",
+              "selector": "#submit",
+              "attribute": "aria-label",
+              "before": null,
+              "value": "Submit application",
+              "semantic": true,
+              "reason": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning."
+            },
+            {
+              "id": "f8fce1dc-e852-429c-97f7-a94f9280333d",
+              "criterion": "1.4.3",
+              "selector": "#help",
+              "attribute": "class",
+              "before": "muted",
+              "value": "muted sugamya-contrast",
+              "semantic": false,
+              "reason": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated."
+            },
+            {
+              "id": "3ae46519-a83e-41f0-a2b4-e208dfe45fc6",
+              "criterion": "1.1.1",
+              "selector": "#desk-map",
+              "attribute": "alt",
+              "before": null,
+              "value": "The diagram shows the route from the entrance to the service desk.",
+              "semantic": true,
+              "reason": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject."
+            }
+          ]
+        },
+        "approvals": [
+          {
+            "id": "fbbb560d-121d-4329-8509-6ace3b006a25",
+            "version": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+            "operation": "5f3e17ea-1226-4a5a-8e66-1bc561c98136",
+            "manifestHash": "f6c5882ede3d8838d9db7ccb00f51a4f5fcf0e4dc9d027ef8f15c1a10b5e9de8",
+            "operationHash": "609c2ee1db7effdc147a66b9d31401469b4433f27b7ca8aad52825a512dbd91d",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Controlled hydration test; semantic content reviewed.",
+            "at": "2026-10-24T07:27:42.036Z"
+          },
+          {
+            "id": "d06e1883-c076-4ac7-9bad-3b2a7eb9acdf",
+            "version": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+            "operation": "63ad39ac-92b4-41ec-991c-c8ccaa2bfe3c",
+            "manifestHash": "f6c5882ede3d8838d9db7ccb00f51a4f5fcf0e4dc9d027ef8f15c1a10b5e9de8",
+            "operationHash": "edb403ddc06f6f2f7cf3536618c2e2d0a9ce287336b2c21cbdc4641b0aa2957b",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Controlled hydration test; semantic content reviewed.",
+            "at": "2026-10-24T07:27:42.039Z"
+          },
+          {
+            "id": "34b834d3-86a4-486a-905c-0dffdd8db07c",
+            "version": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+            "operation": "3ae46519-a83e-41f0-a2b4-e208dfe45fc6",
+            "manifestHash": "f6c5882ede3d8838d9db7ccb00f51a4f5fcf0e4dc9d027ef8f15c1a10b5e9de8",
+            "operationHash": "e5eaf67bd3cd7eb8840eaab6f461e61a6424da69668b76debed4c84aa41ca06e",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Controlled hydration test; semantic content reviewed.",
+            "at": "2026-10-24T07:27:42.042Z"
+          }
+        ],
+        "status": "withheld",
+        "baselineObject": {
+          "name": "baseline-8fa690212337006aff746e5d1112cbbd712ed128fd7c6c7735bfd31f52239769.json",
+          "sha256": "8fa690212337006aff746e5d1112cbbd712ed128fd7c6c7735bfd31f52239769"
+        },
+        "history": []
+      },
+      {
+        "manifest": {
+          "id": "f0d8c93f-622d-4854-9088-26cd31728a08",
+          "target": "second-client-fixture",
+          "path": "/apply",
+          "locale": "en",
+          "baselineHash": "36463f630037163409be4f41a3eb75d731388de68acf36e2f03652f0e4873446",
+          "createdAt": "2026-10-24T07:27:49.467Z",
+          "operations": [
+            {
+              "id": "105dbe49-e3b2-4111-a12c-a3d58fb7e63d",
+              "criterion": "3.3.2",
+              "selector": "#full-name",
+              "attribute": "aria-labelledby",
+              "before": null,
+              "value": "name-label",
+              "semantic": true,
+              "reason": "Associate the existing visible Full name prompt with the required application field; human confirms relationship."
+            },
+            {
+              "id": "cf5dcde8-4e33-4f96-96ed-083413cde529",
+              "criterion": "4.1.2",
+              "selector": "#submit",
+              "attribute": "aria-label",
+              "before": null,
+              "value": "Submit application",
+              "semantic": true,
+              "reason": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning."
+            },
+            {
+              "id": "b39095c6-19d3-419b-8134-34bfc8225203",
+              "criterion": "1.4.3",
+              "selector": "#help",
+              "attribute": "class",
+              "before": "muted",
+              "value": "muted sugamya-contrast",
+              "semantic": false,
+              "reason": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated."
+            },
+            {
+              "id": "6786bc15-65e4-4763-878b-ffb740921466",
+              "criterion": "1.1.1",
+              "selector": "#desk-map",
+              "attribute": "alt",
+              "before": null,
+              "value": "The diagram shows the route from the entrance to the service desk.",
+              "semantic": true,
+              "reason": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject."
+            }
+          ]
+        },
+        "approvals": [
+          {
+            "id": "b76029cf-9486-4e0e-aa20-e1b0aaf49921",
+            "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+            "operation": "105dbe49-e3b2-4111-a12c-a3d58fb7e63d",
+            "manifestHash": "e609a38b71c5e2da698ec158cf6c46dc835908bcfe42af63952abd95133e0e66",
+            "operationHash": "a1b3ac849872301b3fbca1ebad02f45fcc6b2582ffec32b7e6faebbb54b1a951",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Engineering fixture review after negative tests.",
+            "at": "2026-10-24T07:27:49.472Z"
+          },
+          {
+            "id": "87a56160-6636-436c-87c4-4c0d3c5a3c3a",
+            "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+            "operation": "cf5dcde8-4e33-4f96-96ed-083413cde529",
+            "manifestHash": "e609a38b71c5e2da698ec158cf6c46dc835908bcfe42af63952abd95133e0e66",
+            "operationHash": "d727987c39be20619863ecf1d2d534a648d4a9fe6875fc80524536d576a4b0ec",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Engineering fixture review after negative tests.",
+            "at": "2026-10-24T07:27:49.475Z"
+          },
+          {
+            "id": "cfee19d6-0754-4eab-9fba-0f7ddc459b4a",
+            "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+            "operation": "6786bc15-65e4-4763-878b-ffb740921466",
+            "manifestHash": "e609a38b71c5e2da698ec158cf6c46dc835908bcfe42af63952abd95133e0e66",
+            "operationHash": "c3d0e7b32de42bfaf7750d49e301c1c0dc2c5d233b44a87cf2d7dd10510c341b",
+            "actor": "approver",
+            "action": "approve",
+            "reason": "Engineering fixture review after negative tests.",
+            "at": "2026-10-24T07:27:49.480Z"
+          }
+        ],
+        "status": "verified",
+        "baselineObject": {
+          "name": "baseline-114202a8d6118714f72de3f4d7b37874ca074f03115cf7091dc1e0eccdbe40d9.json",
+          "sha256": "114202a8d6118714f72de3f4d7b37874ca074f03115cf7091dc1e0eccdbe40d9"
+        },
+        "history": []
+      }
+    ],
+    "active": "f0d8c93f-622d-4854-9088-26cd31728a08",
+    "lastGood": "f0d8c93f-622d-4854-9088-26cd31728a08",
+    "canary": null,
+    "disabled": false,
+    "baseline": {
+      "toolVersions": {
+        "axe": "4.14.0",
+        "chromium": "156.0.8078.4"
+      },
+      "id": "ca5b0157-867f-4872-8aa4-5b028935e522",
+      "at": "2026-10-24T07:27:49.429Z",
+      "url": "http://127.0.0.1:4200/apply",
+      "method": "local Chromium DOM + accessibility snapshot + axe; public fixture only",
+      "sha256": "36463f630037163409be4f41a3eb75d731388de68acf36e2f03652f0e4873446",
+      "privacy": "public-fixture-minimal",
+      "observations": [
+        {
+          "tag": "img",
+          "id": "desk-map",
+          "text": "",
+          "attributes": {
+            "id": "desk-map",
+            "src": "/map.svg"
+          },
+          "label": null,
+          "title": null,
+          "precedingText": "Finding the desk",
+          "context": "The diagram shows the route from the entrance to the service desk.",
+          "color": "rgb(22, 42, 50)",
+          "background": "rgb(217, 228, 232)",
+          "box": {
+            "x": 164,
+            "y": 399.546875,
+            "width": 456,
+            "height": 170
+          }
+        },
+        {
+          "tag": "p",
+          "id": "help",
+          "text": "All fields are required. Use test details only.",
+          "attributes": {
+            "class": "muted",
+            "id": "help"
+          },
+          "label": null,
+          "title": null,
+          "precedingText": "Your application",
+          "context": null,
+          "color": "rgb(170, 170, 170)",
+          "background": "rgb(255, 255, 255)",
+          "box": {
+            "x": 689,
+            "y": 262.484375,
+            "width": 398,
+            "height": 26.34375
+          }
+        },
+        {
+          "tag": "input",
+          "id": "full-name",
+          "text": "",
+          "attributes": {
+            "id": "full-name",
+            "required": "",
+            "autocomplete": "name"
+          },
+          "label": null,
+          "title": null,
+          "precedingText": "Full name",
+          "context": null,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "box": {
+            "x": 689,
+            "y": 349.171875,
+            "width": 398,
+            "height": 52.34375
+          }
+        },
+        {
+          "tag": "input",
+          "id": "email",
+          "text": "",
+          "attributes": {
+            "id": "email",
+            "type": "email",
+            "required": "",
+            "autocomplete": "email"
+          },
+          "label": "Email address",
+          "title": null,
+          "precedingText": "Email address",
+          "context": null,
+          "color": "rgb(0, 0, 0)",
+          "background": "rgb(255, 255, 255)",
+          "box": {
+            "x": 689,
+            "y": 443.859375,
+            "width": 398,
+            "height": 52.34375
+          }
+        },
+        {
+          "tag": "button",
+          "id": "submit",
+          "text": "→",
+          "attributes": {
+            "id": "submit",
+            "type": "submit",
+            "data-action-label": "Submit application"
+          },
+          "label": null,
+          "title": null,
+          "precedingText": "",
+          "context": null,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(20, 60, 76)",
+          "box": {
+            "x": 689,
+            "y": 518.203125,
+            "width": 58.25,
+            "height": 50.34375
+          }
+        }
+      ],
+      "dom": {
+        "title": "Resident service application · Controlled fixture",
+        "lang": "en",
+        "media": 0,
+        "elements": [
+          {
+            "tag": "img",
+            "id": "desk-map",
+            "text": "",
+            "attributes": {
+              "id": "desk-map",
+              "src": "/map.svg"
+            },
+            "label": null,
+            "title": null,
+            "precedingText": "Finding the desk",
+            "context": "The diagram shows the route from the entrance to the service desk.",
+            "color": "rgb(22, 42, 50)",
+            "background": "rgb(217, 228, 232)",
+            "box": {
+              "x": 164,
+              "y": 399.546875,
+              "width": 456,
+              "height": 170
+            }
+          },
+          {
+            "tag": "p",
+            "id": "help",
+            "text": "All fields are required. Use test details only.",
+            "attributes": {
+              "class": "muted",
+              "id": "help"
+            },
+            "label": null,
+            "title": null,
+            "precedingText": "Your application",
+            "context": null,
+            "color": "rgb(170, 170, 170)",
+            "background": "rgb(255, 255, 255)",
+            "box": {
+              "x": 689,
+              "y": 262.484375,
+              "width": 398,
+              "height": 26.34375
+            }
+          },
+          {
+            "tag": "input",
+            "id": "full-name",
+            "text": "",
+            "attributes": {
+              "id": "full-name",
+              "required": "",
+              "autocomplete": "name"
+            },
+            "label": null,
+            "title": null,
+            "precedingText": "Full name",
+            "context": null,
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "box": {
+              "x": 689,
+              "y": 349.171875,
+              "width": 398,
+              "height": 52.34375
+            }
+          },
+          {
+            "tag": "input",
+            "id": "email",
+            "text": "",
+            "attributes": {
+              "id": "email",
+              "type": "email",
+              "required": "",
+              "autocomplete": "email"
+            },
+            "label": "Email address",
+            "title": null,
+            "precedingText": "Email address",
+            "context": null,
+            "color": "rgb(0, 0, 0)",
+            "background": "rgb(255, 255, 255)",
+            "box": {
+              "x": 689,
+              "y": 443.859375,
+              "width": 398,
+              "height": 52.34375
+            }
+          },
+          {
+            "tag": "button",
+            "id": "submit",
+            "text": "→",
+            "attributes": {
+              "id": "submit",
+              "type": "submit",
+              "data-action-label": "Submit application"
+            },
+            "label": null,
+            "title": null,
+            "precedingText": "",
+            "context": null,
+            "color": "rgb(255, 255, 255)",
+            "background": "rgb(20, 60, 76)",
+            "box": {
+              "x": 689,
+              "y": 518.203125,
+              "width": 58.25,
+              "height": 50.34375
+            }
+          }
+        ]
+      },
+      "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please.\n  - heading \"Finding the desk\" [level=2]\n  - img\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox\n  - text: Email address\n  - textbox \"Email address\"\n  - button\n  - status\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime.",
+      "violations": [
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "description": "Ensure buttons have discernible text",
+          "tags": [
+            "cat.name-role-value",
+            "wcag2a",
+            "wcag412",
+            "section508",
+            "section508.22.a",
+            "TTv5",
+            "TT6.a",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "ACT",
+            "RGAAv4",
+            "RGAA-11.9.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                "#submit"
+              ],
+              "summary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ]
+        },
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "tags": [
+            "cat.color",
+            "wcag2aa",
+            "wcag143",
+            "TTv5",
+            "TT13.c",
+            "EN-301-549",
+            "EN-9.1.4.3",
+            "ACT",
+            "RGAAv4",
+            "RGAA-3.2.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                "#help"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 12.8pt (17px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "image-alt",
+          "impact": "critical",
+          "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+          "tags": [
+            "cat.text-alternatives",
+            "wcag2a",
+            "wcag111",
+            "section508",
+            "section508.22.a",
+            "TTv5",
+            "TT7.a",
+            "TT7.b",
+            "EN-301-549",
+            "EN-9.1.1.1",
+            "ACT",
+            "RGAAv4",
+            "RGAA-1.1.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                "#desk-map"
+              ],
+              "summary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ]
+        },
+        {
+          "id": "label",
+          "impact": "critical",
+          "description": "Ensure every form element has a label",
+          "tags": [
+            "cat.forms",
+            "wcag2a",
+            "wcag412",
+            "section508",
+            "section508.22.n",
+            "TTv5",
+            "TT5.c",
+            "EN-301-549",
+            "EN-9.4.1.2",
+            "ACT",
+            "RGAAv4",
+            "RGAA-11.1.1"
+          ],
+          "nodes": [
+            {
+              "target": [
+                "#full-name"
+              ],
+              "summary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "autocomplete-valid",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "label",
+        "link-name",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ],
+      "errors": [],
+      "blockedOrigins": [],
+      "loadMs": 1076,
+      "object": {
+        "name": "baseline-114202a8d6118714f72de3f4d7b37874ca074f03115cf7091dc1e0eccdbe40d9.json",
+        "sha256": "114202a8d6118714f72de3f4d7b37874ca074f03115cf7091dc1e0eccdbe40d9"
+      },
+      "coverage": [
+        {
+          "id": "1.1.1",
+          "name": "Non-text Content",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#non-text-content",
+          "status": "applicable-and-human-assisted",
+          "method": "DOM + axe + human semantic decision",
+          "reason": "Selected elements only. Meaning cannot be established by scanner.",
+          "confidence": 0.9,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "approved attribute manifest",
+          "semanticRisk": "human decision required",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.2.1",
+          "name": "Audio-only and Video-only (Prerecorded)",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#audio-only-and-video-only-prerecorded",
+          "status": "not-applicable",
+          "method": "DOM inventory of audio/video in current page state",
+          "reason": "No audio or video present in evaluated static state; does not cover linked media or later states.",
+          "confidence": 0.95,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "none",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.2.2",
+          "name": "Captions (Prerecorded)",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#captions-prerecorded",
+          "status": "not-applicable",
+          "method": "DOM inventory of audio/video in current page state",
+          "reason": "No audio or video present in evaluated static state; does not cover linked media or later states.",
+          "confidence": 0.95,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "none",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.2.3",
+          "name": "Audio Description or Media Alternative (Prerecorded)",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded",
+          "status": "not-applicable",
+          "method": "DOM inventory of audio/video in current page state",
+          "reason": "No audio or video present in evaluated static state; does not cover linked media or later states.",
+          "confidence": 0.95,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "none",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.2.4",
+          "name": "Captions (Live)",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#captions-live",
+          "status": "not-applicable",
+          "method": "DOM inventory of audio/video in current page state",
+          "reason": "No audio or video present in evaluated static state; does not cover linked media or later states.",
+          "confidence": 0.95,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "none",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.2.5",
+          "name": "Audio Description (Prerecorded)",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#audio-description-prerecorded",
+          "status": "not-applicable",
+          "method": "DOM inventory of audio/video in current page state",
+          "reason": "No audio or video present in evaluated static state; does not cover linked media or later states.",
+          "confidence": 0.95,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "none",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.3.1",
+          "name": "Info and Relationships",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#info-and-relationships",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.3.2",
+          "name": "Meaningful Sequence",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#meaningful-sequence",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.3.3",
+          "name": "Sensory Characteristics",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#sensory-characteristics",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.3.4",
+          "name": "Orientation",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#orientation",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.3.5",
+          "name": "Identify Input Purpose",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#identify-input-purpose",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.4.1",
+          "name": "Use of Color",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#use-of-color",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.4.2",
+          "name": "Audio Control",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#audio-control",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.4.3",
+          "name": "Contrast (Minimum)",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#contrast-minimum",
+          "status": "applicable-and-automated",
+          "method": "axe computed contrast on rendered public state",
+          "reason": "Automated evidence covers rendered text only; no whole-criterion pass inferred.",
+          "confidence": 0.95,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "preinstalled approved CSS class",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.4.4",
+          "name": "Resize Text",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#resize-text",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.4.5",
+          "name": "Images of Text",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#images-of-text",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.4.10",
+          "name": "Reflow",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#reflow",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.4.11",
+          "name": "Non-text Contrast",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#non-text-contrast",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.4.12",
+          "name": "Text Spacing",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#text-spacing",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "1.4.13",
+          "name": "Content on Hover or Focus",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.1.1",
+          "name": "Keyboard",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#keyboard",
+          "status": "applicable-but-unsupported",
+          "method": "task keyboard probe planned; full manual evaluation outstanding",
+          "reason": "Task probe is not exhaustive keyboard/focus assessment.",
+          "confidence": 0.5,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.1.2",
+          "name": "No Keyboard Trap",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#no-keyboard-trap",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.1.4",
+          "name": "Character Key Shortcuts",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#character-key-shortcuts",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.2.1",
+          "name": "Timing Adjustable",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#timing-adjustable",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.2.2",
+          "name": "Pause, Stop, Hide",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#pause-stop-hide",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.3.1",
+          "name": "Three Flashes or Below Threshold",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.4.1",
+          "name": "Bypass Blocks",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#bypass-blocks",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.4.2",
+          "name": "Page Titled",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#page-titled",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.4.3",
+          "name": "Focus Order",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#focus-order",
+          "status": "applicable-but-unsupported",
+          "method": "task keyboard probe planned; full manual evaluation outstanding",
+          "reason": "Task probe is not exhaustive keyboard/focus assessment.",
+          "confidence": 0.5,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.4.4",
+          "name": "Link Purpose (In Context)",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#link-purpose-in-context",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.4.5",
+          "name": "Multiple Ways",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#multiple-ways",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.4.6",
+          "name": "Headings and Labels",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#headings-and-labels",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.4.7",
+          "name": "Focus Visible",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#focus-visible",
+          "status": "applicable-but-unsupported",
+          "method": "task keyboard probe planned; full manual evaluation outstanding",
+          "reason": "Task probe is not exhaustive keyboard/focus assessment.",
+          "confidence": 0.5,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.4.11",
+          "name": "Focus Not Obscured (Minimum)",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.5.1",
+          "name": "Pointer Gestures",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#pointer-gestures",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.5.2",
+          "name": "Pointer Cancellation",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#pointer-cancellation",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.5.3",
+          "name": "Label in Name",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#label-in-name",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.5.4",
+          "name": "Motion Actuation",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#motion-actuation",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.5.7",
+          "name": "Dragging Movements",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#dragging-movements",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "2.5.8",
+          "name": "Target Size (Minimum)",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#target-size-minimum",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.1.1",
+          "name": "Language of Page",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#language-of-page",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.1.2",
+          "name": "Language of Parts",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#language-of-parts",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.2.1",
+          "name": "On Focus",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#on-focus",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.2.2",
+          "name": "On Input",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#on-input",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.2.3",
+          "name": "Consistent Navigation",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#consistent-navigation",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.2.4",
+          "name": "Consistent Identification",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#consistent-identification",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.2.6",
+          "name": "Consistent Help",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#consistent-help",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.3.1",
+          "name": "Error Identification",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#error-identification",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.3.2",
+          "name": "Labels or Instructions",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#labels-or-instructions",
+          "status": "applicable-and-human-assisted",
+          "method": "DOM + axe + human semantic decision",
+          "reason": "Selected elements only. Meaning cannot be established by scanner.",
+          "confidence": 0.9,
+          "taskImpact": "Blocks name-based service application",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": 5,
+          "repairPath": "approved attribute manifest",
+          "semanticRisk": "human decision required",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.3.3",
+          "name": "Error Suggestion",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#error-suggestion",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.3.4",
+          "name": "Error Prevention (Legal, Financial, Data)",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#error-prevention-legal-financial-data",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.3.7",
+          "name": "Redundant Entry",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#redundant-entry",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "3.3.8",
+          "name": "Accessible Authentication (Minimum)",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "4.1.2",
+          "name": "Name, Role, Value",
+          "level": "A",
+          "url": "https://www.w3.org/TR/WCAG22/#name-role-value",
+          "status": "applicable-and-human-assisted",
+          "method": "DOM + axe + human semantic decision",
+          "reason": "Selected elements only. Meaning cannot be established by scanner.",
+          "confidence": 0.9,
+          "taskImpact": "Blocks name-based service application",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": 5,
+          "repairPath": "approved attribute manifest",
+          "semanticRisk": "human decision required",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        },
+        {
+          "id": "4.1.3",
+          "name": "Status Messages",
+          "level": "AA",
+          "url": "https://www.w3.org/TR/WCAG22/#status-messages",
+          "status": "unresolved",
+          "method": "not-tested",
+          "reason": "No reliable evidence collected for this criterion; manual assessment required.",
+          "confidence": 0,
+          "taskImpact": "Requires criterion-specific assessment",
+          "reach": "one evaluated public page/state; population frequency unknown",
+          "severity": null,
+          "repairPath": "manual/source handoff",
+          "semanticRisk": "not determined outside selected evidence",
+          "deploymentRisk": "static HTML only; fingerprint gated",
+          "verification": "independent DOM / task probe for implemented repairs; otherwise manual",
+          "estimatedOperatorMinutes": null
+        }
+      ],
+      "findings": [
+        {
+          "id": "3150d15f-7f52-4ba8-8718-c451da257659",
+          "criterion": "3.3.2",
+          "selector": "#full-name",
+          "impact": "Associate the existing visible Full name prompt with the required application field; human confirms relationship.",
+          "evidenceId": "ca5b0157-867f-4872-8aa4-5b028935e522",
+          "confidence": 0.98,
+          "severity": 5,
+          "reach": 1,
+          "operatorMinutesEstimate": 1,
+          "priority": 245,
+          "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+          "assumptions": "not measured population reach; severity 1–5 heuristic",
+          "operation": "105dbe49-e3b2-4111-a12c-a3d58fb7e63d"
+        },
+        {
+          "id": "bafbff72-4f93-44e6-ab0e-f5a09b3970e0",
+          "criterion": "4.1.2",
+          "selector": "#submit",
+          "impact": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning.",
+          "evidenceId": "ca5b0157-867f-4872-8aa4-5b028935e522",
+          "confidence": 0.95,
+          "severity": 5,
+          "reach": 1,
+          "operatorMinutesEstimate": 1,
+          "priority": 238,
+          "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+          "assumptions": "not measured population reach; severity 1–5 heuristic",
+          "operation": "cf5dcde8-4e33-4f96-96ed-083413cde529"
+        },
+        {
+          "id": "8716b0ef-9618-47b0-a380-ed56cffa4f5b",
+          "criterion": "1.4.3",
+          "selector": "#help",
+          "impact": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated.",
+          "evidenceId": "ca5b0157-867f-4872-8aa4-5b028935e522",
+          "confidence": 0.99,
+          "severity": 3,
+          "reach": 1,
+          "operatorMinutesEstimate": 0.5,
+          "priority": 198,
+          "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+          "assumptions": "not measured population reach; severity 1–5 heuristic",
+          "operation": "b39095c6-19d3-419b-8134-34bfc8225203"
+        },
+        {
+          "id": "6733723e-3d6d-42fa-bba9-869118faed57",
+          "criterion": "1.1.1",
+          "selector": "#desk-map",
+          "impact": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject.",
+          "evidenceId": "ca5b0157-867f-4872-8aa4-5b028935e522",
+          "confidence": 0.65,
+          "severity": 3,
+          "reach": 1,
+          "operatorMinutesEstimate": 2,
+          "priority": 65,
+          "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+          "assumptions": "not measured population reach; severity 1–5 heuristic",
+          "operation": "6786bc15-65e4-4763-878b-ffb740921466"
+        }
+      ]
+    },
+    "verification": {
+      "id": "e830dd76-60ff-4c9e-876f-0410f0356450",
+      "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+      "at": "2026-10-24T07:27:52.130Z",
+      "pass": true,
+      "checks": [
+        {
+          "name": "origin-response",
+          "pass": true,
+          "detail": {
+            "status": 200
+          }
+        },
+        {
+          "name": "visitor-version",
+          "pass": true,
+          "detail": {
+            "received": "f0d8c93f-622d-4854-9088-26cd31728a08",
+            "profile": "new context; extensions disabled; no operator session"
+          }
+        },
+        {
+          "name": "axe-no-new-findings",
+          "pass": true,
+          "detail": {
+            "newFindings": [],
+            "remaining": [],
+            "limits": "No-new-findings is not conformance"
+          }
+        },
+        {
+          "name": "unaffected-dom",
+          "pass": true,
+          "detail": {
+            "method": "restore intended attributes, compare normalized entire DOM"
+          }
+        },
+        {
+          "name": "html-no-new-parse-errors",
+          "pass": true,
+          "detail": {
+            "before": [],
+            "after": []
+          }
+        },
+        {
+          "name": "layout-unaffected",
+          "pass": true,
+          "detail": {
+            "shifts": [],
+            "expectedChanges": "attribute-only; approved contrast colour; no size change expected"
+          }
+        },
+        {
+          "name": "csp-preserved",
+          "pass": true,
+          "detail": {
+            "csp": "default-src 'self'; script-src 'sha256-Y9Du6c03R5ZgN7OORQN44p9VafSglkEViiIbVit+/aU='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'self'"
+          }
+        },
+        {
+          "name": "manifest-effects-after-hydration",
+          "pass": true,
+          "detail": [
+            {
+              "operation": "105dbe49-e3b2-4111-a12c-a3d58fb7e63d",
+              "pass": true
+            },
+            {
+              "operation": "cf5dcde8-4e33-4f96-96ed-083413cde529",
+              "pass": true
+            },
+            {
+              "operation": "b39095c6-19d3-419b-8134-34bfc8225203",
+              "pass": true
+            },
+            {
+              "operation": "6786bc15-65e4-4763-878b-ffb740921466",
+              "pass": true
+            }
+          ]
+        },
+        {
+          "name": "service-task-keyboard",
+          "pass": true,
+          "detail": {
+            "method": "Submit a service-visit application by accessible name and keyboard",
+            "expectedInputName": "Full name",
+            "expectedButtonName": "Submit application",
+            "error": null
+          }
+        },
+        {
+          "name": "page-functionality",
+          "pass": true,
+          "detail": {
+            "errors": []
+          }
+        },
+        {
+          "name": "network-same-origin",
+          "pass": true,
+          "detail": {
+            "blocked": []
+          }
+        }
+      ],
+      "elapsedMs": 1316,
+      "snapshot": "- banner:\n  - strong: Resident services lab\n  - paragraph: Owned test site · deliberately seeded accessibility barriers · not a government service\n- main:\n  - heading \"Apply for a service visit\" [level=1]\n  - paragraph: Request a visit to the resident service desk. No real personal details, please.\n  - heading \"Finding the desk\" [level=2]\n  - img \"The diagram shows the route from the entrance to the service desk.\"\n  - paragraph: The diagram shows the route from the entrance to the service desk.\n  - link \"Go to application\":\n    - /url: \"#application\"\n  - heading \"Your application\" [level=2]\n  - paragraph: All fields are required. Use test details only.\n  - paragraph: Full name\n  - textbox \"Full name\": Test Resident\n  - text: Email address\n  - textbox \"Email address\": resident@example.test\n  - button \"Submit application\"\n  - status: Application received. Test reference SR-2026.\n- contentinfo: Fixture maintained by The Screen Readers. No data is stored. The origin has no Sugamya runtime.",
+      "evidence": {
+        "name": "verification-715e50e71a2ea42c5dcd3e2120dea7308027d5a7b89329f3242c0fe7afade4ef.json",
+        "sha256": "715e50e71a2ea42c5dcd3e2120dea7308027d5a7b89329f3242c0fe7afade4ef"
+      }
+    },
+    "installation": {
+      "target": "second-client-fixture",
+      "origin": "http://127.0.0.1:4201"
+    }
+  },
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-10-24T07:27:17.663Z",
+      "type": "installation.bound",
+      "data": {
+        "target": "second-client-fixture",
+        "origin": "http://127.0.0.1:4201"
+      },
+      "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "078f7316602a7d01fefe6ecb3562902743368454f8e96fedb126687990569894"
+    },
+    {
+      "seq": 2,
+      "at": "2026-10-24T07:27:20.617Z",
+      "type": "authorization.verified",
+      "data": {
+        "target": "second-client-fixture",
+        "origin": "http://127.0.0.1:4201",
+        "paths": [
+          "/apply"
+        ],
+        "verifiedAt": "2026-10-24T07:27:20.616Z",
+        "expires": "2026-10-28T00:00:00.000Z",
+        "method": "owner-installed challenge"
+      },
+      "previousHash": "078f7316602a7d01fefe6ecb3562902743368454f8e96fedb126687990569894",
+      "hash": "44a3b1e615bf72e7f18fb8c71ce07bb4b2feebcf185be89ebe8480e46ba59428"
+    },
+    {
+      "seq": 3,
+      "at": "2026-10-24T07:27:21.978Z",
+      "type": "evidence.observed",
+      "data": {
+        "evidence": {
+          "name": "baseline-16ae7c961d3d222732a49d78da28b89257a306f7a47016b96416ddf4ab27550b.json",
+          "sha256": "16ae7c961d3d222732a49d78da28b89257a306f7a47016b96416ddf4ab27550b"
+        },
+        "method": "local Chromium DOM + accessibility snapshot + axe; public fixture only",
+        "violations": [
+          {
+            "id": "button-name",
+            "nodes": 1
+          },
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "nodes": 1
+          },
+          {
+            "id": "label",
+            "nodes": 1
+          }
+        ]
+      },
+      "previousHash": "44a3b1e615bf72e7f18fb8c71ce07bb4b2feebcf185be89ebe8480e46ba59428",
+      "hash": "d2fb5df88aa3a0aad612951e6729d9b4cf123c2f64a0cf5f62eecc8fba3e4a19"
+    },
+    {
+      "seq": 4,
+      "at": "2026-10-24T07:27:21.979Z",
+      "type": "proposal.staged",
+      "data": {
+        "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+        "manifestHash": "88ad421b6eb2ad525b2c96897ad30bcbd1104342178fc410ab2abce64b37541e",
+        "findings": [
+          {
+            "id": "f308d13b-682d-4e28-88fb-6f07e38f312b",
+            "criterion": "3.3.2",
+            "selector": "#full-name",
+            "impact": "Associate the existing visible Full name prompt with the required application field; human confirms relationship.",
+            "evidenceId": "8abeb658-e476-418c-9dec-8fd672a3173d",
+            "confidence": 0.98,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 245,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "fe8906b2-70c1-4e3d-a874-ff07cfa6fa10"
+          },
+          {
+            "id": "11e31c06-8e33-45e7-b94b-188d887209b5",
+            "criterion": "4.1.2",
+            "selector": "#submit",
+            "impact": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning.",
+            "evidenceId": "8abeb658-e476-418c-9dec-8fd672a3173d",
+            "confidence": 0.95,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 238,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "aecdb97e-a413-49c5-96d3-5ce895c9c0b3"
+          },
+          {
+            "id": "0808faf8-a2b8-4bca-92b8-14728d9f354e",
+            "criterion": "1.4.3",
+            "selector": "#help",
+            "impact": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated.",
+            "evidenceId": "8abeb658-e476-418c-9dec-8fd672a3173d",
+            "confidence": 0.99,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 0.5,
+            "priority": 198,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "49b9cfd2-ed7b-4168-9a08-41416cfb4a6e"
+          },
+          {
+            "id": "3a10c0ae-02ad-418e-9738-a8661487d2a5",
+            "criterion": "1.1.1",
+            "selector": "#desk-map",
+            "impact": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject.",
+            "evidenceId": "8abeb658-e476-418c-9dec-8fd672a3173d",
+            "confidence": 0.65,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 2,
+            "priority": 65,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "5c5b4c1e-ca8f-4708-b734-cc1083224eeb"
+          }
+        ]
+      },
+      "previousHash": "d2fb5df88aa3a0aad612951e6729d9b4cf123c2f64a0cf5f62eecc8fba3e4a19",
+      "hash": "05d94c1ba4504c97c7a777f7622ea6cbb3f09d958096bccb286c842d50e94f33"
+    },
+    {
+      "seq": 5,
+      "at": "2026-10-24T07:27:21.985Z",
+      "type": "action.failed",
+      "data": {
+        "code": "ACTION_FAILED",
+        "route": "/api/versions/:id/deploy"
+      },
+      "previousHash": "05d94c1ba4504c97c7a777f7622ea6cbb3f09d958096bccb286c842d50e94f33",
+      "hash": "fdf032d4696c746216e4e7a5b7249e36ba72ebc2ad2232ab5eb470bb05537028"
+    },
+    {
+      "seq": 6,
+      "at": "2026-10-24T07:27:21.990Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "9cb970b0-c354-49c6-b62d-d27503bb59a9",
+        "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+        "operation": "fe8906b2-70c1-4e3d-a874-ff07cfa6fa10",
+        "manifestHash": "88ad421b6eb2ad525b2c96897ad30bcbd1104342178fc410ab2abce64b37541e",
+        "operationHash": "09d3d469951ac208c89ca820f34e722970dc2e7b17292e625f87fa0961e1abab",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Engineering evaluation: checked against owned fixture content and service task.",
+        "at": "2026-10-24T07:27:21.989Z"
+      },
+      "previousHash": "fdf032d4696c746216e4e7a5b7249e36ba72ebc2ad2232ab5eb470bb05537028",
+      "hash": "91973a9a7081ca5b3f0038ebd9a043ae003150dab0f578f178b5f5e0a9ea0d08"
+    },
+    {
+      "seq": 7,
+      "at": "2026-10-24T07:27:21.993Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "f7994141-a0a2-4dab-bdf4-987792b8f7b7",
+        "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+        "operation": "aecdb97e-a413-49c5-96d3-5ce895c9c0b3",
+        "manifestHash": "88ad421b6eb2ad525b2c96897ad30bcbd1104342178fc410ab2abce64b37541e",
+        "operationHash": "4f0528274805129cbdfb57912667fd33e3aab32981657f59a873e784e3c88097",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Engineering evaluation: checked against owned fixture content and service task.",
+        "at": "2026-10-24T07:27:21.993Z"
+      },
+      "previousHash": "91973a9a7081ca5b3f0038ebd9a043ae003150dab0f578f178b5f5e0a9ea0d08",
+      "hash": "df65297c16fcd67642996b46bd7c6f366c0f507e8880e86c22c9b94c10822304"
+    },
+    {
+      "seq": 8,
+      "at": "2026-10-24T07:27:21.997Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "ace3b94c-94d1-4fd8-b959-485173d45b2e",
+        "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+        "operation": "5c5b4c1e-ca8f-4708-b734-cc1083224eeb",
+        "manifestHash": "88ad421b6eb2ad525b2c96897ad30bcbd1104342178fc410ab2abce64b37541e",
+        "operationHash": "dc80a9aad3a32bc818b1fe912065cae60e42e877c399092cd072205872d16518",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Engineering evaluation: checked against owned fixture content and service task.",
+        "at": "2026-10-24T07:27:21.996Z"
+      },
+      "previousHash": "df65297c16fcd67642996b46bd7c6f366c0f507e8880e86c22c9b94c10822304",
+      "hash": "cd73eb03f0ac36992f24e76683d52baf01a76363b9c24dc860d488db9be1b5aa"
+    },
+    {
+      "seq": 9,
+      "at": "2026-10-24T07:27:22.009Z",
+      "type": "authorization.verified",
+      "data": {
+        "target": "second-client-fixture",
+        "origin": "http://127.0.0.1:4201",
+        "paths": [
+          "/apply"
+        ],
+        "verifiedAt": "2026-10-24T07:27:22.009Z",
+        "expires": "2026-10-28T00:00:00.000Z",
+        "method": "owner-installed challenge"
+      },
+      "previousHash": "cd73eb03f0ac36992f24e76683d52baf01a76363b9c24dc860d488db9be1b5aa",
+      "hash": "d5771753052e25bbb5fd45f86fcca45abc8cfb1bcbdcf40fcd08eefcc65403a7"
+    },
+    {
+      "seq": 10,
+      "at": "2026-10-24T07:27:22.025Z",
+      "type": "deployment.canary",
+      "data": {
+        "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+        "previous": null
+      },
+      "previousHash": "d5771753052e25bbb5fd45f86fcca45abc8cfb1bcbdcf40fcd08eefcc65403a7",
+      "hash": "8a664768cb92afea0dc03e9421e90e724f36ca5bfb648fe656935eb68939cd17"
+    },
+    {
+      "seq": 11,
+      "at": "2026-10-24T07:27:23.411Z",
+      "type": "verification.canary",
+      "data": {
+        "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+        "pass": true,
+        "evidence": {
+          "name": "verification-6c68c6a9ab667e5dce41f651988f1b36057d0b86353bed4d27f8e5f4710336ae.json",
+          "sha256": "6c68c6a9ab667e5dce41f651988f1b36057d0b86353bed4d27f8e5f4710336ae"
+        }
+      },
+      "previousHash": "8a664768cb92afea0dc03e9421e90e724f36ca5bfb648fe656935eb68939cd17",
+      "hash": "c9389191e45b5a77941f462de9eab8559bdd47eedc09ec4d51f50d483d9ea678"
+    },
+    {
+      "seq": 12,
+      "at": "2026-10-24T07:27:23.411Z",
+      "type": "deployment.activated",
+      "data": {
+        "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+        "previous": null
+      },
+      "previousHash": "c9389191e45b5a77941f462de9eab8559bdd47eedc09ec4d51f50d483d9ea678",
+      "hash": "828acf4e2e1f62d95925635e2fb68dc8df0d0e3049f21d79810d3515442e70a7"
+    },
+    {
+      "seq": 13,
+      "at": "2026-10-24T07:27:24.766Z",
+      "type": "verification.visitor",
+      "data": {
+        "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+        "pass": true,
+        "evidence": {
+          "name": "verification-4dc91e0a8925621db922fbd3897cbaf374c3cf276d1a6960e5aecfb2c174b3e8.json",
+          "sha256": "4dc91e0a8925621db922fbd3897cbaf374c3cf276d1a6960e5aecfb2c174b3e8"
+        }
+      },
+      "previousHash": "828acf4e2e1f62d95925635e2fb68dc8df0d0e3049f21d79810d3515442e70a7",
+      "hash": "cab6fac7c06096ab1a72d5001f7f4c5031483ce4d4ce83ada706b33119a7513d"
+    },
+    {
+      "seq": 14,
+      "at": "2026-10-24T07:27:24.766Z",
+      "type": "deployment.verified",
+      "data": {
+        "version": "ef1f40dd-2601-468e-81e9-3c9f0f18a938"
+      },
+      "previousHash": "cab6fac7c06096ab1a72d5001f7f4c5031483ce4d4ce83ada706b33119a7513d",
+      "hash": "dcbdbba33b333a7e1fc8da9dbb190d3faba69c5e0f612abc2fcf2b4a93587d4a"
+    },
+    {
+      "seq": 15,
+      "at": "2026-10-24T07:27:24.771Z",
+      "type": "action.failed",
+      "data": {
+        "code": "ACTION_FAILED",
+        "route": "/api/versions/:id/deploy"
+      },
+      "previousHash": "dcbdbba33b333a7e1fc8da9dbb190d3faba69c5e0f612abc2fcf2b4a93587d4a",
+      "hash": "d86def2ea237dd9b039ca9dfc4b11ae0375e5578680829cf3fa68e57267b89e0"
+    },
+    {
+      "seq": 16,
+      "at": "2026-10-24T07:27:26.171Z",
+      "type": "deployment.emergency-disabled",
+      "data": {
+        "previous": "ef1f40dd-2601-468e-81e9-3c9f0f18a938",
+        "restored": "original origin response"
+      },
+      "previousHash": "d86def2ea237dd9b039ca9dfc4b11ae0375e5578680829cf3fa68e57267b89e0",
+      "hash": "15f9bd93351ba100974dcd229225a7bc64aed0703b6330866879f39207c620c8"
+    },
+    {
+      "seq": 17,
+      "at": "2026-10-24T07:27:27.388Z",
+      "type": "evidence.observed",
+      "data": {
+        "evidence": {
+          "name": "baseline-6925e7598b1605390df70495655762c44a7d95ee0068865c82ea0cc3d5e382f2.json",
+          "sha256": "6925e7598b1605390df70495655762c44a7d95ee0068865c82ea0cc3d5e382f2"
+        },
+        "method": "local Chromium DOM + accessibility snapshot + axe; public fixture only",
+        "violations": [
+          {
+            "id": "button-name",
+            "nodes": 1
+          },
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "nodes": 1
+          },
+          {
+            "id": "label",
+            "nodes": 1
+          }
+        ]
+      },
+      "previousHash": "15f9bd93351ba100974dcd229225a7bc64aed0703b6330866879f39207c620c8",
+      "hash": "29f0001b68b5a75bf629966dba8a9876aeb2783f07318f25877fd92ecf102c58"
+    },
+    {
+      "seq": 18,
+      "at": "2026-10-24T07:27:27.389Z",
+      "type": "proposal.staged",
+      "data": {
+        "version": "e0c78d6b-384f-4666-9b0f-a2dc0a4decfb",
+        "manifestHash": "e2d3781ac303001b595b8ead95a602f532e171514c896861f6b775d0402403c9",
+        "findings": [
+          {
+            "id": "c77df8de-94c1-42ca-a624-c74a58494611",
+            "criterion": "3.3.2",
+            "selector": "#full-name",
+            "impact": "Associate the existing visible Full name prompt with the required application field; human confirms relationship.",
+            "evidenceId": "f69f0ebf-1923-48b1-aa70-1709f50593a1",
+            "confidence": 0.98,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 245,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "be418bec-3e4d-4227-93c4-0514db90c419"
+          },
+          {
+            "id": "0edd0be1-6db0-4f52-9d20-ed74f3356c87",
+            "criterion": "4.1.2",
+            "selector": "#submit",
+            "impact": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning.",
+            "evidenceId": "f69f0ebf-1923-48b1-aa70-1709f50593a1",
+            "confidence": 0.95,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 238,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "8e15004d-4549-476c-a994-1d2574aeca95"
+          },
+          {
+            "id": "937873f0-b065-43d2-b055-058de82a0e28",
+            "criterion": "1.4.3",
+            "selector": "#help",
+            "impact": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated.",
+            "evidenceId": "f69f0ebf-1923-48b1-aa70-1709f50593a1",
+            "confidence": 0.99,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 0.5,
+            "priority": 198,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "26eac84c-dbbc-4615-a0a1-897023711404"
+          },
+          {
+            "id": "961ea069-7095-4ab1-90d2-203d0d4d4464",
+            "criterion": "1.1.1",
+            "selector": "#desk-map",
+            "impact": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject.",
+            "evidenceId": "f69f0ebf-1923-48b1-aa70-1709f50593a1",
+            "confidence": 0.65,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 2,
+            "priority": 65,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "3cca4b68-7e75-40af-a959-31f1656f30d9"
+          }
+        ]
+      },
+      "previousHash": "29f0001b68b5a75bf629966dba8a9876aeb2783f07318f25877fd92ecf102c58",
+      "hash": "a4bc125c0ca617a7e8da0f58f2df32c4719f45ce446b5e8eb79596809725157c"
+    },
+    {
+      "seq": 19,
+      "at": "2026-10-24T07:27:27.395Z",
+      "type": "semantic.reject",
+      "data": {
+        "id": "d2b342b3-34dc-4064-839b-a7e196e22814",
+        "version": "e0c78d6b-384f-4666-9b0f-a2dc0a4decfb",
+        "operation": "be418bec-3e4d-4227-93c4-0514db90c419",
+        "manifestHash": "e2d3781ac303001b595b8ead95a602f532e171514c896861f6b775d0402403c9",
+        "operationHash": "dacbe5245fed7b11f17184b7ef7caac3e64ffcf612c220566d171a0db7cc5b9c",
+        "actor": "approver",
+        "action": "reject",
+        "reason": "Evaluation rejection case: insufficient diagram description.",
+        "at": "2026-10-24T07:27:27.395Z"
+      },
+      "previousHash": "a4bc125c0ca617a7e8da0f58f2df32c4719f45ce446b5e8eb79596809725157c",
+      "hash": "ab3fcc0e5cf0056e8ab73e0490e31772ebef4cf924555f3aeea4d45dd5595a0a"
+    },
+    {
+      "seq": 20,
+      "at": "2026-10-24T07:27:27.398Z",
+      "type": "action.failed",
+      "data": {
+        "code": "ACTION_FAILED",
+        "route": "/api/versions/:id/deploy"
+      },
+      "previousHash": "ab3fcc0e5cf0056e8ab73e0490e31772ebef4cf924555f3aeea4d45dd5595a0a",
+      "hash": "3637b08e72a487d2a0ab529650b4c297ebfe07cc4940327f7a706bd80e6e13c6"
+    },
+    {
+      "seq": 21,
+      "at": "2026-10-24T07:27:28.628Z",
+      "type": "evidence.observed",
+      "data": {
+        "evidence": {
+          "name": "baseline-6b918bb65674d6f8686433f9ccab2504c77628c4eb4ed2852ca6864bbad062a2.json",
+          "sha256": "6b918bb65674d6f8686433f9ccab2504c77628c4eb4ed2852ca6864bbad062a2"
+        },
+        "method": "local Chromium DOM + accessibility snapshot + axe; public fixture only",
+        "violations": [
+          {
+            "id": "button-name",
+            "nodes": 1
+          },
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "nodes": 1
+          },
+          {
+            "id": "label",
+            "nodes": 1
+          }
+        ]
+      },
+      "previousHash": "3637b08e72a487d2a0ab529650b4c297ebfe07cc4940327f7a706bd80e6e13c6",
+      "hash": "936d15c5ca61807e891e8f14454860e5464d7266b10d413b73829644e108a930"
+    },
+    {
+      "seq": 22,
+      "at": "2026-10-24T07:27:28.628Z",
+      "type": "proposal.staged",
+      "data": {
+        "version": "b6aa9e02-1111-4eb6-9c16-51c1f794d26b",
+        "manifestHash": "03dfb72f27eaca367ef9ba4b8608e259fa40777bb69e8f73f80339f38a17e1d5",
+        "findings": [
+          {
+            "id": "bd6e36e2-d43f-408b-8730-23a19cfa394a",
+            "criterion": "3.3.2",
+            "selector": "#full-name",
+            "impact": "Associate the existing visible Full name prompt with the required application field; human confirms relationship.",
+            "evidenceId": "beb3cd8c-07ee-4c82-ab73-dd5ef5c26b43",
+            "confidence": 0.98,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 245,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "508df4f5-cd0d-4432-8f15-4bc68c754d9b"
+          },
+          {
+            "id": "8e9640b6-b16d-4aba-abbf-79df5aaa551d",
+            "criterion": "4.1.2",
+            "selector": "#submit",
+            "impact": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning.",
+            "evidenceId": "beb3cd8c-07ee-4c82-ab73-dd5ef5c26b43",
+            "confidence": 0.95,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 238,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "370f9c07-d6aa-4255-9008-fc92787e79d2"
+          },
+          {
+            "id": "8385cf21-4d66-4a90-bfb7-f42f7a3cb8a6",
+            "criterion": "1.4.3",
+            "selector": "#help",
+            "impact": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated.",
+            "evidenceId": "beb3cd8c-07ee-4c82-ab73-dd5ef5c26b43",
+            "confidence": 0.99,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 0.5,
+            "priority": 198,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "0e49c287-e04c-4d3b-94d8-0af0be16f254"
+          },
+          {
+            "id": "c3b0dd55-167b-4ffc-8ac8-b3f6f625b98d",
+            "criterion": "1.1.1",
+            "selector": "#desk-map",
+            "impact": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject.",
+            "evidenceId": "beb3cd8c-07ee-4c82-ab73-dd5ef5c26b43",
+            "confidence": 0.65,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 2,
+            "priority": 65,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "0a519e48-0a12-45e7-8131-ba4240eb8f5f"
+          }
+        ]
+      },
+      "previousHash": "936d15c5ca61807e891e8f14454860e5464d7266b10d413b73829644e108a930",
+      "hash": "1ed5904f5505dd07c6bff3cd1d2b1f2dcd0bf708d1a82c19bfe6463c712b8772"
+    },
+    {
+      "seq": 23,
+      "at": "2026-10-24T07:27:28.633Z",
+      "type": "semantic.edit",
+      "data": {
+        "id": "51b7fe4e-aefa-44fd-8b5c-e2d4e81de8b8",
+        "version": "b6aa9e02-1111-4eb6-9c16-51c1f794d26b",
+        "operation": "370f9c07-d6aa-4255-9008-fc92787e79d2",
+        "manifestHash": "3f557ee8f442798706f9793741ff94c0fdbb8d8c84f690ef3ae5278502e84025",
+        "operationHash": "b7b99e971ccc0704754a5d4c9f7a5422e046292de9cdb764f544427442ae5672",
+        "actor": "approver",
+        "action": "edit",
+        "reason": "Controlled negative test only: intentionally wrong action name to exercise independent task gate.",
+        "at": "2026-10-24T07:27:28.633Z"
+      },
+      "previousHash": "1ed5904f5505dd07c6bff3cd1d2b1f2dcd0bf708d1a82c19bfe6463c712b8772",
+      "hash": "c5414243eaf03f4bc3f845c991855ea72189d8b5c3359dc6100e16972447b958"
+    },
+    {
+      "seq": 24,
+      "at": "2026-10-24T07:27:28.640Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "161b4b4a-b408-494c-8a5e-3f7e333d0322",
+        "version": "b6aa9e02-1111-4eb6-9c16-51c1f794d26b",
+        "operation": "508df4f5-cd0d-4432-8f15-4bc68c754d9b",
+        "manifestHash": "3f557ee8f442798706f9793741ff94c0fdbb8d8c84f690ef3ae5278502e84025",
+        "operationHash": "54cc9b16fac57ce59649af7a8639e9334a405acfc1446cfefbb5b402032e8dbf",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Controlled negative test: approve remaining semantic operations.",
+        "at": "2026-10-24T07:27:28.640Z"
+      },
+      "previousHash": "c5414243eaf03f4bc3f845c991855ea72189d8b5c3359dc6100e16972447b958",
+      "hash": "15a9c179785d9316aad5c47dac4bb082d363539c363a8f4c6511ed82995e8f8d"
+    },
+    {
+      "seq": 25,
+      "at": "2026-10-24T07:27:28.643Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "d75fdff5-6723-4560-921e-f68e42a81722",
+        "version": "b6aa9e02-1111-4eb6-9c16-51c1f794d26b",
+        "operation": "0a519e48-0a12-45e7-8131-ba4240eb8f5f",
+        "manifestHash": "3f557ee8f442798706f9793741ff94c0fdbb8d8c84f690ef3ae5278502e84025",
+        "operationHash": "5c95813aeaf5516b47d1d8a2e5cab43de4b109aeff16b56f9b468260345515cb",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Controlled negative test: approve remaining semantic operations.",
+        "at": "2026-10-24T07:27:28.643Z"
+      },
+      "previousHash": "15a9c179785d9316aad5c47dac4bb082d363539c363a8f4c6511ed82995e8f8d",
+      "hash": "8c0b953ae14f3cc57864757374daf96d20d56612bac2b51f27f3de08e2abf13a"
+    },
+    {
+      "seq": 26,
+      "at": "2026-10-24T07:27:28.648Z",
+      "type": "authorization.verified",
+      "data": {
+        "target": "second-client-fixture",
+        "origin": "http://127.0.0.1:4201",
+        "paths": [
+          "/apply"
+        ],
+        "verifiedAt": "2026-10-24T07:27:28.648Z",
+        "expires": "2026-10-28T00:00:00.000Z",
+        "method": "owner-installed challenge"
+      },
+      "previousHash": "8c0b953ae14f3cc57864757374daf96d20d56612bac2b51f27f3de08e2abf13a",
+      "hash": "ad80bf74ad56eb77e93a700e07331d7aa7de60f3d612aba3c10f11bf76d4f49e"
+    },
+    {
+      "seq": 27,
+      "at": "2026-10-24T07:27:28.652Z",
+      "type": "deployment.canary",
+      "data": {
+        "version": "b6aa9e02-1111-4eb6-9c16-51c1f794d26b",
+        "previous": null
+      },
+      "previousHash": "ad80bf74ad56eb77e93a700e07331d7aa7de60f3d612aba3c10f11bf76d4f49e",
+      "hash": "d4f72b607f6fda583ea67d82c48c21574f77ee93dcfb3ef3c101ae84606558f3"
+    },
+    {
+      "seq": 28,
+      "at": "2026-10-24T07:27:29.894Z",
+      "type": "verification.canary",
+      "data": {
+        "version": "b6aa9e02-1111-4eb6-9c16-51c1f794d26b",
+        "pass": false,
+        "evidence": {
+          "name": "verification-4d521743c9e64062de47fa6d3d0d969edd673c5d4b098226bae3ff256d7e52e5.json",
+          "sha256": "4d521743c9e64062de47fa6d3d0d969edd673c5d4b098226bae3ff256d7e52e5"
+        }
+      },
+      "previousHash": "d4f72b607f6fda583ea67d82c48c21574f77ee93dcfb3ef3c101ae84606558f3",
+      "hash": "6bf564143bd39ad90f382b5f52cd2ea1971f1c188c7b98adf8fd14137c5b778a"
+    },
+    {
+      "seq": 29,
+      "at": "2026-10-24T07:27:29.894Z",
+      "type": "promotion.withheld",
+      "data": {
+        "version": "b6aa9e02-1111-4eb6-9c16-51c1f794d26b",
+        "activeUnchanged": null,
+        "reason": "Independent canary gate failed"
+      },
+      "previousHash": "6bf564143bd39ad90f382b5f52cd2ea1971f1c188c7b98adf8fd14137c5b778a",
+      "hash": "b03207c01aaefb04943508861183880340331f1ead8c1c24117c12873cf98502"
+    },
+    {
+      "seq": 30,
+      "at": "2026-10-24T07:27:31.311Z",
+      "type": "evidence.observed",
+      "data": {
+        "evidence": {
+          "name": "baseline-0eb5907038b15f2c4cae2395fbcc6bac94417445d78dabc60cdf52d0cb50cf42.json",
+          "sha256": "0eb5907038b15f2c4cae2395fbcc6bac94417445d78dabc60cdf52d0cb50cf42"
+        },
+        "method": "local Chromium DOM + accessibility snapshot + axe; public fixture only",
+        "violations": [
+          {
+            "id": "button-name",
+            "nodes": 1
+          },
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "nodes": 1
+          },
+          {
+            "id": "label",
+            "nodes": 1
+          }
+        ]
+      },
+      "previousHash": "b03207c01aaefb04943508861183880340331f1ead8c1c24117c12873cf98502",
+      "hash": "a17c15deaf983f83fe7bd5718c542d2a1dad995a4b0ca9c5e72d51a556050ca6"
+    },
+    {
+      "seq": 31,
+      "at": "2026-10-24T07:27:31.312Z",
+      "type": "proposal.staged",
+      "data": {
+        "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+        "manifestHash": "80e0de7308a30a5a63163c637d403d5f7de09f7324f4624fc9f8ef67145f05fd",
+        "findings": [
+          {
+            "id": "5dce56f6-30fa-490c-afd8-04aa26ae3605",
+            "criterion": "3.3.2",
+            "selector": "#full-name",
+            "impact": "Associate the existing visible Full name prompt with the required application field; human confirms relationship.",
+            "evidenceId": "2266442e-8ad5-403f-a32f-25d8d3f71e56",
+            "confidence": 0.98,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 245,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "55fc0c3d-2025-4ae0-899a-056bee876d82"
+          },
+          {
+            "id": "035dcd7c-43df-4070-8a1e-629c46f045d8",
+            "criterion": "4.1.2",
+            "selector": "#submit",
+            "impact": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning.",
+            "evidenceId": "2266442e-8ad5-403f-a32f-25d8d3f71e56",
+            "confidence": 0.95,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 238,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "3ae9c99a-86b8-4941-abf8-abb59456298e"
+          },
+          {
+            "id": "94ee4eac-6971-4d10-90b9-239d4c82eb14",
+            "criterion": "1.4.3",
+            "selector": "#help",
+            "impact": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated.",
+            "evidenceId": "2266442e-8ad5-403f-a32f-25d8d3f71e56",
+            "confidence": 0.99,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 0.5,
+            "priority": 198,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "37bd136c-4f98-4479-aa1a-ffa56b2846ba"
+          },
+          {
+            "id": "0ad89457-ddcd-4452-bc54-698b7cf4c906",
+            "criterion": "1.1.1",
+            "selector": "#desk-map",
+            "impact": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject.",
+            "evidenceId": "2266442e-8ad5-403f-a32f-25d8d3f71e56",
+            "confidence": 0.65,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 2,
+            "priority": 65,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "03a390f2-bea4-4b1c-91cc-5de4f15c8d2c"
+          }
+        ]
+      },
+      "previousHash": "a17c15deaf983f83fe7bd5718c542d2a1dad995a4b0ca9c5e72d51a556050ca6",
+      "hash": "10a3f5a296a42c3598dca46cc60a3b0f680291757e9e2f429635a06c11828789"
+    },
+    {
+      "seq": 32,
+      "at": "2026-10-24T07:27:31.316Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "9d40ed78-d46d-4156-b857-16c2bc04b210",
+        "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+        "operation": "55fc0c3d-2025-4ae0-899a-056bee876d82",
+        "manifestHash": "80e0de7308a30a5a63163c637d403d5f7de09f7324f4624fc9f8ef67145f05fd",
+        "operationHash": "ae7bf371d534162e2a965e4e15ed71570b0ac990e8e1f1c5cd69532791e72c97",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Engineering fixture review; correct visible label, diagram context and submit action.",
+        "at": "2026-10-24T07:27:31.316Z"
+      },
+      "previousHash": "10a3f5a296a42c3598dca46cc60a3b0f680291757e9e2f429635a06c11828789",
+      "hash": "d0079aae7f4419bf7f03468c79d6ff5dab78dafd10b081e2a5368f8b64f337b5"
+    },
+    {
+      "seq": 33,
+      "at": "2026-10-24T07:27:31.320Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "23260afa-3b60-47ac-b3fc-4b5ce525431c",
+        "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+        "operation": "3ae9c99a-86b8-4941-abf8-abb59456298e",
+        "manifestHash": "80e0de7308a30a5a63163c637d403d5f7de09f7324f4624fc9f8ef67145f05fd",
+        "operationHash": "da70751b14e0f505812c86d3e689cae2b94d60911646134a5bca1a8e7824ff92",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Engineering fixture review; correct visible label, diagram context and submit action.",
+        "at": "2026-10-24T07:27:31.319Z"
+      },
+      "previousHash": "d0079aae7f4419bf7f03468c79d6ff5dab78dafd10b081e2a5368f8b64f337b5",
+      "hash": "1faab292f4be35eea0011981eb66537359172340eab70184564c8d9d3495d484"
+    },
+    {
+      "seq": 34,
+      "at": "2026-10-24T07:27:31.322Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "4f4af2a7-195b-4846-b14d-0c771b308531",
+        "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+        "operation": "03a390f2-bea4-4b1c-91cc-5de4f15c8d2c",
+        "manifestHash": "80e0de7308a30a5a63163c637d403d5f7de09f7324f4624fc9f8ef67145f05fd",
+        "operationHash": "72fdd798428ba36e8f65be125db37d8948249cdd11d45645ba0036f3b49ae6fd",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Engineering fixture review; correct visible label, diagram context and submit action.",
+        "at": "2026-10-24T07:27:31.322Z"
+      },
+      "previousHash": "1faab292f4be35eea0011981eb66537359172340eab70184564c8d9d3495d484",
+      "hash": "41beb9e816b12f4dde39db8940e9f33ef1922c96103990e0c60b00d983a8ef5a"
+    },
+    {
+      "seq": 35,
+      "at": "2026-10-24T07:27:31.327Z",
+      "type": "authorization.verified",
+      "data": {
+        "target": "second-client-fixture",
+        "origin": "http://127.0.0.1:4201",
+        "paths": [
+          "/apply"
+        ],
+        "verifiedAt": "2026-10-24T07:27:31.327Z",
+        "expires": "2026-10-28T00:00:00.000Z",
+        "method": "owner-installed challenge"
+      },
+      "previousHash": "41beb9e816b12f4dde39db8940e9f33ef1922c96103990e0c60b00d983a8ef5a",
+      "hash": "291747c44369fcb331738d6f219df7d594648fd6a1bd51ca166f78a5b9544fc3"
+    },
+    {
+      "seq": 36,
+      "at": "2026-10-24T07:27:31.331Z",
+      "type": "deployment.canary",
+      "data": {
+        "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+        "previous": null
+      },
+      "previousHash": "291747c44369fcb331738d6f219df7d594648fd6a1bd51ca166f78a5b9544fc3",
+      "hash": "ed70107373ce3b9980889d5988db2dc0b774966279fc4b885f4ffe567ba59b31"
+    },
+    {
+      "seq": 37,
+      "at": "2026-10-24T07:27:32.629Z",
+      "type": "verification.canary",
+      "data": {
+        "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+        "pass": true,
+        "evidence": {
+          "name": "verification-2a8bb8c2a82bbf726fdf8bff7a71311a14bf503bbb994c2f68a9c31ead931d47.json",
+          "sha256": "2a8bb8c2a82bbf726fdf8bff7a71311a14bf503bbb994c2f68a9c31ead931d47"
+        }
+      },
+      "previousHash": "ed70107373ce3b9980889d5988db2dc0b774966279fc4b885f4ffe567ba59b31",
+      "hash": "b2116ad097f3a0353879e7438752e5b6bef20ad67f118fabfebdcb439e2508a4"
+    },
+    {
+      "seq": 38,
+      "at": "2026-10-24T07:27:32.629Z",
+      "type": "deployment.activated",
+      "data": {
+        "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+        "previous": null
+      },
+      "previousHash": "b2116ad097f3a0353879e7438752e5b6bef20ad67f118fabfebdcb439e2508a4",
+      "hash": "5243b8da3265bfb45fa1ce10199e286b8b26bf47e99751109cc14880c8a87a84"
+    },
+    {
+      "seq": 39,
+      "at": "2026-10-24T07:27:33.901Z",
+      "type": "verification.visitor",
+      "data": {
+        "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+        "pass": true,
+        "evidence": {
+          "name": "verification-705a20daaaf26fca69227b77ba63ec8b229f18dc82fd1b62ef3a0603d559704b.json",
+          "sha256": "705a20daaaf26fca69227b77ba63ec8b229f18dc82fd1b62ef3a0603d559704b"
+        }
+      },
+      "previousHash": "5243b8da3265bfb45fa1ce10199e286b8b26bf47e99751109cc14880c8a87a84",
+      "hash": "ee119c4eab4092ecca7146e92d18d2447c6b456e751fcbe09645c548782a94b0"
+    },
+    {
+      "seq": 40,
+      "at": "2026-10-24T07:27:33.901Z",
+      "type": "deployment.verified",
+      "data": {
+        "version": "a7098ccf-4fbe-4103-8304-7ea256244995"
+      },
+      "previousHash": "ee119c4eab4092ecca7146e92d18d2447c6b456e751fcbe09645c548782a94b0",
+      "hash": "cfa94d233727233c6b472099a6a8c4a690a5dc0697d96d078225300de8f1d1fa"
+    },
+    {
+      "seq": 41,
+      "at": "2026-10-24T07:27:33.934Z",
+      "type": "transformation.skipped",
+      "data": {
+        "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+        "path": "/apply",
+        "reason": "document-precondition-mismatch"
+      },
+      "previousHash": "cfa94d233727233c6b472099a6a8c4a690a5dc0697d96d078225300de8f1d1fa",
+      "hash": "284bcf3dc7fb9f734e0e45b6616fb4c17a354bab7ab25d8036d2069cb7dfaceb"
+    },
+    {
+      "seq": 42,
+      "at": "2026-10-24T07:27:40.165Z",
+      "type": "verification.observed",
+      "data": {
+        "version": "a7098ccf-4fbe-4103-8304-7ea256244995",
+        "pass": false,
+        "evidence": {
+          "name": "verification-9daa048297a600c2d0855c0f2798a9d30e4f74b845af4b0e418a10580296f10d.json",
+          "sha256": "9daa048297a600c2d0855c0f2798a9d30e4f74b845af4b0e418a10580296f10d"
+        }
+      },
+      "previousHash": "284bcf3dc7fb9f734e0e45b6616fb4c17a354bab7ab25d8036d2069cb7dfaceb",
+      "hash": "496d5f2854a0885f15380861004f79f65acab2c7b8f653175d068e8b2f2ab48f"
+    },
+    {
+      "seq": 43,
+      "at": "2026-10-24T07:27:40.165Z",
+      "type": "deployment.rolled-back",
+      "data": {
+        "from": "a7098ccf-4fbe-4103-8304-7ea256244995",
+        "to": null,
+        "reason": "Observed verification failed",
+        "at": "2026-10-24T07:27:40.165Z"
+      },
+      "previousHash": "496d5f2854a0885f15380861004f79f65acab2c7b8f653175d068e8b2f2ab48f",
+      "hash": "2d493c9b64c36960017d9b66683f72459c11ece6545de850d496d84520e590f0"
+    },
+    {
+      "seq": 44,
+      "at": "2026-10-24T07:27:40.178Z",
+      "type": "origin.http-error",
+      "data": {
+        "path": "/apply",
+        "status": 503,
+        "repairClaimed": false
+      },
+      "previousHash": "2d493c9b64c36960017d9b66683f72459c11ece6545de850d496d84520e590f0",
+      "hash": "216ca35014cc3a160e42aa00c813aa1527983ebc6c847e240f4ee6b327d96159"
+    },
+    {
+      "seq": 45,
+      "at": "2026-10-24T07:27:40.833Z",
+      "type": "action.failed",
+      "data": {
+        "code": "ACTION_FAILED",
+        "route": "/api/scan"
+      },
+      "previousHash": "216ca35014cc3a160e42aa00c813aa1527983ebc6c847e240f4ee6b327d96159",
+      "hash": "6110351010202efafe6235260793edb44ba24a588f457580dc775f422b3c25a6"
+    },
+    {
+      "seq": 46,
+      "at": "2026-10-24T07:27:42.031Z",
+      "type": "evidence.observed",
+      "data": {
+        "evidence": {
+          "name": "baseline-8fa690212337006aff746e5d1112cbbd712ed128fd7c6c7735bfd31f52239769.json",
+          "sha256": "8fa690212337006aff746e5d1112cbbd712ed128fd7c6c7735bfd31f52239769"
+        },
+        "method": "local Chromium DOM + accessibility snapshot + axe; public fixture only",
+        "violations": [
+          {
+            "id": "button-name",
+            "nodes": 1
+          },
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "nodes": 1
+          },
+          {
+            "id": "label",
+            "nodes": 1
+          }
+        ]
+      },
+      "previousHash": "6110351010202efafe6235260793edb44ba24a588f457580dc775f422b3c25a6",
+      "hash": "b1be23134b2b1876dd58c9c78b3f619be11cda8e50e0475ee528f38b041e33c9"
+    },
+    {
+      "seq": 47,
+      "at": "2026-10-24T07:27:42.032Z",
+      "type": "proposal.staged",
+      "data": {
+        "version": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+        "manifestHash": "f6c5882ede3d8838d9db7ccb00f51a4f5fcf0e4dc9d027ef8f15c1a10b5e9de8",
+        "findings": [
+          {
+            "id": "59fc6642-9ba3-46e8-862f-ab9b67b95bc2",
+            "criterion": "3.3.2",
+            "selector": "#full-name",
+            "impact": "Associate the existing visible Full name prompt with the required application field; human confirms relationship.",
+            "evidenceId": "59915b9f-bacc-44eb-b0c4-93b1f5735253",
+            "confidence": 0.98,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 245,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "5f3e17ea-1226-4a5a-8e66-1bc561c98136"
+          },
+          {
+            "id": "7432498d-d828-42ab-8c42-d1aeb72c2fcc",
+            "criterion": "4.1.2",
+            "selector": "#submit",
+            "impact": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning.",
+            "evidenceId": "59915b9f-bacc-44eb-b0c4-93b1f5735253",
+            "confidence": 0.95,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 238,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "63ad39ac-92b4-41ec-991c-c8ccaa2bfe3c"
+          },
+          {
+            "id": "b1234fce-a014-48f5-a49e-e2c0aa86410e",
+            "criterion": "1.4.3",
+            "selector": "#help",
+            "impact": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated.",
+            "evidenceId": "59915b9f-bacc-44eb-b0c4-93b1f5735253",
+            "confidence": 0.99,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 0.5,
+            "priority": 198,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "f8fce1dc-e852-429c-97f7-a94f9280333d"
+          },
+          {
+            "id": "6f4851fa-88cb-4e85-bf00-7e68641bc34e",
+            "criterion": "1.1.1",
+            "selector": "#desk-map",
+            "impact": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject.",
+            "evidenceId": "59915b9f-bacc-44eb-b0c4-93b1f5735253",
+            "confidence": 0.65,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 2,
+            "priority": 65,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "3ae46519-a83e-41f0-a2b4-e208dfe45fc6"
+          }
+        ]
+      },
+      "previousHash": "b1be23134b2b1876dd58c9c78b3f619be11cda8e50e0475ee528f38b041e33c9",
+      "hash": "b208b93917a0cc8e3e561a1f169d650ad5541c80f906ddff6f3d9f6107f69d21"
+    },
+    {
+      "seq": 48,
+      "at": "2026-10-24T07:27:42.036Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "fbbb560d-121d-4329-8509-6ace3b006a25",
+        "version": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+        "operation": "5f3e17ea-1226-4a5a-8e66-1bc561c98136",
+        "manifestHash": "f6c5882ede3d8838d9db7ccb00f51a4f5fcf0e4dc9d027ef8f15c1a10b5e9de8",
+        "operationHash": "609c2ee1db7effdc147a66b9d31401469b4433f27b7ca8aad52825a512dbd91d",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Controlled hydration test; semantic content reviewed.",
+        "at": "2026-10-24T07:27:42.036Z"
+      },
+      "previousHash": "b208b93917a0cc8e3e561a1f169d650ad5541c80f906ddff6f3d9f6107f69d21",
+      "hash": "fd8586400bd5d7fb28e11e29386dbc6d82f42c44f93d85800f3b9dbd55cdffb4"
+    },
+    {
+      "seq": 49,
+      "at": "2026-10-24T07:27:42.039Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "d06e1883-c076-4ac7-9bad-3b2a7eb9acdf",
+        "version": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+        "operation": "63ad39ac-92b4-41ec-991c-c8ccaa2bfe3c",
+        "manifestHash": "f6c5882ede3d8838d9db7ccb00f51a4f5fcf0e4dc9d027ef8f15c1a10b5e9de8",
+        "operationHash": "edb403ddc06f6f2f7cf3536618c2e2d0a9ce287336b2c21cbdc4641b0aa2957b",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Controlled hydration test; semantic content reviewed.",
+        "at": "2026-10-24T07:27:42.039Z"
+      },
+      "previousHash": "fd8586400bd5d7fb28e11e29386dbc6d82f42c44f93d85800f3b9dbd55cdffb4",
+      "hash": "a86dbec54194696d4ef00e31906054f42b959092fda53b75d4a0a363f84c7693"
+    },
+    {
+      "seq": 50,
+      "at": "2026-10-24T07:27:42.042Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "34b834d3-86a4-486a-905c-0dffdd8db07c",
+        "version": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+        "operation": "3ae46519-a83e-41f0-a2b4-e208dfe45fc6",
+        "manifestHash": "f6c5882ede3d8838d9db7ccb00f51a4f5fcf0e4dc9d027ef8f15c1a10b5e9de8",
+        "operationHash": "e5eaf67bd3cd7eb8840eaab6f461e61a6424da69668b76debed4c84aa41ca06e",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Controlled hydration test; semantic content reviewed.",
+        "at": "2026-10-24T07:27:42.042Z"
+      },
+      "previousHash": "a86dbec54194696d4ef00e31906054f42b959092fda53b75d4a0a363f84c7693",
+      "hash": "29bbc6aa6f390f691ca3ee0b57b7c34a88c6cad08e2aaaef07fd31e94690a6cc"
+    },
+    {
+      "seq": 51,
+      "at": "2026-10-24T07:27:42.046Z",
+      "type": "authorization.verified",
+      "data": {
+        "target": "second-client-fixture",
+        "origin": "http://127.0.0.1:4201",
+        "paths": [
+          "/apply"
+        ],
+        "verifiedAt": "2026-10-24T07:27:42.046Z",
+        "expires": "2026-10-28T00:00:00.000Z",
+        "method": "owner-installed challenge"
+      },
+      "previousHash": "29bbc6aa6f390f691ca3ee0b57b7c34a88c6cad08e2aaaef07fd31e94690a6cc",
+      "hash": "100e837437f9d23e46d0d660574f6df5d9a6f57670774b0818dd9244dbf3577b"
+    },
+    {
+      "seq": 52,
+      "at": "2026-10-24T07:27:42.050Z",
+      "type": "deployment.canary",
+      "data": {
+        "version": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+        "previous": null
+      },
+      "previousHash": "100e837437f9d23e46d0d660574f6df5d9a6f57670774b0818dd9244dbf3577b",
+      "hash": "09a23dfb5503a373403f54eeba7b1f468ef5340996c22229118324d2b3b59df5"
+    },
+    {
+      "seq": 53,
+      "at": "2026-10-24T07:27:48.257Z",
+      "type": "verification.canary",
+      "data": {
+        "version": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+        "pass": false,
+        "evidence": {
+          "name": "verification-c7c291352972a4d6790cdf329afbf7c56486a521f4ff6a4d2fea2cd27ad25d14.json",
+          "sha256": "c7c291352972a4d6790cdf329afbf7c56486a521f4ff6a4d2fea2cd27ad25d14"
+        }
+      },
+      "previousHash": "09a23dfb5503a373403f54eeba7b1f468ef5340996c22229118324d2b3b59df5",
+      "hash": "c1b3af7314891522945ac282864b2e776be2036b956c7b94bb9c641d893d6734"
+    },
+    {
+      "seq": 54,
+      "at": "2026-10-24T07:27:48.258Z",
+      "type": "promotion.withheld",
+      "data": {
+        "version": "c2250046-0839-4eb0-b952-1a6a5959bb76",
+        "activeUnchanged": null,
+        "reason": "Independent canary gate failed"
+      },
+      "previousHash": "c1b3af7314891522945ac282864b2e776be2036b956c7b94bb9c641d893d6734",
+      "hash": "6efe966944614fc75337b98f174f5ec763cf9b931ae678cfb1b97839193ec77a"
+    },
+    {
+      "seq": 55,
+      "at": "2026-10-24T07:27:49.467Z",
+      "type": "evidence.observed",
+      "data": {
+        "evidence": {
+          "name": "baseline-114202a8d6118714f72de3f4d7b37874ca074f03115cf7091dc1e0eccdbe40d9.json",
+          "sha256": "114202a8d6118714f72de3f4d7b37874ca074f03115cf7091dc1e0eccdbe40d9"
+        },
+        "method": "local Chromium DOM + accessibility snapshot + axe; public fixture only",
+        "violations": [
+          {
+            "id": "button-name",
+            "nodes": 1
+          },
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          },
+          {
+            "id": "image-alt",
+            "nodes": 1
+          },
+          {
+            "id": "label",
+            "nodes": 1
+          }
+        ]
+      },
+      "previousHash": "6efe966944614fc75337b98f174f5ec763cf9b931ae678cfb1b97839193ec77a",
+      "hash": "05bc858212a4bf4a17e30f43ca473345bf0320aaba810ba8354a108f7d275de4"
+    },
+    {
+      "seq": 56,
+      "at": "2026-10-24T07:27:49.467Z",
+      "type": "proposal.staged",
+      "data": {
+        "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+        "manifestHash": "e609a38b71c5e2da698ec158cf6c46dc835908bcfe42af63952abd95133e0e66",
+        "findings": [
+          {
+            "id": "3150d15f-7f52-4ba8-8718-c451da257659",
+            "criterion": "3.3.2",
+            "selector": "#full-name",
+            "impact": "Associate the existing visible Full name prompt with the required application field; human confirms relationship.",
+            "evidenceId": "ca5b0157-867f-4872-8aa4-5b028935e522",
+            "confidence": 0.98,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 245,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "105dbe49-e3b2-4111-a12c-a3d58fb7e63d"
+          },
+          {
+            "id": "bafbff72-4f93-44e6-ab0e-f5a09b3970e0",
+            "criterion": "4.1.2",
+            "selector": "#submit",
+            "impact": "Expose the owner-provided action metadata as the button name; human must confirm the action meaning.",
+            "evidenceId": "ca5b0157-867f-4872-8aa4-5b028935e522",
+            "confidence": 0.95,
+            "severity": 5,
+            "reach": 1,
+            "operatorMinutesEstimate": 1,
+            "priority": 238,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "cf5dcde8-4e33-4f96-96ed-083413cde529"
+          },
+          {
+            "id": "8716b0ef-9618-47b0-a380-ed56cffa4f5b",
+            "criterion": "1.4.3",
+            "selector": "#help",
+            "impact": "Use owner-preinstalled contrast class; known colour #344e5a on white. No arbitrary CSS generated.",
+            "evidenceId": "ca5b0157-867f-4872-8aa4-5b028935e522",
+            "confidence": 0.99,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 0.5,
+            "priority": 198,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "b39095c6-19d3-419b-8134-34bfc8225203"
+          },
+          {
+            "id": "6733723e-3d6d-42fa-bba9-869118faed57",
+            "criterion": "1.1.1",
+            "selector": "#desk-map",
+            "impact": "Draft copied from adjacent context, not a generated image interpretation. Human must inspect diagram and approve, edit or reject.",
+            "evidenceId": "ca5b0157-867f-4872-8aa4-5b028935e522",
+            "confidence": 0.65,
+            "severity": 3,
+            "reach": 1,
+            "operatorMinutesEstimate": 2,
+            "priority": 65,
+            "priorityFormula": "severity × confidence × evaluated-task-reach(1) × 100 / (estimated review minutes + 1)",
+            "assumptions": "not measured population reach; severity 1–5 heuristic",
+            "operation": "6786bc15-65e4-4763-878b-ffb740921466"
+          }
+        ]
+      },
+      "previousHash": "05bc858212a4bf4a17e30f43ca473345bf0320aaba810ba8354a108f7d275de4",
+      "hash": "624f1a6bad6d3657b60f118ee79a88698baed07d07b05660145ebad2d6c937df"
+    },
+    {
+      "seq": 57,
+      "at": "2026-10-24T07:27:49.472Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "b76029cf-9486-4e0e-aa20-e1b0aaf49921",
+        "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+        "operation": "105dbe49-e3b2-4111-a12c-a3d58fb7e63d",
+        "manifestHash": "e609a38b71c5e2da698ec158cf6c46dc835908bcfe42af63952abd95133e0e66",
+        "operationHash": "a1b3ac849872301b3fbca1ebad02f45fcc6b2582ffec32b7e6faebbb54b1a951",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Engineering fixture review after negative tests.",
+        "at": "2026-10-24T07:27:49.472Z"
+      },
+      "previousHash": "624f1a6bad6d3657b60f118ee79a88698baed07d07b05660145ebad2d6c937df",
+      "hash": "73ba617ff4d0d970384872fb520306f157652eb1d8079918f36acd9b2483a711"
+    },
+    {
+      "seq": 58,
+      "at": "2026-10-24T07:27:49.475Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "87a56160-6636-436c-87c4-4c0d3c5a3c3a",
+        "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+        "operation": "cf5dcde8-4e33-4f96-96ed-083413cde529",
+        "manifestHash": "e609a38b71c5e2da698ec158cf6c46dc835908bcfe42af63952abd95133e0e66",
+        "operationHash": "d727987c39be20619863ecf1d2d534a648d4a9fe6875fc80524536d576a4b0ec",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Engineering fixture review after negative tests.",
+        "at": "2026-10-24T07:27:49.475Z"
+      },
+      "previousHash": "73ba617ff4d0d970384872fb520306f157652eb1d8079918f36acd9b2483a711",
+      "hash": "14de44797603e1be5a17ca5ad946a6bc6f71b1340f366a4d596536702e093a76"
+    },
+    {
+      "seq": 59,
+      "at": "2026-10-24T07:27:49.480Z",
+      "type": "semantic.approve",
+      "data": {
+        "id": "cfee19d6-0754-4eab-9fba-0f7ddc459b4a",
+        "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+        "operation": "6786bc15-65e4-4763-878b-ffb740921466",
+        "manifestHash": "e609a38b71c5e2da698ec158cf6c46dc835908bcfe42af63952abd95133e0e66",
+        "operationHash": "c3d0e7b32de42bfaf7750d49e301c1c0dc2c5d233b44a87cf2d7dd10510c341b",
+        "actor": "approver",
+        "action": "approve",
+        "reason": "Engineering fixture review after negative tests.",
+        "at": "2026-10-24T07:27:49.480Z"
+      },
+      "previousHash": "14de44797603e1be5a17ca5ad946a6bc6f71b1340f366a4d596536702e093a76",
+      "hash": "fb6ea9d5ddd89bf932bed24add662c3f803133728d7bddd3161d23e37de37f77"
+    },
+    {
+      "seq": 60,
+      "at": "2026-10-24T07:27:49.484Z",
+      "type": "authorization.verified",
+      "data": {
+        "target": "second-client-fixture",
+        "origin": "http://127.0.0.1:4201",
+        "paths": [
+          "/apply"
+        ],
+        "verifiedAt": "2026-10-24T07:27:49.484Z",
+        "expires": "2026-10-28T00:00:00.000Z",
+        "method": "owner-installed challenge"
+      },
+      "previousHash": "fb6ea9d5ddd89bf932bed24add662c3f803133728d7bddd3161d23e37de37f77",
+      "hash": "dd161b4fdc9791f8615a2149e8c321d78f4aa79c3c298471d689db8e1d31edc8"
+    },
+    {
+      "seq": 61,
+      "at": "2026-10-24T07:27:49.487Z",
+      "type": "deployment.canary",
+      "data": {
+        "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+        "previous": null
+      },
+      "previousHash": "dd161b4fdc9791f8615a2149e8c321d78f4aa79c3c298471d689db8e1d31edc8",
+      "hash": "0f66915e879f72b4a002ff9dc9e72068bb223c63631102648f495556dcfe1460"
+    },
+    {
+      "seq": 62,
+      "at": "2026-10-24T07:27:50.813Z",
+      "type": "verification.canary",
+      "data": {
+        "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+        "pass": true,
+        "evidence": {
+          "name": "verification-c1250ab6867b0e82bb1053616116bc698abfd80f43652f15abfa3034365b04d7.json",
+          "sha256": "c1250ab6867b0e82bb1053616116bc698abfd80f43652f15abfa3034365b04d7"
+        }
+      },
+      "previousHash": "0f66915e879f72b4a002ff9dc9e72068bb223c63631102648f495556dcfe1460",
+      "hash": "195e756ef7f13baebaefcbc2ad2ff09346470e15193d009480155bf343e1e97f"
+    },
+    {
+      "seq": 63,
+      "at": "2026-10-24T07:27:50.813Z",
+      "type": "deployment.activated",
+      "data": {
+        "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+        "previous": null
+      },
+      "previousHash": "195e756ef7f13baebaefcbc2ad2ff09346470e15193d009480155bf343e1e97f",
+      "hash": "9822d35b4ec9ffae3018788b15e9027b8f5900fac2a4ffe86a827b5a6586c98d"
+    },
+    {
+      "seq": 64,
+      "at": "2026-10-24T07:27:52.159Z",
+      "type": "verification.visitor",
+      "data": {
+        "version": "f0d8c93f-622d-4854-9088-26cd31728a08",
+        "pass": true,
+        "evidence": {
+          "name": "verification-715e50e71a2ea42c5dcd3e2120dea7308027d5a7b89329f3242c0fe7afade4ef.json",
+          "sha256": "715e50e71a2ea42c5dcd3e2120dea7308027d5a7b89329f3242c0fe7afade4ef"
+        }
+      },
+      "previousHash": "9822d35b4ec9ffae3018788b15e9027b8f5900fac2a4ffe86a827b5a6586c98d",
+      "hash": "4950c4e8aa8217f34f51aed5791d0bc6a749ff8214ef2f2570e83f69365b7c0c"
+    },
+    {
+      "seq": 65,
+      "at": "2026-10-24T07:27:52.159Z",
+      "type": "deployment.verified",
+      "data": {
+        "version": "f0d8c93f-622d-4854-9088-26cd31728a08"
+      },
+      "previousHash": "4950c4e8aa8217f34f51aed5791d0bc6a749ff8214ef2f2570e83f69365b7c0c",
+      "hash": "8301bc5df2e4fb9120df1525991f9fe9344707448252752f0837280ec78f6e90"
+    }
+  ],
+  "integrity": {
+    "verified": true,
+    "head": "8301bc5df2e4fb9120df1525991f9fe9344707448252752f0837280ec78f6e90",
+    "limits": "Hash chain detects edits against retained head; local administrator can rewrite whole log. Not external notarization."
+  },
+  "privacy": {
+    "remoteCalls": 0,
+    "completedCalls": 0,
+    "externalModels": "Groq text-only, optional per-request explicit consent; no screenshots/images/HTML",
+    "signedInPages": "unsupported; deny by default"
+  },
+  "roi": {
+    "measuredHumanReviewMinutes": null,
+    "measuredSetupMinutes": null,
+    "modelCost": 0,
+    "claims": "No human-study or time-saving claim; forecast requires explicit operator inputs."
+  }
+}

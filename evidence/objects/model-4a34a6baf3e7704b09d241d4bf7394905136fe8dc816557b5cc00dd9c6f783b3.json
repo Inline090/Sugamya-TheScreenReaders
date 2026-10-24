@@ -1,0 +1,21 @@
+{
+  "draft": {
+    "status": "draft",
+    "value": "Diagram showing route from entrance to service desk.",
+    "uncertainty": "Based on provided context; no visual details confirmed."
+  },
+  "provider": "Groq",
+  "model": "openai/gpt-oss-20b",
+  "elapsedMs": 380,
+  "payloadHash": "6aa1120eef6fef695329ec761e1035e2addfa4852b5ae56e6b1b5862bc581a99",
+  "usage": {
+    "promptTokens": 291,
+    "completionTokens": 150,
+    "totalTokens": 441
+  },
+  "cost": {
+    "actualBilled": null,
+    "estimateUSD": null,
+    "reason": "Provider invoice/rate not verified; do not assume free calls."
+  }
+}

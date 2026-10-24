@@ -1,0 +1,16 @@
+# Observed engineering failures, retained rather than hidden
+
+1. Initial Chromium launch failed: missing `libnspr4.so`. Installed actual browser OS dependencies with `npx playwright install-deps chromium`; reran browser/MCP/E2E successfully.
+2. First skill draw used unsupported `--kind dashboard`; official supported `devtools` route used after reading app-screen guidance. No fabricated draw result.
+3. First mobile UI test waited for hidden sidebar identity; real mobile sign-out was also hidden. Fixed mobile identity/sign-out layout and reran 1440/768/390 tests: no overflow, no page errors, no axe findings.
+4. Changing route schema to generic paths initially rejected `/map.svg` because it excluded dots. Both gateway processes failed startup visibly. Fixed validated path grammar with explicit traversal rejection, added a positive real-config unit test, restarted, reran both final public proof and second-client suite.
+5. Default Arena external hostname returned HTTP 403 because a traffic token is required. Not counted as ordinary-public delivery. Created official Cloudflare Quick Tunnel, waited for connection/DNS propagation, then repeated clean public browser checks successfully.
+6. Official GitHub Models docs showed retirement, so it was not used as a pretend model service. Initial Groq request with Python's default User-Agent was rejected; a named client User-Agent worked. An old Llama model ID was unavailable; the actual authenticated catalog selected `openai/gpt-oss-20b`, and real inference succeeded. No fallback model response was invented.
+7. Initial Taste inspector: 0 failures, one small-text warning. Raised actual interface labels to 13px, fixed disclosure alignment, re-inspected rendered desktop/mobile: 0 failures / 0 warnings. An intervening inspector run hit an unavailable gateway during schema debugging; those error-page results were not passed off as app success.
+8. ESLint 10 plus a legacy plugin initially threw `context.getSourceCode is not a function`. Added official `@eslint/compat` rules wrapper; final analysis completed with 0 errors and 26 retained/reviewed warnings. No blanket rule disabling.
+
+Negative accessibility/security tests are deliberately seeded fixtures and are labeled as such. Provider 503 in the unit suite is a controlled injected failure, not an observed Groq outage. Main human-approval evidence is distinct from scripted role-capability test decisions.
+
+## Final restart configuration mistake caught by real tests
+
+A final isolated reuse gateway restart accidentally supplied `SUGAMYA_TARGET` instead of the documented `TARGET_CONFIG`. It therefore used the default owned origin while the fault-injection driver targeted the second origin. The resulting **17/21** failure is retained in `reuse/restart-misconfiguration-results.json`; it is not a passing result. Main human-approved state was never modified. The isolated store was quarantined privately, the correct config was used with a fresh isolated store, and the entire suite was rerun. A new startup guard refuses stores containing another target's manifests and binds each store to its target ID/origin. `startup-scope-negative.txt` records an actual refused startup against the mismatched quarantined store. This is precisely why real failure injection is required rather than inferring success from HTTP 200.
