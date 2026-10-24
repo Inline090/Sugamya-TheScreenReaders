@@ -531,6 +531,69 @@ function renderExternal() {
   );
   const nodes = [head, summary];
   for (const o of external.operations) nodes.push(renderExternalOp(o));
+  if (external.coverage?.length) {
+    const counts = external.coverage.reduce(
+      (a, r) => ((a[r.status] = (a[r.status] || 0) + 1), a),
+      {},
+    );
+    nodes.push(
+      el(
+        "p",
+        "WCAG 2.2 A/AA: " +
+          external.coverage.length +
+          " criteria · " +
+          Object.entries(counts)
+            .map(([k, v]) => v + " " + k.replaceAll("-", " "))
+            .join(" · "),
+        "caption",
+      ),
+    );
+    const det = el("details");
+    det.append(el("summary", "Coverage by criterion"));
+    const table = el("table"),
+      thead = el("thead"),
+      hr = el("tr");
+    hr.append(el("th", "Criterion"), el("th", "Status"), el("th", "Method"));
+    thead.append(hr);
+    const tbody = el("tbody");
+    for (const r of external.coverage) {
+      const tr = el("tr");
+      tr.append(
+        el("td", r.id + " " + r.name),
+        el("td", r.status),
+        el("td", r.method + " — " + r.reason),
+      );
+      tbody.append(tr);
+    }
+    table.append(thead, tbody);
+    det.append(table);
+    nodes.push(det);
+  }
+  if (external.probes) {
+    const p = external.probes;
+    nodes.push(
+      el(
+        "p",
+        "Probes: " +
+          (p.keyboard?.order?.length || 0) +
+          " Tab steps, " +
+          (p.keyboard?.traps?.length || 0) +
+          " trap candidate(s); focus indicator missing on " +
+          (p.focusVisible?.missing || 0) +
+          "/" +
+          (p.focusVisible?.checked || 0) +
+          "; targets under 24px: " +
+          (p.targetSize?.failing || 0) +
+          "/" +
+          (p.targetSize?.checked || 0) +
+          "; 320px reflow: " +
+          (p.reflow?.horizontalScroll
+            ? "horizontal scroll"
+            : "no horizontal scroll"),
+        "caption",
+      ),
+    );
+  }
   if (external.contrast.length) {
     const det = el("details");
     det.append(
@@ -553,11 +616,14 @@ function renderExternalOp(o) {
         ? o.decision.action === "reject"
           ? "Rejected"
           : "Human approved"
-        : "Needs human review",
+        : o.provisional
+          ? "Provisional AI draft — needs approval"
+          : "Needs human review",
       "status " + (decided ? "good" : "wait"),
     ),
   );
   card.append(title, el("p", o.reason, "caption"));
+  if (o.source) card.append(el("p", "Source: " + o.source, "caption"));
   const diff = el("div", undefined, "diff");
   diff.append(
     el("span", "Before"),
