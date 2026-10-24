@@ -67,7 +67,90 @@ export function tierOf(id) {
   return "human";
 }
 
-export function coverageFor({ axe = [], hasMedia = false } = {}) {
+function probeStatus(id, p) {
+  if (!p) return null;
+  const k = p.keyboard || {},
+    t = p.targetSize || {},
+    f = p.focusVisible || {},
+    r = p.reflow || {};
+  switch (id) {
+    case "2.1.1":
+      if (!k.order || !k.order.length) return null;
+      return {
+        status: "no-failure-found-in-tested-state",
+        method: "keyboard Tab walk",
+        reason: "40-step Tab walk completed in this state.",
+      };
+    case "2.1.2":
+      if (!k.order || !k.order.length) return null;
+      return k.traps && k.traps.length
+        ? {
+            status: "detected",
+            method: "keyboard Tab walk",
+            reason: "Repeated focus on: " + k.traps.slice(0, 3).join(", ") + ".",
+          }
+        : {
+            status: "no-failure-found-in-tested-state",
+            method: "keyboard Tab walk",
+            reason: "No repeated-focus candidate in 40 steps.",
+          };
+    case "2.4.3":
+      if (!k.order || !k.order.length) return null;
+      return {
+        status: "no-failure-found-in-tested-state",
+        method: "recorded focus order",
+        reason: "Focus order recorded; manual judgment still advised.",
+      };
+    case "2.4.7":
+      if (!f.checked) return null;
+      return f.missing > 0
+        ? {
+            status: "detected",
+            method: "focus visibility probe",
+            reason:
+              f.missing +
+              " of " +
+              f.checked +
+              " focused controls showed no outline or box-shadow.",
+          }
+        : {
+            status: "no-failure-found-in-tested-state",
+            method: "focus visibility probe",
+            reason:
+              "All " + f.checked + " focused controls showed a visible focus indicator.",
+          };
+    case "2.5.8":
+      if (!t.checked) return null;
+      return t.failing > 0
+        ? {
+            status: "detected",
+            method: "target size probe",
+            reason: t.failing + " of " + t.checked + " controls are under 24x24px.",
+          }
+        : {
+            status: "no-failure-found-in-tested-state",
+            method: "target size probe",
+            reason: "All " + t.checked + " controls are at least 24x24px.",
+          };
+    case "1.4.10":
+      if (!r.width) return null;
+      return r.horizontalScroll
+        ? {
+            status: "detected",
+            method: "320px reflow probe",
+            reason: "Horizontal scrolling present at 320px width.",
+          }
+        : {
+            status: "no-failure-found-in-tested-state",
+            method: "320px reflow probe",
+            reason: "No horizontal scrolling at 320px width.",
+          };
+    default:
+      return null;
+  }
+}
+
+export function coverageFor({ axe = [], hasMedia = false, probes = null } = {}) {
   const violated = new Map();
   for (const v of axe) {
     const c = RULE_TO_CRITERION[v.id];
@@ -77,6 +160,16 @@ export function coverageFor({ axe = [], hasMedia = false } = {}) {
   }
   return CRITERIA.map((c) => {
     const tier = tierOf(c.id);
+    const probed = probeStatus(c.id, probes);
+    if (probed && !violated.has(c.id))
+      return {
+        id: c.id,
+        name: c.name,
+        level: c.level,
+        url: c.url,
+        tier,
+        ...probed,
+      };
     let status, method, reason;
     if (c.id.startsWith("1.2.")) {
       if (!hasMedia) {

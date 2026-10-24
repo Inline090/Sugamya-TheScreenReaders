@@ -5,6 +5,7 @@ import fs from "node:fs";
 import { randomBytes } from "node:crypto";
 import { draftAlt } from "./vision.js";
 import { coverageFor } from "./wcag.js";
+import { runProbes } from "./probes.js";
 
 /**
  * External-URL mode.
@@ -120,9 +121,11 @@ export async function analyzeUrl(raw) {
     const hasMedia = await page.evaluate(
       () => document.querySelectorAll("video, audio").length > 0,
     );
+    const probes = await runProbes(page);
     const coverage = coverageFor({
       axe: axe.violations.map((v) => ({ id: v.id })),
       hasMedia,
+      probes,
     });
 
     const candidates = await page.evaluate(() => {
@@ -308,6 +311,7 @@ export async function analyzeUrl(raw) {
         passes: axe.passes.length,
       },
       coverage,
+      probes,
     };
     sessions.set(session.id, session);
     trimSessions();
@@ -330,6 +334,7 @@ function publicSession(s) {
     contrast: s.contrast,
     axe: s.axe,
     coverage: s.coverage || [],
+    probes: s.probes || null,
     previewUrl: "/preview/" + s.id,
   };
 }
