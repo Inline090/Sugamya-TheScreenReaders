@@ -406,8 +406,7 @@ export function decide(id, operationId, body) {
  * Serve the analysed page with approved operations applied. This is a snapshot
  * preview: the target site itself is never modified.
  */
-export function previewHtml(id) {
-  const s = getSession(id);
+export function renderSession(s) {
   const $ = cheerio.load(s.html);
   let applied = 0;
   for (const op of s.operations) {
@@ -437,4 +436,22 @@ export function previewHtml(id) {
     );
   }
   return $.html();
+}
+
+export function previewHtml(id) {
+  return renderSession(getSession(id));
+}
+
+/**
+ * Latest stored session for a URL. Used by the before-load proxy so the
+ * corrected DOM is what the browser receives, not the original page.
+ */
+export function sessionForUrl(url) {
+  loadSessions();
+  const matches = [...sessions.values()].filter((s) => s.url === url);
+  return (
+    matches.sort((a, b) =>
+      (b.createdAt || "").localeCompare(a.createdAt || ""),
+    )[0] || null
+  );
 }

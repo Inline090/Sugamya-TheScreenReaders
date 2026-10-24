@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node src/server.js",
     "origin": "node fixture/origin.js",
+    "proxy": "node scripts/proxy.mjs",
     "setup": "node scripts/setup.js",
     "test": "node --test tests/*.test.js",
     "test:e2e": "node scripts/e2e.js",
