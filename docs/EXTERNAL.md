@@ -14,9 +14,7 @@ and queue semantic changes (image/video descriptions) for an approver.
    `detected`, `no-failure-found-in-tested-state`, `needs-interactive-evidence`,
    `needs-human-review`, `not-applicable`, `unresolved`.
 5. Proposes operations:
-   - image alt text, drafted by the optional vision adapter and marked
-     **provisional**;
-   - video descriptions, **detected and queued only** (never auto-written);
+   - image alt text, drafted by the vision adapter and marked **provisional**;
    - labels and accessible names for unlabeled fields and nameless controls.
 6. Serves `/preview/<id>` with every non-rejected fix applied and visible
    markers (green solid = fixed, amber dashed = provisional).
@@ -25,8 +23,8 @@ and queue semantic changes (image/video descriptions) for an approver.
 
 ## Human review
 
-- Image and video descriptions are **provisional** and appear in the
-  **Semantic approval queue**.
+- Image descriptions are **provisional** and appear in the **Semantic approval
+  queue**.
 - The approver can approve, edit, or reject each one.
 - Approving or editing clears the provisional marker and the next preview or
   proxy response uses the approved value.
@@ -58,8 +56,10 @@ route.
 
 - The preview and proxy serve the **analysed snapshot**, not a live third-party
   rewrite. The target site itself is never modified.
-- The vision route is unconfirmed: without a configured endpoint the adapter
-  uses the explicit `changed via sugamya` placeholder and marks it provisional.
+- The vision adapter uses a local Ollama vision model by default, or an
+  OpenAI-compatible endpoint when `SUGAMYA_VISION_*` is set. Without any model
+  it uses the explicit `changed via sugamya` placeholder and marks it
+  provisional.
 - Coverage is per tested page and state. "No failure found" is not a
   conformance claim.
-- Video is queued for human description; no automatic captioning is claimed.
+- No automatic captioning or media description is claimed.

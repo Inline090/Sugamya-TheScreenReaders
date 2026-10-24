@@ -165,7 +165,7 @@ export async function analyzeUrl(raw) {
             attribute: "alt",
             current: alt,
             context: (el.nextElementSibling?.textContent || "").trim().slice(0, 160),
-            src: el.getAttribute("src") || "",
+            src: el.currentSrc || el.src || "",
           });
         });
       };
@@ -214,28 +214,6 @@ export async function analyzeUrl(raw) {
           context: "",
         });
       });
-      // Video is detect-and-queue only: we never auto-write a description.
-      document.querySelectorAll("video, iframe").forEach((el) => {
-        if (!visible(el)) return;
-        const src = el.getAttribute("src") || "";
-        const isVideo =
-          el.tagName.toLowerCase() === "video" ||
-          /youtube|vimeo|wistia|video/i.test(src);
-        if (!isVideo) return;
-        if ((el.getAttribute("aria-label") || "").trim()) return;
-        if ((el.getAttribute("title") || "").trim()) return;
-        const marker = mark(el);
-        out.push({
-          marker,
-          kind: "video",
-          tag: el.tagName.toLowerCase(),
-          criterion: "1.2.2",
-          attribute: "aria-label",
-          current: el.getAttribute("aria-label"),
-          context: el.getAttribute("title") || "",
-          src,
-        });
-      });
       return out;
     });
 
@@ -249,15 +227,13 @@ export async function analyzeUrl(raw) {
       let value = "Action";
       let source = "deterministic";
       let provisional = false;
+      let vision = false;
       if (c.kind === "img") {
         const d = await draftAlt({ imageUrl: c.src, context: c.context });
         value = d.value;
         source = d.source;
         provisional = d.provisional;
-      } else if (c.kind === "video") {
-        value = "Video pending description";
-        source = "detected video (needs human description)";
-        provisional = true;
+        vision = Boolean(d.vision);
       } else if (c.kind === "label") {
         value = c.placeholder || c.fieldName || "Field";
       }
@@ -270,17 +246,16 @@ export async function analyzeUrl(raw) {
         value,
         semantic: true,
         provisional,
+        vision,
         source,
         criterion: c.criterion,
         kind: c.kind,
         reason:
           c.kind === "img"
             ? "Image alt text is provisional and must be confirmed by a human."
-            : c.kind === "video"
-              ? "Video detected; a human must write or approve the description."
-              : c.kind === "label"
-                ? "Form field has no persistent label or accessible name."
-                : "Control has no accessible name.",
+            : c.kind === "label"
+              ? "Form field has no persistent label or accessible name."
+              : "Control has no accessible name.",
       });
     }
 
