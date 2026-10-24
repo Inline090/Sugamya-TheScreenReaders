@@ -4,6 +4,7 @@ import * as cheerio from "cheerio";
 import fs from "node:fs";
 import { randomBytes } from "node:crypto";
 import { draftAlt } from "./vision.js";
+import { coverageFor } from "./wcag.js";
 
 /**
  * External-URL mode.
@@ -116,6 +117,13 @@ export async function analyzeUrl(raw) {
     const axe = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
       .analyze();
+    const hasMedia = await page.evaluate(
+      () => document.querySelectorAll("video, audio").length > 0,
+    );
+    const coverage = coverageFor({
+      axe: axe.violations.map((v) => ({ id: v.id })),
+      hasMedia,
+    });
 
     const candidates = await page.evaluate(() => {
       const out = [];
@@ -299,6 +307,7 @@ export async function analyzeUrl(raw) {
         })),
         passes: axe.passes.length,
       },
+      coverage,
     };
     sessions.set(session.id, session);
     trimSessions();
@@ -320,6 +329,7 @@ function publicSession(s) {
     })),
     contrast: s.contrast,
     axe: s.axe,
+    coverage: s.coverage || [],
     previewUrl: "/preview/" + s.id,
   };
 }
