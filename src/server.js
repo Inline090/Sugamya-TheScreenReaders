@@ -21,6 +21,7 @@ import {
   analyzeUrl,
   decide as decideExternal,
   getPublicSession,
+  pendingQueue,
   previewHtml,
   setValue as setExternalValue,
 } from "./external.js";
@@ -705,6 +706,13 @@ app.post(
     return analyzeUrl(body.data.url);
   }),
 );
+app.get("/api/external/queue", (req, res, next) => {
+  try {
+    res.set("Cache-Control", "no-store").json(pendingQueue());
+  } catch (e) {
+    next(e);
+  }
+});
 app.get("/api/external/:id", (req, res, next) => {
   try {
     res.set("Cache-Control", "no-store").json(getPublicSession(req.params.id));

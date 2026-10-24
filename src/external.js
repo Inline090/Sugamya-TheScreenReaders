@@ -455,3 +455,33 @@ export function sessionForUrl(url) {
     )[0] || null
   );
 }
+
+/**
+ * Provisional operations across every stored session, for the approver queue.
+ */
+export function pendingQueue() {
+  loadSessions();
+  const out = [];
+  const rows = [...sessions.values()].sort((a, b) =>
+    (b.createdAt || "").localeCompare(a.createdAt || ""),
+  );
+  for (const s of rows) {
+    for (const op of s.operations) {
+      const d = s.decisions.get(op.id);
+      if (d) continue;
+      if (!op.provisional) continue;
+      out.push({
+        sessionId: s.id,
+        url: s.url,
+        operationId: op.id,
+        kind: op.kind,
+        criterion: op.criterion,
+        value: op.value,
+        source: op.source,
+        reason: op.reason,
+        previewUrl: "/preview/" + s.id,
+      });
+    }
+  }
+  return out;
+}

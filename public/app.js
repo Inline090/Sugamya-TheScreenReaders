@@ -93,6 +93,7 @@ async function refresh() {
     $("#console").hidden = false;
     $("#signout").hidden = false;
     render();
+    loadExternalQueue();
   } catch (e) {
     if (!current) {
       $("#login-panel").hidden = false;
@@ -507,6 +508,54 @@ $("#roi").onsubmit = (e) => {
     Math.round(((sites * (baseline - 2 * review)) / 60) * rate) +
     ". Excludes hosting, setup, manual audits and maintenance. These inputs are assumptions, not measured savings.";
 };
+async function loadExternalQueue() {
+  try {
+    const items = await api("/external/queue");
+    const box = $("#external-queue");
+    if (!box) return;
+    if (!items.length) {
+      box.replaceChildren();
+      return;
+    }
+    const head = el("div", undefined, "section-head");
+    head.append(el("h3", "Semantic approval queue (" + items.length + ")"));
+    const nodes = [head];
+    for (const item of items) {
+      const card = el("article", undefined, "proposal");
+      const title = el("div", undefined, "proposal-title");
+      title.append(
+        el("strong", item.criterion + " · " + item.kind),
+        el("span", "Provisional — needs approval", "status wait"),
+      );
+      card.append(
+        title,
+        el("p", item.url, "caption"),
+        el("p", item.reason, "caption"),
+        el("p", "Draft: " + item.value, "caption"),
+      );
+      const actions = el("div", undefined, "review-actions");
+      const decide = (action) => () =>
+        perform("Queue " + action, async () => {
+          await api("/external/" + item.sessionId + "/decide", {
+            operationId: item.operationId,
+            action,
+            reason: action + "ed from the semantic queue",
+          });
+          await loadExternalQueue();
+          return {};
+        });
+      actions.append(
+        button("Approve", decide("approve")),
+        button("Reject", decide("reject"), "danger"),
+      );
+      card.append(actions);
+      nodes.push(card);
+    }
+    box.replaceChildren(...nodes);
+  } catch {
+    /* queue is optional */
+  }
+}
 function renderExternal() {
   const box = $("#external-result");
   if (!box) return;
