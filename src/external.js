@@ -1,7 +1,9 @@
 import { chromium } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 import * as cheerio from "cheerio";
+import fs from "node:fs";
 import { randomBytes } from "node:crypto";
+import { draftAlt } from "./vision.js";
 
 /**
  * External-URL mode.
@@ -18,6 +20,37 @@ import { randomBytes } from "node:crypto";
 const sessions = new Map();
 const MAX_SESSIONS = 50;
 const MAX_BYTES = 2 * 1024 * 1024;
+const STORE_FILE =
+  process.env.SUGAMYA_EXTERNAL_STORE || "var/external-sessions.json";
+
+function serialize(session) {
+  return { ...session, decisions: [...session.decisions.entries()] };
+}
+function deserialize(raw) {
+  return { ...raw, decisions: new Map(raw.decisions || []) };
+}
+function loadSessions() {
+  try {
+    const rows = JSON.parse(fs.readFileSync(STORE_FILE, "utf8"));
+    for (const row of rows) sessions.set(row.id, deserialize(row));
+  } catch {
+    /* first run or unreadable store */
+  }
+}
+function saveSessions() {
+  try {
+    fs.mkdirSync(STORE_FILE.split("/").slice(0, -1).join("/") || ".", {
+      recursive: true,
+    });
+    fs.writeFileSync(
+      STORE_FILE,
+      JSON.stringify([...sessions.values()].map(serialize)),
+    );
+  } catch {
+    /* persistence is best-effort in the demo */
+  }
+}
+loadSessions();
 
 function safeUrl(raw) {
   let u;
@@ -170,6 +203,28 @@ export async function analyzeUrl(raw) {
           context: "",
         });
       });
+      // Video is detect-and-queue only: we never auto-write a description.
+      document.querySelectorAll("video, iframe").forEach((el) => {
+        if (!visible(el)) return;
+        const src = el.getAttribute("src") || "";
+        const isVideo =
+          el.tagName.toLowerCase() === "video" ||
+          /youtube|vimeo|wistia|video/i.test(src);
+        if (!isVideo) return;
+        if ((el.getAttribute("aria-label") || "").trim()) return;
+        if ((el.getAttribute("title") || "").trim()) return;
+        const marker = mark(el);
+        out.push({
+          marker,
+          kind: "video",
+          tag: el.tagName.toLowerCase(),
+          criterion: "1.2.2",
+          attribute: "aria-label",
+          current: el.getAttribute("aria-label"),
+          context: el.getAttribute("title") || "",
+          src,
+        });
+      });
       return out;
     });
 
@@ -177,28 +232,46 @@ export async function analyzeUrl(raw) {
     if (Buffer.byteLength(html) > MAX_BYTES)
       throw Error("Page is too large for the demo preview");
 
-    const operations = candidates.slice(0, 8).map((c, i) => ({
-      id: "op-" + (i + 1),
-      marker: c.marker,
-      selector: `[data-sugamya="${c.marker}"]`,
-      attribute: c.attribute,
-      before: c.current ?? null,
-      value:
-        c.kind === "img"
-          ? "changed via sugamya"
-          : c.kind === "label"
-            ? c.placeholder || c.fieldName || "Field"
-            : "Action",
-      semantic: true,
-      criterion: c.criterion,
-      kind: c.kind,
-      reason:
-        c.kind === "img"
-          ? "Image has no alternative text. A human must confirm the description."
-          : c.kind === "label"
-            ? "Form field has no persistent label or accessible name."
-            : "Control has no accessible name.",
-    }));
+    const operations = [];
+    for (const c of candidates) {
+      if (operations.length >= 8) break;
+      let value = "Action";
+      let source = "deterministic";
+      let provisional = false;
+      if (c.kind === "img") {
+        const d = await draftAlt({ imageUrl: c.src, context: c.context });
+        value = d.value;
+        source = d.source;
+        provisional = d.provisional;
+      } else if (c.kind === "video") {
+        value = "Video pending description";
+        source = "detected video (needs human description)";
+        provisional = true;
+      } else if (c.kind === "label") {
+        value = c.placeholder || c.fieldName || "Field";
+      }
+      operations.push({
+        id: "op-" + (operations.length + 1),
+        marker: c.marker,
+        selector: `[data-sugamya="${c.marker}"]`,
+        attribute: c.attribute,
+        before: c.current ?? null,
+        value,
+        semantic: true,
+        provisional,
+        source,
+        criterion: c.criterion,
+        kind: c.kind,
+        reason:
+          c.kind === "img"
+            ? "Image alt text is provisional and must be confirmed by a human."
+            : c.kind === "video"
+              ? "Video detected; a human must write or approve the description."
+              : c.kind === "label"
+                ? "Form field has no persistent label or accessible name."
+                : "Control has no accessible name.",
+      });
+    }
 
     const contrast = axe.violations
       .filter((v) => v.id === "color-contrast")
@@ -229,6 +302,7 @@ export async function analyzeUrl(raw) {
     };
     sessions.set(session.id, session);
     trimSessions();
+    saveSessions();
     return publicSession(session);
   } finally {
     await browser.close();
@@ -272,12 +346,15 @@ export function setValue(id, operationId, rawValue) {
   if (!v) throw Error("Enter a value");
   if (/[<>]/.test(v)) throw Error("Markup characters are not allowed");
   op.value = v.slice(0, 300);
+  op.provisional = false;
+  op.approved = true;
   s.decisions.set(operationId, {
     action: "edit",
     value: op.value,
     reason: "direct edit (human review disabled)",
     at: new Date().toISOString(),
   });
+  saveSessions();
   return publicSession(s);
 }
 
@@ -302,6 +379,11 @@ export function decide(id, operationId, body) {
     at: new Date().toISOString(),
   });
   if (action === "edit") op.value = value;
+  if (action !== "reject") {
+    op.provisional = false;
+    op.approved = true;
+  }
+  saveSessions();
   return publicSession(s);
 }
 
@@ -322,6 +404,7 @@ export function previewHtml(id) {
     $(op.selector).attr(op.attribute, op.value);
     // Mark the element so the injected fix is visible in the preview.
     $(op.selector).attr("data-sugamya-fixed", "1");
+    if (op.provisional) $(op.selector).attr("data-sugamya-provisional", "1");
     applied += 1;
   }
   // A preview should not execute the target's scripts; strip them so the
@@ -332,7 +415,9 @@ export function previewHtml(id) {
     $("head").append(
       `<style data-sugamya-highlight>
         [data-sugamya-fixed]{outline:3px solid #2e7d32 !important;outline-offset:2px;}
+        [data-sugamya-provisional]{outline:3px dashed #b26a00 !important;}
         [data-sugamya-fixed]::after{content:" ✓ Sugamya fix";position:absolute;background:#2e7d32;color:#fff;font:600 11px/1.4 system-ui,sans-serif;padding:2px 6px;border-radius:4px;z-index:2147483647;}
+        [data-sugamya-provisional]::after{content:" ✓ Sugamya fix (provisional)";background:#b26a00;}
       </style>`,
     );
   }
